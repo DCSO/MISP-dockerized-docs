@@ -1,5 +1,6 @@
 MISP dockerized documentation
 ====
+
 # About
 **MISP dockerized** is a project designed to provide an easy-to-use and easy-to-install 'out of the box' MISP instance that includes everything you need to run MISP with minimal host-side requirements. 
 
@@ -8,74 +9,66 @@ MISP dockerized documentation
 **THIS PROJECT IS IN BETA PHASE**
 
 ### Project Information
-<table>
-<tr>
-  <td>Latest Release</td>
-  <td><a href="https://badge.fury.io/gh/DCSO%2FMISP-dockerized"><img src="https://badge.fury.io/gh/DCSO%2FMISP-dockerized.svg" alt="GitHub version" height="18"></a></td>
-</tr>
-<tr>
-  <td>Travis Master</td>
-  <td><a href="https://travis-ci.org/DCSO/MISP-dockerized"><img src="https://travis-ci.org/DCSO/MISP-dockerized.svg?branch=master" /></a></td>
-</tr>
-</table>
+
+|||
+|-|-|
+| Travis Master | [![][10]][3]  |
+
+[3]: https://travis-ci.org/DCSO/MISP-dockerized
+[10]: https://travis-ci.org/DCSO/MISP-dockerized.svg?branch=master
 
 ### Docker Container Information
 
-| Name | Travis | Docker Size & Layers | Latest Docker Version | Commit | Container License |
-|---|---|---|---|---|---|
-| misp-proxy | [![](https://travis-ci.org/DCSO/MISP-dockerized-proxy.svg?branch=master)](https://travis-ci.org/DCSO/MISP-dockerized-proxy) | [![](https://images.microbadger.com/badges/image/dcso/misp-proxy.svg)](https://microbadger.com/images/dcso/misp-proxy) | [![](https://images.microbadger.com/badges/version/dcso/misp-proxy.svg)](https://microbadger.com/images/dcso/misp-proxy) | [![](https://images.microbadger.com/badges/commit/dcso/misp-proxy.svg)](https://microbadger.com/images/dcso/misp-proxy) | [![](https://images.microbadger.com/badges/license/dcso/misp-proxy.svg)](https://microbadger.com/images/dcso/misp-proxy) |
-| misp-server | [![](https://travis-ci.org/DCSO/MISP-dockerized-server.svg?branch=master)](https://travis-ci.org/DCSO/MISP-dockerized-server)| [![](https://images.microbadger.com/badges/image/dcso/misp-server.svg)](https://microbadger.com/images/dcso/misp-server) | [![](https://images.microbadger.com/badges/version/dcso/misp-server.svg)](https://microbadger.com/images/dcso/misp-server) | [![](https://images.microbadger.com/badges/commit/dcso/misp-server.svg)](https://microbadger.com/images/dcso/misp-server) | [![](https://images.microbadger.com/badges/license/dcso/misp-server.svg)](https://microbadger.com/images/dcso/misp-server) |
-| misp-robot | [![](https://travis-ci.org/DCSO/MISP-dockerized-robot.svg?branch=master)](https://travis-ci.org/DCSO/MISP-dockerized-robot)|  [![](https://images.microbadger.com/badges/image/dcso/misp-robot.svg)](https://microbadger.com/images/dcso/misp-robot) | [![](https://images.microbadger.com/badges/version/dcso/misp-robot.svg)](https://microbadger.com/images/dcso/misp-robot) | [![](https://images.microbadger.com/badges/commit/dcso/misp-robot.svg)](https://microbadger.com/images/dcso/misp-robot) | [![](https://images.microbadger.com/badges/license/dcso/misp-robot.svg)](https://microbadger.com/images/dcso/misp-robot) |
+| Name         | Travis        | Docker Size & Layers | Latest Docker Version | Commit        |
+| ------------ | ------------- | -------------------- | --------------------- | ------------- |  
+| misp-proxy   | [![][1]][2]   | [![][4]][7]          | [![][5]][7]           | [![][6]][7]   |  
+| misp-server  | [![][8]][9]   | [![][11]][14]        | [![][12]][14]         | [![][13]][14] |  
+| misp-robot   | [![][15]][16] | [![][18]][21]        | [![][19]][21]         | [![][20]][21] |  
+| misp-postfix | [![][22]][23] | [![][25]][28]        | [![][26]][28]         | [![][27]][28] |  
+
+
+[1]: https://travis-ci.org/DCSO/MISP-dockerized-proxy.svg?branch=master
+[2]: https://travis-ci.org/DCSO/MISP-dockerized-proxy
+[4]: https://images.microbadger.com/badges/image/dcso/misp-proxy.svg
+[5]: https://images.microbadger.com/badges/version/dcso/misp-proxy.svg
+[6]: https://images.microbadger.com/badges/commit/dcso/misp-proxy.svg
+[7]: https://microbadger.com/images/dcso/misp-proxy
+
+[8]: https://travis-ci.org/DCSO/MISP-dockerized-server.svg?branch=master
+[9]: https://travis-ci.org/DCSO/MISP-dockerized-server
+[11]: https://images.microbadger.com/badges/image/dcso/misp-server.svg
+[12]: https://images.microbadger.com/badges/version/dcso/misp-server.svg
+[13]: https://images.microbadger.com/badges/commit/dcso/misp-server.svg
+[14]: https://microbadger.com/images/dcso/misp-server
+
+[15]: https://travis-ci.org/DCSO/MISP-dockerized-robot.svg?branch=master
+[16]: https://travis-ci.org/DCSO/MISP-dockerized-robot
+[18]: https://images.microbadger.com/badges/image/dcso/misp-robot.svg
+[19]: https://images.microbadger.com/badges/version/dcso/misp-robot.svg
+[20]: https://images.microbadger.com/badges/commit/dcso/misp-robot.svg
+[21]: https://microbadger.com/images/dcso/misp-robot
+
+[22]: https://travis-ci.org/DCSO/MISP-dockerized-postfix.svg?branch=master
+[23]: https://travis-ci.org/DCSO/MISP-dockerized-postfix
+[25]: https://images.microbadger.com/badges/image/dcso/misp-postfix.svg
+[26]: https://images.microbadger.com/badges/version/dcso/misp-postfix.svg
+[27]: https://images.microbadger.com/badges/commit/dcso/misp-postfix.svg
+[28]: https://microbadger.com/images/dcso/misp-postfix
 
 # Installation
-## Software Prerequsites
-For the Installation of MISP dockerized you need at least:
 
-| Component |  minimum Version   |
-|----|-----|
-| Docker   | 17.03.0-ce |
-| Git   | newest Version from Distribution |
+## The 4 Step Installation Guide
+See [quick-start](./quick-start/README.md)
 
 
-## Firewall Prerequsites
-For the Installation the followed Connections need to available:
+# Help
 
-|URL|Direction|Protocol|Destination Port|
-|---|---|---|---|
-| registry-1.docker.io| outgoing TCP | 443 |
-| github.com*| outgoing | TCP | 443 |
-| hub.docker.com|outgoing |TCP | 443 |
+## Backup and Recovery
+See [backup-restore](./help/backup-restore.md)
 
-### Why registry-1.docker.io:
-This contains all required docker container:
+# General Help
+See [Help](.help/README.md)
 
-|Container|based on|purpose|
-|---|---|---|
-|misp-redis|official redis|scheduled tasks|
-|misp-db|official mariadb|database to save MISP settings|
-|misp-proxy|alpine|reverse proxy|
-|misp-server|ubuntu|MISP application server|
-|misp-robot|ubuntu|deploy & configuration manager|
-
-### Why github.com
-This contains:
-- scripts
-- tools
-
-
-# What's missing
-Currently the following things are not yet implemented but are planned
-* GnuPG Support
-* Postfix
-* MISP-Modules
-
-# Additional Informations
-## MariaDB and Docker
-* https://mariadb.com/kb/en/library/installing-and-using-mariadb-via-docker/
-* https://hub.docker.com/r/_/mariadb/
-## MISP
-* https://github.com/MISP/MISP
-* https://www.misp-project.org/
 
 # License
 
