@@ -11,14 +11,9 @@ Welcome to MISP-dockerized's |version| documentation!
 
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:    
+   :maxdepth: 2    
     
-   intro/index
-   admin/index
-   design/index
-   contribute/index
-   appendix/index
+
 
 
 Indices and tables
