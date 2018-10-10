@@ -4,19 +4,30 @@
 .PHONY: help test-travis build push start
 
 help:
-	echo "Please use a command"
+	@echo "Please use: \n \
+		test-travis 	-	test .travis.yml file \n \
+		encrypt-file 	-	encrypt-files for travis-ci \n \
+		build 		-	build sphinx html files \n \
+		push 		-	push files to github branch \n \
+		start 		-	start docker python container to test and look sphinx documentation \n \
+		"
 
 test-travis:
-	.travis/travis-cli.sh check
+	./travis-cli.sh check
 
 encrypt-file:
-	.travis/travis-cli.sh encrypt-file $(key)
+	./travis-cli.sh encrypt-file $(key)
 
-build:
+build-html:
 	make -C ../ html
 
+build-docker:
+	./build.sh
+
 push:
-	.travis/push.sh
+	./push.sh
 
 start:
-	docker run -ti --rm -v $(CURDIR)/../:/data python bash
+	docker run --rm -v $(CURDIR)/../:/data dockerhub.dcso.de/sphinx make clean
+	docker run --rm -v $(CURDIR)/../:/data dockerhub.dcso.de/sphinx
+	

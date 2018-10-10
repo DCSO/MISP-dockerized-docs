@@ -48,6 +48,7 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
+    #'releases',
 ]
 
 # Do not warn about external images (status badges in README.rst)
@@ -269,4 +270,26 @@ intersphinx_mapping = {'https://docs.python.org/': None}
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
-    
+
+# -- Options for Releases
+#releases_release_uri = "https://github.com/DCSO/MISP-dockerized/tree/%s"
+#releases_issue_uri = "https://github.com/DCSO/MISP-dockerized/issues/%s"
+# OR
+releases_github_path = 'DCSO/MISP-dockerized'
+
+#  You may optionally set releases_debug = True to see debug output while building your docs.
+#releases_debug = True
+
+# If your changelog includes “simple” pre-1.0 releases derived from a single branch (i.e. without stable release lines & semantic versioning) you may want to set releases_unstable_prehistory = True.
+#releases_unstable_prehistory = True
+
+# If you wish to use a different document name, use another config option (as per previous bullet point), 
+# releases_document_name. E.g. releases_document_name = "CHANGES" would cause Releases 
+# to mutate a file called CHANGES.rst instead of changelog.rst.
+# It is possible to target multiple changelog files for mutation by setting releases_document_name to a list of strings 
+# instead of a single string, e.g. releases_document_name = ['project_1/changelog', 'project_2/changes', 'changelog'].
+# Releases only modifies the bulleted list in these files and does not touch other elements; 
+# this allows you to place paragraphs, comments etc at the top (or bottom) of the document.
+#releases_document_name = "CHANGES"
+
+releases_document_name = ['changelogs/main', 'changelogs/misp-modules', 'changelogs/misp-postfix', 'changelogs/misp-proxy', 'changelogs/misp-robot', 'changelogs/misp-server' ]

@@ -7,13 +7,18 @@ Welcome to MISP-dockerized's |version| documentation!
 =====================================================
 `MISP dockerized` is a project designed to provide an easy-to-use and easy-to-install 'out of the box' MISP instance that includes everything you need to run MISP with minimal host-side requirements. 
 
-`MISP dockerized` uses MISP (Open Source Threat Intelligence Platform - https://github.com/MISP/MISP), which is maintend and developed by the MISP project team (https://www.misp-project.org/)
+`MISP dockerized` uses MISP (Open Source Threat Intelligence Platform - https://github.com/MISP/MISP), which is maintend and developed by the MISP project team (https://www.misp-project.org/).
 
 
 .. toctree::
    :maxdepth: 2    
     
-
+   intro/index
+   admin/index
+   .. design/index
+   .. contribute/index
+   .. appendix/index
+   changelogs/index
 
 
 Indices and tables
@@ -22,3 +27,5 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+
