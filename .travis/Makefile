@@ -13,10 +13,16 @@ help:
 		"
 
 test-travis:
-	./travis-cli.sh check
+	docker run -ti -v $(CURDIR)/../:/project --rm skandyla/travis-cli lint
 
 encrypt-file:
-	./travis-cli.sh encrypt-file $(key)
+	docker run -ti -v $(CURDIR)/../:/project --rm skandyla/travis-cli encrypt-file $(CURDIR)/../publish.key -r DCSO/MISP-dockerized-docs
+
+report:
+	docker run -ti -v $(CURDIR)/../:/project --rm skandyla/travis-cli report --org
+
+update-travis-check:
+	docker pull skandyla/travis-cli
 
 build-html:
 	make -C ../ html

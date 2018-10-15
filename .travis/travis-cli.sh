@@ -13,7 +13,7 @@ while (($#)); do
         exit 0
     ;;
     encrypt-file)
-	    check_via_travis_cli encrypt-file $2
+	    check_via_travis_cli $@
         exit 0
 	    ;;
     *)
