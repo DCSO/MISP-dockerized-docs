@@ -7,7 +7,8 @@ Miscellaneous information about the project.
    :maxdepth: 2
 
    faqs
-   roadmap
-   releases
+   .. roadmap
+   .. releases
    support
-   history
+   .. history
+   thanks
