@@ -1,0 +1,38 @@
+language: python
+python:
+  - 3.5
+
+git:
+  depth: 10
+
+
+# env:
+#   global:
+#   - secure: "PASTE ENCRYPTED RESULT HERE"
+
+
+before_install:
+- mkdir -p ~/.ssh
+#- openssl aes-256-cbc -K $encrypted_eff88d0bace2_key -iv $encrypted_eff88d0bace2_iv -in publish-key.enc -out ~/.ssh/publish-key -d
+#- chmod u=rw,og= ~/.ssh/publish-key
+- echo "Host github.com" >> ~/.ssh/config
+- echo "  IdentityFile ~/.ssh/publish-key" >> ~/.ssh/config
+- git --version
+#- git remote set-url origin git@github.com:DCSO/MISP-dockerized-docs.git
+
+install: 
+  - PATH="$PATH:/$(whoami)/.local/bin"
+  - pip install --user -r requirements.txt
+  - pip install -e git+https://github.com/bitprophet/releases/#egg=releases
+  
+
+script: 
+- make html
+- ghp-import -n -m "Update MISP-dockerized-docs" -p -s
+- ghp-import -n -m "Update MISP-dockerized-docs" -p -s -r DCSO/MISP-dockerized
+
+after_success:
+  only:
+  - master
+  script:
+  - ./push.sh
