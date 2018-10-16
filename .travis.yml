@@ -18,7 +18,7 @@ before_install:
 - echo "Host github.com" >> ~/.ssh/config
 - echo "  IdentityFile ~/.ssh/publish-key" >> ~/.ssh/config
 - git --version
-#- git remote set-url origin git@github.com:DCSO/MISP-dockerized-docs.git
+- git remote set-url origin_MAIN git@github.com:DCSO/MISP-dockerized.git
 
 install: 
   - PATH="$PATH:/$(whoami)/.local/bin"
@@ -28,8 +28,8 @@ install:
 
 script: 
 - make html
-- ghp-import -n -m "Update MISP-dockerized-docs" -p -s
-- ghp-import -n -m "Update MISP-dockerized-docs" -p -s -r DCSO/MISP-dockerized
+- ghp-import -n -m "Update MISP-dockerized-docs" -p -s ./_build/html
+- ghp-import -n -m "Update MISP-dockerized-docs" -p -s -r origin_MAIN ./_build/html
 
 after_success:
   only:
