@@ -5,9 +5,11 @@ mkdir -p ~/.ssh
 
 if [ $CI == "true" ]
 then
+    echo "CI"
     #openssl aes-256-cbc -K $encrypted_eff88d0bace2_key -iv $encrypted_eff88d0bace2_iv -in publish-key.enc -out ~/.ssh/publish-key -d
     #chmod u=rw,og= ~/.ssh/publish-key
 else
+    echo "non-CI"
     cp ../publish.key ~/.ssh/publish-key
 fi
 echo "#########################################################"  
