@@ -1,0 +1,373 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Reporting Issues &mdash; MISP-dockerized 0.3.3-beta documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/DCSO_Logo_Favicon_152x152_srgb.png"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MISP-dockerized
+          
+
+          
+            
+            <img src="../_static/DCSO_Logo_Office_36pt_150dpi_allgrgb.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../intro/install_nativ_docker.html">Docker nativ: 4 Step Installation Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../intro/install_nativ_docker.html#clone-repository">1. Clone Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../intro/install_nativ_docker.html#configure-tls-certificates-and-diffie-hellmann-file-optional">2. Configure TLS Certificates and Diffie-Hellmann File (optional)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../intro/install_nativ_docker.html#start-docker-environment">3. Start Docker Environment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../intro/install_nativ_docker.html#optional-look-if-all-required-components-are-installed">3.1. [OPTIONAL] look if all required components are installed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intro/install_nativ_docker.html#optional-manual-build-config">3.2 [OPTIONAL] Manual build config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intro/install_nativ_docker.html#optional-manual-deploy-environment">3.3 [OPTIONAL] Manual deploy environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intro/install_nativ_docker.html#optional-configure-the-instance">3.4 [OPTIONAL] Configure the Instance</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../intro/install_nativ_docker.html#login-in-your-new-misp-environment">4. Login in your new MISP Environment</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../admin/index.html">Administrator Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../admin/dockerized_upgrading.html">Upgrading MISP-dockerized</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_upgrading.html#advice">Advice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_upgrading.html#basic-instructions">Basic instructions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_upgrading.html#from-v0-3-4-beta-to-v1-0-0">From v0.3.4-beta to v1.0.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_upgrading.html#from-v0-3-3-beta-to-v0-3-4-beta">From v0.3.3-beta to v0.3.4-beta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_upgrading.html#from-v0-3-2-beta-to-v0-3-3-beta">From v0.3.2-beta to v0.3.3-beta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_upgrading.html#from-v0-3-1-beta-to-v0-3-2-beta">From v0.3.1-beta to v0.3.2-beta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_upgrading.html#from-v0-3-0-beta-to-v0-3-1-beta">From v0.3.0-beta to v0.3.1-beta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_upgrading.html#from-v0-2-0-beta-to-v0-3-0-beta">From v0.2.0-beta to v0.3.0-beta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_upgrading.html#from-v2-4-88-beta-3-to-v0-2-0-beta">From v2.4.88-beta.3 to v0.2.0-beta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_upgrading.html#from-v2-4-88-beta-2-to-v2-4-88-beta-3">From v2.4.88-beta.2 to v2.4.88-beta.3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_upgrading.html#from-v2-4-88-beta-1-to-v2-4-88-beta-2">From v2.4.88-beta.1 to v2.4.88-beta.2</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/dockerized_backup-restore.html">Backup and Recovery of  MISP-dockerized</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_backup-restore.html#backup">Backup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_backup-restore.html#restore">Restore</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/dockerized_logging.html">Logging mechanism of  MISP-dockerized</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_logging.html#which-log-files-are-relevant-for-troubleshooting">Which log files are relevant for troubleshooting?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_logging.html#show-logs-with-docker-logs-container-name">Show logs with <cite>docker logs &lt;container_name&gt;</cite></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_logging.html#show-logs-with-syslog-forwarding">Show logs with syslog forwarding</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/redis_maintenance.html">Redis Maintenance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/docker/docker_cmd.html">Help</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_cmd.html#make-docker-autostart-at-startup">Make Docker Autostart at Startup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_cmd.html#delete-the-repository">Delete the Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_cmd.html#rebuild-from-backup">Rebuild from Backup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_cmd.html#access-the-container">Access the Container</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_cmd.html#usefull-commands">Usefull Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/docker/docker_proxy.html">Configure Docker to use a proxy server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_proxy.html#configure-the-docker-client">Configure the Docker client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_proxy.html#use-environment-variables">Use environment variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_proxy.html#sources">Sources:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/docker/docker_network.html">Docker Network Help</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_network.html#stopping-automatic-network-interface-renaming-on-docker-host">Stopping Automatic Network Interface Renaming on Docker Host</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_network.html#example-for-a-docker-network-configuration">Example for a Docker Network Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_network.html#sources">Sources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/docker/docker_daemon.html">Tips for Docker Daemon Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_daemon.html#example-of-etc-docker-daemon-json">Example of <cite>/etc/docker/daemon.json</cite></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_daemon.html#sources">Sources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelogs/index.html">Changelogs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../changelogs/misp-modules.html">MISP-dockerized-misp-modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../changelogs/misp-modules.html#release-candidate-0-3-2">Release Candidate 0.3.2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/misp-modules.html#update-informations">Update Informations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/misp-modules.html#general-changes">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/misp-modules.html#fixes-improvements">Fixes &amp; Improvements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/misp-modules.html#detailed-changes">Detailed Changes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../changelogs/misp-modules.html#release-candidate-0-3-1">Release Candidate 0.3.1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/misp-modules.html#update-informations">Update Informations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/misp-modules.html#fixes-improvements">Fixes &amp; Improvements</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../changelogs/misp-modules.html#release-candidate-0-3-0">Release Candidate 0.3.0</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/misp-modules.html#update-informations">Update Informations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/misp-modules.html#general-changes">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/misp-modules.html#fixes-improvements">Fixes &amp; Improvements</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MISP-dockerized</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Reporting Issues</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/contribute/issues.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="reporting-issues">
+<h1>Reporting Issues<a class="headerlink" href="#reporting-issues" title="Permalink to this headline">¶</a></h1>
+<p>Report bugs and features requests to <a class="reference external" href="https://github.com/Elgg/Elgg/issues">https://github.com/Elgg/Elgg/issues</a>.
+See below for guidelines.</p>
+<div class="section" id="disclaimers">
+<h2>DISCLAIMERS<a class="headerlink" href="#disclaimers" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>SECURITY ISSUES SHOULD BE REPORTED TO security &#64; elgg . org!</strong>
+Please do not post any security issues on github!!</li>
+<li>Support requests belong on the <a class="reference external" href="http://community.elgg.org">community site</a>.
+Tickets with support requests will be closed.</li>
+<li>We cannot make any guarantees as to when your ticket will be resolved.</li>
+</ul>
+</div>
+<div class="section" id="bug-reports">
+<h2>Bug reports<a class="headerlink" href="#bug-reports" title="Permalink to this headline">¶</a></h2>
+<p>Before submitting a bug report:</p>
+<ul class="simple">
+<li>Search for an existing ticket on the issue you’re having. Add any
+extra info there.</li>
+<li>Verify the problem is reproducible<ul>
+<li>On the latest version of Elgg</li>
+<li>With all third-party plugins disabled</li>
+</ul>
+</li>
+</ul>
+<p>Good bug report checklist:</p>
+<ul class="simple">
+<li>Expected behavior and actual behavior</li>
+<li>Clear steps to reproduce the problem</li>
+<li>The version of Elgg you’re running</li>
+<li>Browsers affected by this problem</li>
+</ul>
+</div>
+<div class="section" id="feature-requests">
+<h2>Feature requests<a class="headerlink" href="#feature-requests" title="Permalink to this headline">¶</a></h2>
+<p>Before submitting a feature request:</p>
+<ul class="simple">
+<li>Check the <a class="reference external" href="http://community.elgg.org">community site</a> for a plugin that has the features you
+need.</li>
+<li>Consider if you can <span class="xref std std-doc">develop a plugin</span> that does what you need.</li>
+<li>Search through the closed tickets to see if someone else suggested
+the same feature, but got turned down. You’ll need to be able to
+explain why your suggestion should be considered this time.</li>
+</ul>
+<p>Good feature request checklist:</p>
+<ul class="simple">
+<li>Detailed explanation of the feature</li>
+<li>Real-life use-cases</li>
+<li>Proposed API</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, DCSO GmbH
+      Last updated on Oct 16, 2018.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'0.3.3-beta',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #808080;
+    }
+    /* Sidebar */
+    .wy-nav-side {
+      /* background: #808080;*/
+    }
+  </style>
+
+
+</body>
+</html>

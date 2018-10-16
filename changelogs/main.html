@@ -1,0 +1,363 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Changelog MISP-dockerized &mdash; MISP-dockerized 0.3.3-beta documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/DCSO_Logo_Favicon_152x152_srgb.png"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MISP-dockerized
+          
+
+          
+            
+            <img src="../_static/DCSO_Logo_Office_36pt_150dpi_allgrgb.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../intro/install_nativ_docker.html">Docker nativ: 4 Step Installation Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../intro/install_nativ_docker.html#clone-repository">1. Clone Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../intro/install_nativ_docker.html#configure-tls-certificates-and-diffie-hellmann-file-optional">2. Configure TLS Certificates and Diffie-Hellmann File (optional)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../intro/install_nativ_docker.html#start-docker-environment">3. Start Docker Environment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../intro/install_nativ_docker.html#optional-look-if-all-required-components-are-installed">3.1. [OPTIONAL] look if all required components are installed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intro/install_nativ_docker.html#optional-manual-build-config">3.2 [OPTIONAL] Manual build config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intro/install_nativ_docker.html#optional-manual-deploy-environment">3.3 [OPTIONAL] Manual deploy environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intro/install_nativ_docker.html#optional-configure-the-instance">3.4 [OPTIONAL] Configure the Instance</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../intro/install_nativ_docker.html#login-in-your-new-misp-environment">4. Login in your new MISP Environment</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../admin/index.html">Administrator Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../admin/dockerized_upgrading.html">Upgrading MISP-dockerized</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_upgrading.html#advice">Advice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_upgrading.html#basic-instructions">Basic instructions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_upgrading.html#from-v0-3-4-beta-to-v1-0-0">From v0.3.4-beta to v1.0.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_upgrading.html#from-v0-3-3-beta-to-v0-3-4-beta">From v0.3.3-beta to v0.3.4-beta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_upgrading.html#from-v0-3-2-beta-to-v0-3-3-beta">From v0.3.2-beta to v0.3.3-beta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_upgrading.html#from-v0-3-1-beta-to-v0-3-2-beta">From v0.3.1-beta to v0.3.2-beta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_upgrading.html#from-v0-3-0-beta-to-v0-3-1-beta">From v0.3.0-beta to v0.3.1-beta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_upgrading.html#from-v0-2-0-beta-to-v0-3-0-beta">From v0.2.0-beta to v0.3.0-beta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_upgrading.html#from-v2-4-88-beta-3-to-v0-2-0-beta">From v2.4.88-beta.3 to v0.2.0-beta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_upgrading.html#from-v2-4-88-beta-2-to-v2-4-88-beta-3">From v2.4.88-beta.2 to v2.4.88-beta.3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_upgrading.html#from-v2-4-88-beta-1-to-v2-4-88-beta-2">From v2.4.88-beta.1 to v2.4.88-beta.2</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/dockerized_backup-restore.html">Backup and Recovery of  MISP-dockerized</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_backup-restore.html#backup">Backup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_backup-restore.html#restore">Restore</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/dockerized_logging.html">Logging mechanism of  MISP-dockerized</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_logging.html#which-log-files-are-relevant-for-troubleshooting">Which log files are relevant for troubleshooting?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_logging.html#show-logs-with-docker-logs-container-name">Show logs with <cite>docker logs &lt;container_name&gt;</cite></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/dockerized_logging.html#show-logs-with-syslog-forwarding">Show logs with syslog forwarding</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/redis_maintenance.html">Redis Maintenance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/docker/docker_cmd.html">Help</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_cmd.html#make-docker-autostart-at-startup">Make Docker Autostart at Startup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_cmd.html#delete-the-repository">Delete the Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_cmd.html#rebuild-from-backup">Rebuild from Backup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_cmd.html#access-the-container">Access the Container</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_cmd.html#usefull-commands">Usefull Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/docker/docker_proxy.html">Configure Docker to use a proxy server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_proxy.html#configure-the-docker-client">Configure the Docker client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_proxy.html#use-environment-variables">Use environment variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_proxy.html#sources">Sources:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/docker/docker_network.html">Docker Network Help</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_network.html#stopping-automatic-network-interface-renaming-on-docker-host">Stopping Automatic Network Interface Renaming on Docker Host</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_network.html#example-for-a-docker-network-configuration">Example for a Docker Network Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_network.html#sources">Sources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../admin/docker/docker_daemon.html">Tips for Docker Daemon Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_daemon.html#example-of-etc-docker-daemon-json">Example of <cite>/etc/docker/daemon.json</cite></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admin/docker/docker_daemon.html#sources">Sources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Changelogs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="misp-modules.html">MISP-dockerized-misp-modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="misp-modules.html#release-candidate-0-3-2">Release Candidate 0.3.2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="misp-modules.html#update-informations">Update Informations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="misp-modules.html#general-changes">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="misp-modules.html#fixes-improvements">Fixes &amp; Improvements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="misp-modules.html#detailed-changes">Detailed Changes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="misp-modules.html#release-candidate-0-3-1">Release Candidate 0.3.1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="misp-modules.html#update-informations">Update Informations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="misp-modules.html#fixes-improvements">Fixes &amp; Improvements</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="misp-modules.html#release-candidate-0-3-0">Release Candidate 0.3.0</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="misp-modules.html#update-informations">Update Informations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="misp-modules.html#general-changes">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="misp-modules.html#fixes-improvements">Fixes &amp; Improvements</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MISP-dockerized</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Changelog MISP-dockerized</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/changelogs/main.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="changelog-misp-dockerized">
+<span id="changelog-misp-dockerized"></span><h1>Changelog MISP-dockerized<a class="headerlink" href="#changelog-misp-dockerized" title="Permalink to this headline">¶</a></h1>
+<p>USING: https://releases.readthedocs.io/en/latest/usage.html</p>
+<ul class="simple">
+<li>:release:<code class="docutils literal notranslate"><span class="pre">2.4.0</span> <span class="pre">&lt;2018-09-13&gt;</span></code></li>
+<li>:release:<code class="docutils literal notranslate"><span class="pre">2.3.2</span> <span class="pre">&lt;2018-09-13&gt;</span></code></li>
+<li>:release:<code class="docutils literal notranslate"><span class="pre">2.2.3</span> <span class="pre">&lt;2018-09-13&gt;</span></code></li>
+<li>:release:<code class="docutils literal notranslate"><span class="pre">2.1.6</span> <span class="pre">&lt;2018-09-13&gt;</span></code></li>
+<li>:release:<code class="docutils literal notranslate"><span class="pre">2.0.5</span> <span class="pre">&lt;2018-09-13&gt;</span></code></li>
+<li>:feature:<code class="docutils literal notranslate"><span class="pre">1780</span></code> Add context manager behavior to <code class="docutils literal notranslate"><span class="pre">~fabric.group.Group</span></code>, to
+match the same feature in <code class="docutils literal notranslate"><span class="pre">~fabric.connection.Connection</span></code>. Feature request by
+István Sárándi.</li>
+<li>:feature:<code class="docutils literal notranslate"><span class="pre">1709</span></code> Add <code class="docutils literal notranslate"><span class="pre">Group.close</span> <span class="pre">&lt;fabric.group.Group.close&gt;</span></code> to allow closing
+an entire group’s worth of connections at once. Patch via Johannes Löthberg.</li>
+<li>:bug:<code class="docutils literal notranslate"><span class="pre">-</span></code> Fix a bug preventing tab completion (using the Invoke-level
+<code class="docutils literal notranslate"><span class="pre">--complete</span></code> flag) from completing task names correctly (behavior was to
+act as if there were never any tasks present, even if there was a valid
+fabfile nearby).</li>
+<li>:bug:<code class="docutils literal notranslate"><span class="pre">1850</span></code> Skip over <code class="docutils literal notranslate"><span class="pre">ProxyJump</span></code> configuration directives in SSH config
+data when they would cause self-referential <code class="docutils literal notranslate"><span class="pre">RecursionError</span></code> (e.g. due to
+wildcard-using <code class="docutils literal notranslate"><span class="pre">Host</span></code> stanzas which include the jump server itself).
+Reported by Chris Adams.</li>
+<li>:bug:<code class="docutils literal notranslate"><span class="pre">-</span></code> Some debug logging was reusing Invoke’s logger object, generating
+log messages “named” after <code class="docutils literal notranslate"><span class="pre">invoke</span></code> instead of <code class="docutils literal notranslate"><span class="pre">fabric</span></code>. This has been
+fixed by using Fabric’s own logger everywhere instead.</li>
+<li>:bug:<code class="docutils literal notranslate"><span class="pre">1852</span></code> Grant internal <code class="docutils literal notranslate"><span class="pre">~fabric.connection.Connection</span></code> objects created
+during <code class="docutils literal notranslate"><span class="pre">ProxyJump</span></code> based gateways/proxies a copy of the outer
+<code class="docutils literal notranslate"><span class="pre">Connection</span></code>’s configuration object. This was not previously done, which
+among other things meant one could not fully disable SSH config file loading
+(as the internal <code class="docutils literal notranslate"><span class="pre">Connection</span></code> objects would revert to the default
+behavior). Thanks to Chris Adams for the report.</li>
+<li>:release:<code class="docutils literal notranslate"><span class="pre">2.3.1</span> <span class="pre">&lt;2018-08-08&gt;</span></code></li>
+<li>:bug:<code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">(2.3+)</span></code> Update the new functionality added for :issue:<code class="docutils literal notranslate"><span class="pre">1826</span></code> so it
+uses <code class="docutils literal notranslate"><span class="pre">export</span></code>; without this, nontrivial shell invocations like <code class="docutils literal notranslate"><span class="pre">command1</span> <span class="pre">&amp;&amp;</span> <span class="pre">command2</span></code> end up only applying the env vars to the first command.</li>
+<li>:release:<code class="docutils literal notranslate"><span class="pre">2.3.0</span> <span class="pre">&lt;2018-08-08&gt;</span></code></li>
+<li>:feature:<code class="docutils literal notranslate"><span class="pre">1826</span></code> Add a new Boolean configuration and
+<code class="docutils literal notranslate"><span class="pre">~fabric.connection.Connection</span></code> parameter, <code class="docutils literal notranslate"><span class="pre">inline_ssh_env</span></code>, which (when
+set to <code class="docutils literal notranslate"><span class="pre">True</span></code>) changes how Fabric submits shell environment variables to
+remote servers; this feature helps work around commonly restrictive
+<code class="docutils literal notranslate"><span class="pre">AcceptEnv</span></code> settings on SSH servers. Thanks to Massimiliano Torromeo and
+Max Arnold for the reports.</li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, DCSO GmbH
+      Last updated on Oct 16, 2018.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'0.3.3-beta',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #808080;
+    }
+    /* Sidebar */
+    .wy-nav-side {
+      /* background: #808080;*/
+    }
+  </style>
+
+
+</body>
+</html>
