@@ -21,11 +21,11 @@ Welcome to MISP-dockerized's |version| documentation!
    changelogs/index
 
 
-Indices and tables
+.. Indices and tables
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
 
 

@@ -6,33 +6,16 @@ git:
   depth: 10
 
 
-# env:
+env:
 #   global:
 #   - secure: "PASTE ENCRYPTED RESULT HERE"
-
-
-before_install:
-- mkdir -p ~/.ssh
-#- openssl aes-256-cbc -K $encrypted_eff88d0bace2_key -iv $encrypted_eff88d0bace2_iv -in publish-key.enc -out ~/.ssh/publish-key -d
-#- chmod u=rw,og= ~/.ssh/publish-key
-- echo "Host github.com" >> ~/.ssh/config
-- echo "  IdentityFile ~/.ssh/publish-key" >> ~/.ssh/config
-- git --version
-- git remote add -t gh-pages origin_MAIN git@github.com:DCSO/MISP-dockerized.git
-
-install: 
-  - PATH="$PATH:/$(whoami)/.local/bin"
-  - pip install -r requirements.txt
-  - pip install -e git+https://github.com/bitprophet/releases/#egg=releases
-  
+  - MAKEFILE: make -C ./travis
 
 script: 
-- make html
-- ghp-import -n -m "Update MISP-dockerized-docs" -p -s ./_build/html
-- ghp-import -n -m "Update MISP-dockerized-docs" -p -s -r origin_MAIN ./_build/html
+- $MAKEFILE execute-CI
 
 after_success:
   only:
   - master
   script:
-  - ./push.sh
+  - $MAKEFILE push
