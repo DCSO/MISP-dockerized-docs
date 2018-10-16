@@ -7,9 +7,9 @@ git:
 
 
 env:
-#   global:
+   global:
 #   - secure: "PASTE ENCRYPTED RESULT HERE"
-  - MAKEFILE: make -C ./travis
+    - MAKEFILE="make -C .travis/"
 
 script: 
 - $MAKEFILE execute-CI
