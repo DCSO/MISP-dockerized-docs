@@ -130,8 +130,7 @@
 <li class="toctree-l3"><a class="reference internal" href="dockerized_logging.html#show-logs-with-syslog-forwarding">Show logs with syslog forwarding</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="redis_maintenance.html">Redis Maintenance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="docker/docker_cmd.html">Help</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docker/docker_cmd.html">Basic Docker Commands &amp; Basic Docker Help</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="docker/docker_cmd.html#make-docker-autostart-at-startup">Make Docker Autostart at Startup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="docker/docker_cmd.html#delete-the-repository">Delete the Repository</a></li>
 <li class="toctree-l3"><a class="reference internal" href="docker/docker_cmd.html#rebuild-from-backup">Rebuild from Backup</a></li>
@@ -156,6 +155,7 @@
 <li class="toctree-l3"><a class="reference internal" href="docker/docker_daemon.html#sources">Sources</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="redis_maintenance.html">Redis Maintenance</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../changelogs/index.html">Changelogs</a><ul>
@@ -251,14 +251,57 @@
 <p>Best practices for effectively managing an MISP-dockerized Environment.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="dockerized_upgrading.html">Upgrading MISP-dockerized</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dockerized_backup-restore.html">Backup and Recovery of  MISP-dockerized</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dockerized_logging.html">Logging mechanism of  MISP-dockerized</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dockerized_upgrading.html">Upgrading MISP-dockerized</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dockerized_upgrading.html#advice">Advice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dockerized_upgrading.html#basic-instructions">Basic instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dockerized_upgrading.html#from-v0-3-4-beta-to-v1-0-0">From v0.3.4-beta to v1.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dockerized_upgrading.html#from-v0-3-3-beta-to-v0-3-4-beta">From v0.3.3-beta to v0.3.4-beta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dockerized_upgrading.html#from-v0-3-2-beta-to-v0-3-3-beta">From v0.3.2-beta to v0.3.3-beta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dockerized_upgrading.html#from-v0-3-1-beta-to-v0-3-2-beta">From v0.3.1-beta to v0.3.2-beta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dockerized_upgrading.html#from-v0-3-0-beta-to-v0-3-1-beta">From v0.3.0-beta to v0.3.1-beta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dockerized_upgrading.html#from-v0-2-0-beta-to-v0-3-0-beta">From v0.2.0-beta to v0.3.0-beta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dockerized_upgrading.html#from-v2-4-88-beta-3-to-v0-2-0-beta">From v2.4.88-beta.3 to v0.2.0-beta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dockerized_upgrading.html#from-v2-4-88-beta-2-to-v2-4-88-beta-3">From v2.4.88-beta.2 to v2.4.88-beta.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dockerized_upgrading.html#from-v2-4-88-beta-1-to-v2-4-88-beta-2">From v2.4.88-beta.1 to v2.4.88-beta.2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dockerized_backup-restore.html">Backup and Recovery of  MISP-dockerized</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dockerized_backup-restore.html#backup">Backup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dockerized_backup-restore.html#restore">Restore</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dockerized_logging.html">Logging mechanism of  MISP-dockerized</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dockerized_logging.html#which-log-files-are-relevant-for-troubleshooting">Which log files are relevant for troubleshooting?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dockerized_logging.html#show-logs-with-docker-logs-container-name">Show logs with <cite>docker logs &lt;container_name&gt;</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dockerized_logging.html#show-logs-with-syslog-forwarding">Show logs with syslog forwarding</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docker/docker_cmd.html">Basic Docker Commands &amp; Basic Docker Help</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docker/docker_cmd.html#make-docker-autostart-at-startup">Make Docker Autostart at Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docker/docker_cmd.html#delete-the-repository">Delete the Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docker/docker_cmd.html#rebuild-from-backup">Rebuild from Backup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docker/docker_cmd.html#access-the-container">Access the Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docker/docker_cmd.html#usefull-commands">Usefull Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docker/docker_proxy.html">Configure Docker to use a proxy server</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docker/docker_proxy.html#configure-the-docker-client">Configure the Docker client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docker/docker_proxy.html#use-environment-variables">Use environment variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docker/docker_proxy.html#sources">Sources:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docker/docker_network.html">Docker Network Help</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docker/docker_network.html#stopping-automatic-network-interface-renaming-on-docker-host">Stopping Automatic Network Interface Renaming on Docker Host</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docker/docker_network.html#example-for-a-docker-network-configuration">Example for a Docker Network Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docker/docker_network.html#sources">Sources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docker/docker_daemon.html">Tips for Docker Daemon Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docker/docker_daemon.html#example-of-etc-docker-daemon-json">Example of <cite>/etc/docker/daemon.json</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="docker/docker_daemon.html#sources">Sources</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="redis_maintenance.html">Redis Maintenance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docker/docker_cmd.html">Help</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docker/docker_proxy.html">Configure Docker to use a proxy server</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docker/docker_network.html">Docker Network Help</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docker/docker_daemon.html">Tips for Docker Daemon Configuration</a></li>
 </ul>
 </div>
 </div>

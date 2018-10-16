@@ -129,8 +129,7 @@
 <li class="toctree-l3"><a class="reference internal" href="admin/dockerized_logging.html#show-logs-with-syslog-forwarding">Show logs with syslog forwarding</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="admin/redis_maintenance.html">Redis Maintenance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin/docker/docker_cmd.html">Help</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="admin/docker/docker_cmd.html">Basic Docker Commands &amp; Basic Docker Help</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="admin/docker/docker_cmd.html#make-docker-autostart-at-startup">Make Docker Autostart at Startup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="admin/docker/docker_cmd.html#delete-the-repository">Delete the Repository</a></li>
 <li class="toctree-l3"><a class="reference internal" href="admin/docker/docker_cmd.html#rebuild-from-backup">Rebuild from Backup</a></li>
@@ -155,6 +154,7 @@
 <li class="toctree-l3"><a class="reference internal" href="admin/docker/docker_daemon.html#sources">Sources</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="admin/redis_maintenance.html">Redis Maintenance</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="changelogs/index.html">Changelogs</a><ul>
@@ -263,11 +263,11 @@
 <li class="toctree-l2"><a class="reference internal" href="admin/dockerized_upgrading.html">Upgrading MISP-dockerized</a></li>
 <li class="toctree-l2"><a class="reference internal" href="admin/dockerized_backup-restore.html">Backup and Recovery of  MISP-dockerized</a></li>
 <li class="toctree-l2"><a class="reference internal" href="admin/dockerized_logging.html">Logging mechanism of  MISP-dockerized</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin/redis_maintenance.html">Redis Maintenance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin/docker/docker_cmd.html">Help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin/docker/docker_cmd.html">Basic Docker Commands &amp; Basic Docker Help</a></li>
 <li class="toctree-l2"><a class="reference internal" href="admin/docker/docker_proxy.html">Configure Docker to use a proxy server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="admin/docker/docker_network.html">Docker Network Help</a></li>
 <li class="toctree-l2"><a class="reference internal" href="admin/docker/docker_daemon.html">Tips for Docker Daemon Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin/redis_maintenance.html">Redis Maintenance</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="changelogs/index.html">Changelogs</a><ul>
@@ -295,11 +295,11 @@
 <table border="1" class="colwidths-given docutils" id="id1">
 <caption><span class="caption-text">Docker Container Information</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
+<col width="11%" />
+<col width="22%" />
+<col width="22%" />
+<col width="22%" />
+<col width="22%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Name</th>
@@ -310,7 +310,7 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>misp-dockerized-server</td>
+<tr class="row-even"><td>MISP-dockerized-server</td>
 <td><a class="reference external" href="https://travis-ci.org/DCSO/MISP-dockerized-server"><img alt="MISP-dockerized-server" class="align-middle" src="https://travis-ci.org/DCSO/MISP-dockerized-server.svg?branch=master" /></a></td>
 <td><a class="reference external" href="https://microbadger.com/images/dcso/misp-dockerized-server"><div align="middle" class="align-middle"><img alt="MISP-dockerized-server-image" src="https://images.microbadger.com/badges/image/dcso/misp-dockerized-server.svg" /></div>
 </a></td>
@@ -319,7 +319,7 @@
 <td><a class="reference external" href="https://microbadger.com/images/dcso/misp-dockerized-server"><div align="middle" class="align-middle"><img alt="MISP-dockerized-server-commit" src="https://images.microbadger.com/badges/commit/dcso/misp-dockerized-server.svg" /></div>
 </a></td>
 </tr>
-<tr class="row-odd"><td>misp-dockerized-proxy</td>
+<tr class="row-odd"><td>MISP-dockerized-proxy</td>
 <td><a class="reference external" href="https://travis-ci.org/DCSO/MISP-dockerized-proxy"><img alt="MISP-dockerized-proxy" class="align-middle" src="https://travis-ci.org/DCSO/MISP-dockerized-proxy.svg?branch=master" /></a></td>
 <td><a class="reference external" href="https://microbadger.com/images/dcso/misp-dockerized-proxy"><div align="middle" class="align-middle"><img alt="MISP-dockerized-proxy-image" src="https://images.microbadger.com/badges/image/dcso/misp-dockerized-proxy.svg" /></div>
 </a></td>
@@ -328,7 +328,7 @@
 <td><a class="reference external" href="https://microbadger.com/images/dcso/misp-dockerized-proxy"><div align="middle" class="align-middle"><img alt="MISP-dockerized-proxy-commit" src="https://images.microbadger.com/badges/commit/dcso/misp-dockerized-proxy.svg" /></div>
 </a></td>
 </tr>
-<tr class="row-even"><td>misp-dockerized-robot</td>
+<tr class="row-even"><td>MISP-dockerized-robot</td>
 <td><a class="reference external" href="https://travis-ci.org/DCSO/MISP-dockerized-robot"><img alt="MISP-dockerized-robot" class="align-middle" src="https://travis-ci.org/DCSO/MISP-dockerized-robot.svg?branch=master" /></a></td>
 <td><a class="reference external" href="https://microbadger.com/images/dcso/misp-dockerized-robot"><div align="middle" class="align-middle"><img alt="MISP-dockerized-robot-image" src="https://images.microbadger.com/badges/image/dcso/misp-dockerized-robot.svg" /></div>
 </a></td>
@@ -337,7 +337,7 @@
 <td><a class="reference external" href="https://microbadger.com/images/dcso/misp-dockerized-robot"><div align="middle" class="align-middle"><img alt="MISP-dockerized-robot-commit" src="https://images.microbadger.com/badges/commit/dcso/misp-dockerized-robot.svg" /></div>
 </a></td>
 </tr>
-<tr class="row-odd"><td>misp-dockerized-postfix</td>
+<tr class="row-odd"><td>MISP-dockerized-postfix</td>
 <td><a class="reference external" href="https://travis-ci.org/DCSO/MISP-dockerized-postfix"><img alt="MISP-dockerized-postfix" class="align-middle" src="https://travis-ci.org/DCSO/MISP-dockerized-postfix.svg?branch=master" /></a></td>
 <td><a class="reference external" href="https://microbadger.com/images/dcso/misp-dockerized-postfix"><div align="middle" class="align-middle"><img alt="MISP-dockerized-postfix-image" src="https://images.microbadger.com/badges/image/dcso/misp-dockerized-postfix.svg" /></div>
 </a></td>
@@ -346,13 +346,13 @@
 <td><a class="reference external" href="https://microbadger.com/images/dcso/misp-dockerized-postfix"><div align="middle" class="align-middle"><img alt="MISP-dockerized-postfix-commit" src="https://images.microbadger.com/badges/commit/dcso/misp-dockerized-postfix.svg" /></div>
 </a></td>
 </tr>
-<tr class="row-even"><td>misp-dockerized-modules</td>
-<td><a class="reference external" href="https://travis-ci.org/DCSO/MISP-dockerized-modules"><img alt="MISP-dockerized-modules" class="align-middle" src="https://travis-ci.org/DCSO/MISP-dockerized-modules.svg?branch=master" /></a></td>
-<td><a class="reference external" href="https://microbadger.com/images/dcso/misp-dockerized-modules"><div align="middle" class="align-middle"><img alt="MISP-dockerized-modules-image" src="https://images.microbadger.com/badges/image/dcso/misp-dockerized-modules.svg" /></div>
+<tr class="row-even"><td>MISP-dockerized-modules</td>
+<td><a class="reference external" href="https://travis-ci.org/DCSO/MISP-dockerized-misp-modules"><img alt="MISP-dockerized-modules" class="align-middle" src="https://travis-ci.org/DCSO/MISP-dockerized-misp-modules.svg?branch=master" /></a></td>
+<td><a class="reference external" href="https://microbadger.com/images/dcso/misp-dockerized-misp-modules"><div align="middle" class="align-middle"><img alt="MISP-dockerized-modules-image" src="https://images.microbadger.com/badges/image/dcso/misp-dockerized-misp-modules.svg" /></div>
 </a></td>
-<td><a class="reference external" href="https://microbadger.com/images/dcso/misp-dockerized-modules"><div align="middle" class="align-middle"><img alt="MISP-dockerized-modules-version" src="https://images.microbadger.com/badges/version/dcso/misp-dockerized-modules.svg" /></div>
+<td><a class="reference external" href="https://microbadger.com/images/dcso/misp-dockerized-misp-modules"><div align="middle" class="align-middle"><img alt="MISP-dockerized-modules-version" src="https://images.microbadger.com/badges/version/dcso/misp-dockerized-misp-modules.svg" /></div>
 </a></td>
-<td><a class="reference external" href="https://microbadger.com/images/dcso/misp-dockerized-modules"><div align="middle" class="align-middle"><img alt="MISP-dockerized-modules-commit" src="https://images.microbadger.com/badges/commit/dcso/misp-dockerized-modules.svg" /></div>
+<td><a class="reference external" href="https://microbadger.com/images/dcso/misp-dockerized-misp-modules"><div align="middle" class="align-middle"><img alt="MISP-dockerized-modules-commit" src="https://images.microbadger.com/badges/commit/dcso/misp-dockerized-misp-modules.svg" /></div>
 </a></td>
 </tr>
 </tbody>

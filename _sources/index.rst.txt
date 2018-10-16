@@ -109,34 +109,34 @@ Docker Container Information
     :align: middle
 
 
-.. |MISP-dockerized-modules| image:: https://travis-ci.org/DCSO/MISP-dockerized-modules.svg?branch=master
-    :target: https://travis-ci.org/DCSO/MISP-dockerized-modules
+.. |MISP-dockerized-modules| image:: https://travis-ci.org/DCSO/MISP-dockerized-misp-modules.svg?branch=master
+    :target: https://travis-ci.org/DCSO/MISP-dockerized-misp-modules
     :align: middle
 
-.. |MISP-dockerized-modules-image| image:: https://images.microbadger.com/badges/image/dcso/misp-dockerized-modules.svg
-    :target: https://microbadger.com/images/dcso/misp-dockerized-modules
+.. |MISP-dockerized-modules-image| image:: https://images.microbadger.com/badges/image/dcso/misp-dockerized-misp-modules.svg
+    :target: https://microbadger.com/images/dcso/misp-dockerized-misp-modules
     :scale: 100%
     :align: middle
 
-.. |MISP-dockerized-modules-version| image:: https://images.microbadger.com/badges/version/dcso/misp-dockerized-modules.svg
-    :target: https://microbadger.com/images/dcso/misp-dockerized-modules
+.. |MISP-dockerized-modules-version| image:: https://images.microbadger.com/badges/version/dcso/misp-dockerized-misp-modules.svg
+    :target: https://microbadger.com/images/dcso/misp-dockerized-misp-modules
     :align: middle
 
-.. |MISP-dockerized-modules-commit| image:: https://images.microbadger.com/badges/commit/dcso/misp-dockerized-modules.svg
-    :target: https://microbadger.com/images/dcso/misp-dockerized-modules
+.. |MISP-dockerized-modules-commit| image:: https://images.microbadger.com/badges/commit/dcso/misp-dockerized-misp-modules.svg
+    :target: https://microbadger.com/images/dcso/misp-dockerized-misp-modules
     :align: middle
 
 
 
 .. csv-table:: Docker Container Information
    :header: "Name", "Travis", "Docker size & layers", "Latest Docker version", "Commit"
-   :widths: 20, 20, 20, 20, 20
+   :widths: 10, 20, 20, 20, 20
 
-   "misp-dockerized-server", |MISP-dockerized-server|, |MISP-dockerized-server-image|,|MISP-dockerized-server-version|,|MISP-dockerized-server-commit|
-   "misp-dockerized-proxy", |MISP-dockerized-proxy|, |MISP-dockerized-proxy-image|,|MISP-dockerized-proxy-version|,|MISP-dockerized-proxy-commit|
-   "misp-dockerized-robot", |MISP-dockerized-robot|, |MISP-dockerized-robot-image|,|MISP-dockerized-robot-version|,|MISP-dockerized-robot-commit|
-   "misp-dockerized-postfix", |MISP-dockerized-postfix|, |MISP-dockerized-postfix-image|,|MISP-dockerized-postfix-version|,|MISP-dockerized-postfix-commit|
-   "misp-dockerized-modules", |MISP-dockerized-modules|, |MISP-dockerized-modules-image|,|MISP-dockerized-modules-version|,|MISP-dockerized-modules-commit|
+   "MISP-dockerized-server", |MISP-dockerized-server|, |MISP-dockerized-server-image|,|MISP-dockerized-server-version|,|MISP-dockerized-server-commit|
+   "MISP-dockerized-proxy", |MISP-dockerized-proxy|, |MISP-dockerized-proxy-image|,|MISP-dockerized-proxy-version|,|MISP-dockerized-proxy-commit|
+   "MISP-dockerized-robot", |MISP-dockerized-robot|, |MISP-dockerized-robot-image|,|MISP-dockerized-robot-version|,|MISP-dockerized-robot-commit|
+   "MISP-dockerized-postfix", |MISP-dockerized-postfix|, |MISP-dockerized-postfix-image|,|MISP-dockerized-postfix-version|,|MISP-dockerized-postfix-commit|
+   "MISP-dockerized-modules", |MISP-dockerized-modules|, |MISP-dockerized-modules-image|,|MISP-dockerized-modules-version|,|MISP-dockerized-modules-commit|
 
 
 .. Indices and tables
