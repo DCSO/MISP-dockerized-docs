@@ -30,7 +30,6 @@ Project Information
 
 .. |MISP-dockerized| image:: https://travis-ci.org/DCSO/MISP-dockerized.svg?branch=master
     :target: https://travis-ci.org/DCSO/MISP-dockerized  
-    :scale: 100%
     :align: middle
 
 
