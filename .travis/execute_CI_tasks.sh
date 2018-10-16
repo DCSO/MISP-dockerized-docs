@@ -16,6 +16,9 @@ echo "#########################################################"
 
 echo "Host github.com" >> ~/.ssh/config
 echo "  IdentityFile ~/.ssh/publish-key" >> ~/.ssh/config
+echo "  StrictHostKeyChecking no" >> ~/.ssh/config
+echo "  UserKnownHostsFile /dev/null" >> ~/.ssh/config
+
 git --version
 git remote add -t gh-pages origin_MAIN git@github.com:DCSO/MISP-dockerized.git
 
@@ -52,7 +55,7 @@ echo -n "try to upload..."
 #   -s, --shell           Use the shell when invoking Git. [False]
 #   -l, --follow-links    Follow symlinks when adding files. [False]
 #   -h, --help            show this help message and exit
-ghp-import -n -m "Update MISP-dockerized-docs" -p ../_build/html
+ghp-import -n -m "Update MISP-dockerized-docs" -f -p ../_build/html
 echo "finished."
 #ghp-import -n -m "Update MISP-dockerized-docs" -p -s -r origin_MAIN ../_build/html
 echo "#########################################################"

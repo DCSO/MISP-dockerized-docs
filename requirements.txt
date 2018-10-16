@@ -1,5 +1,6 @@
 sphinx 
 sphinx_rtd_theme
+sphinxcontrib-httpdomain
 recommonmark
 # for https://pypi.org/project/ghp-import/
 ghp-import
