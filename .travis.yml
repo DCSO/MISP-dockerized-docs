@@ -18,7 +18,7 @@ before_install:
 - echo "Host github.com" >> ~/.ssh/config
 - echo "  IdentityFile ~/.ssh/publish-key" >> ~/.ssh/config
 - git --version
-- git remote set-url origin_MAIN git@github.com:DCSO/MISP-dockerized.git
+- git remote add -t gh-pages origin_MAIN git@github.com:DCSO/MISP-dockerized.git
 
 install: 
   - PATH="$PATH:/$(whoami)/.local/bin"
