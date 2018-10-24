@@ -25,8 +25,8 @@ Welcome to MISP-dockerized's |version| documentation!
 
 
 
-Project Information
--------------------------
+MISP-dockerized Main Project Information
+----------------------------------------
 
 .. |MISP-dockerized| image:: https://travis-ci.org/DCSO/MISP-dockerized.svg?branch=master
     :target: https://travis-ci.org/DCSO/MISP-dockerized  
@@ -127,16 +127,73 @@ Docker Container Information
     :align: middle
 
 
+.. list-table:: Docker Container Travis Information
+   :header-rows: 1
+   :align: left
 
-.. csv-table:: Docker Container Information
-   :header: "Name", "Travis", "Docker size & layers", "Latest Docker version", "Commit"
-   :widths: 10, 20, 20, 20, 20
+   * - Name
+     - Travis
+   * - MISP-dockerized-server
+     - |MISP-dockerized-server|
+   * - MISP-dockerized-proxy
+     - |MISP-dockerized-proxy|
+   * - MISP-dockerized-postfix     
+     - |MISP-dockerized-postfix|
+   * - MISP-dockerized-modules     
+     - |MISP-dockerized-modules|
+   * - MISP-dockerized-robot
+     - |MISP-dockerized-robot|
 
-   "MISP-dockerized-server", |MISP-dockerized-server|, |MISP-dockerized-server-image|,|MISP-dockerized-server-version|,|MISP-dockerized-server-commit|
-   "MISP-dockerized-proxy", |MISP-dockerized-proxy|, |MISP-dockerized-proxy-image|,|MISP-dockerized-proxy-version|,|MISP-dockerized-proxy-commit|
-   "MISP-dockerized-robot", |MISP-dockerized-robot|, |MISP-dockerized-robot-image|,|MISP-dockerized-robot-version|,|MISP-dockerized-robot-commit|
-   "MISP-dockerized-postfix", |MISP-dockerized-postfix|, |MISP-dockerized-postfix-image|,|MISP-dockerized-postfix-version|,|MISP-dockerized-postfix-commit|
-   "MISP-dockerized-modules", |MISP-dockerized-modules|, |MISP-dockerized-modules-image|,|MISP-dockerized-modules-version|,|MISP-dockerized-modules-commit|
+.. list-table:: Docker Container Latest Image Information
+   :header-rows: 1
+   :align: left
+
+   * - Name
+     - Latest Image
+   * - MISP-dockerized-server
+     - |MISP-dockerized-server-image|
+   * - MISP-dockerized-proxy
+     - |MISP-dockerized-proxy-image|
+   * - MISP-dockerized-postfix     
+     - |MISP-dockerized-postfix-image|
+   * - MISP-dockerized-modules     
+     - |MISP-dockerized-modules-image|
+   * - MISP-dockerized-robot
+     - |MISP-dockerized-robot-image|
+
+.. list-table:: Docker Container Latest Version Information
+   :header-rows: 1
+   :align: left
+
+   * - Name
+     - Latest Version
+   * - MISP-dockerized-server
+     - |MISP-dockerized-server-version|
+   * - MISP-dockerized-proxy
+     - |MISP-dockerized-proxy-version|
+   * - MISP-dockerized-postfix     
+     - |MISP-dockerized-postfix-version|
+   * - MISP-dockerized-modules     
+     - |MISP-dockerized-modules-version|
+   * - MISP-dockerized-robot
+     - |MISP-dockerized-robot-version|
+
+.. list-table:: Docker Container Latest Commit Information
+   :header-rows: 1
+   :align: left
+
+   * - Name
+     - Latest Commit
+   * - MISP-dockerized-server
+     - |MISP-dockerized-server-commit|
+   * - MISP-dockerized-proxy
+     - |MISP-dockerized-proxy-commit|
+   * - MISP-dockerized-postfix     
+     - |MISP-dockerized-postfix-commit|
+   * - MISP-dockerized-modules     
+     - |MISP-dockerized-modules-commit|
+   * - MISP-dockerized-robot
+     - |MISP-dockerized-robot-commit|
 
 
 .. Indices and tables
