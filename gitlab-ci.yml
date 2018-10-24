@@ -1,0 +1,14 @@
+image: python:alpine
+
+variables:
+  # The following variables are setup via gitlab project group:
+  # SSH_PRIVATE_KEY
+  - MAKEFILE="make -C .travis/"
+
+build_documentation:
+  only:
+    - master
+  before_script:
+    - $MAKEFILE execute-CI
+  script:
+    - $MAKEFILE push
