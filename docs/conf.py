@@ -271,7 +271,9 @@ intersphinx_mapping = {'https://docs.python.org/': None}
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
 
-# -- Options for Releases
+
+# -- Options for Releases --------------------------------------------------
+
 #releases_release_uri = "https://github.com/DCSO/MISP-dockerized/tree/%s"
 #releases_issue_uri = "https://github.com/DCSO/MISP-dockerized/issues/%s"
 # OR
@@ -293,3 +295,14 @@ releases_github_path = 'DCSO/MISP-dockerized'
 #releases_document_name = "CHANGES"
 
 releases_document_name = ['changelogs/main', 'changelogs/misp-modules', 'changelogs/misp-postfix', 'changelogs/misp-proxy', 'changelogs/misp-robot', 'changelogs/misp-server' ]
+
+
+# --- Options for sphinx-versioning --------------------------------------------------
+#   Show a warning banner. Enables the Banner Message feature.
+#    This setting may also be specified in your conf.py file. It must be a boolean:
+scv_show_banner = True
+
+# SCVersioning.
+scv_banner_greatest_tag = True
+scv_grm_exclude = ('.gitignore', '.nojekyll', 'README.rst')
+scv_sort = ('semver', 'time')

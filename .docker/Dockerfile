@@ -2,7 +2,7 @@ FROM python
 
 #     Variables for Labels:
 ARG VENDOR="DCSO GmbH"
-ARG COMPONENT="proxy"
+ARG COMPONENT="docs"
 ARG BUILD_DATE
 ARG GIT_REPO
 ARG VCS_REF

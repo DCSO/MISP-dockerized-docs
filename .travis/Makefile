@@ -40,5 +40,8 @@ build-html-docker:
 	docker run --rm -v $(CURDIR)/../:/data dockerhub.dcso.de/sphinx make clean
 	docker run --rm -v $(CURDIR)/../:/data dockerhub.dcso.de/sphinx
 	
+test-start:
+	docker run --rm -ti -v $(CURDIR)/../:/data python:alpine sh
+
 execute-CI:
 	./execute_CI_tasks.sh
