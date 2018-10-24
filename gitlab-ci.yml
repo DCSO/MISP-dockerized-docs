@@ -1,11 +1,22 @@
 image: python:alpine
 
+stages:
+- test
+- deploy
+
 variables:
   # The following variables are setup via gitlab project group:
   # SSH_PRIVATE_KEY
   - MAKEFILE="make -C .travis/"
 
-build_documentation:
+build_only:
+  stage: test
+  before_script:
+    - apk add --no-cache make
+    - $MAKEFILE execute-CI
+
+build_and:publish:
+  stage: deploy
   only:
     - master
   before_script:
