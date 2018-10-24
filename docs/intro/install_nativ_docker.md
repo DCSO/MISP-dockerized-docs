@@ -2,7 +2,7 @@
 ### 1. Clone Repository
 After cloning the repository change the branch to the required, for example:
 ```
-$> git clone https://github.com/DCSO/MISP-dockerized.git && git checkout tags/2.4.88-beta.3
+$> git clone https://github.com/DCSO/MISP-dockerized.git
 ```
 
 ### 2. Configure TLS Certificates and Diffie-Hellmann File (optional)
@@ -22,7 +22,7 @@ If all prerequsites are fulfilled, you can deploy them as follows:
 ### 3. Start Docker Environment
 To start the deployment and build the configuration files and configure the whole environment, simply enter:
 ```
-$> make start
+$> make install
 ```
 We decided, that build config and deploy environment can be done in one step.
 
