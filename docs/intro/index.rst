@@ -7,7 +7,7 @@ Discover if `MISP-dockerized` is right for your community / company.
    :maxdepth: 2
    
    .. features
-   .. requirements/index
+   requirements/index
    install_nativ_docker
    .. install_kubernetes
    .. install_openshift

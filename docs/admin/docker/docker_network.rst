@@ -1,5 +1,5 @@
-Docker Network Help
-===================
+Docker Container Network Tips
+===================================
 
 Stopping Automatic Network Interface Renaming on Docker Host
 ------------------------------------------------------------

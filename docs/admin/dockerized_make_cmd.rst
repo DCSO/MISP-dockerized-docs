@@ -1,10 +1,8 @@
-# Docker Basic Commands & Help
+Available `make` Commands
+#########################
 
-### Make Docker Autostart at Startup
-```
-$ systemctl enable docker.service
-```
-### Delete the Repository
+Delete the Repository
+*********************
 To delete everything e.g. to start from scratch you can use this:
 ```
 &> make delete
@@ -13,17 +11,26 @@ To delete everything e.g. to start from scratch you can use this:
 **Warning**
 `make delete` delete all volumes, leading to a loss of all your data. Make sure you have saved everything before you run it.
 
-### Rebuild from Backup
-If you want to start from scratch or reinitialse your MISP instance, make sure you have delete everything. Clone the repository and start the container deployment with `make start`. After that restore all your volumes as described at `Backup and Recovery`.
+Rebuild from Backup
+*******************
+If you want to start from scratch or reinitialse your MISP instance:
+```
+&> make backup-all
+&> make delete
+&> make install
+&> make restore-all
+```
 
-### Access the Container
+
+Access the Container
+********************
 To access the container e.g. to change MISP config.php or proxy config, you can use:
 ```
 docker exec -it dcso/[container] bash
 ```
-Container variants: `misp-robot` `misp-server` `misp-proxy` (for the ubuntu version only)
+Only available for ubuntu or debian container. It isn't available for alpine container such as misp-proxy or misp-postfix.
 
-For the misp-proxy if you have alpine version:
+For the alpine version:
 ```
 docker exec -it dcso/misp-proxy sh
 ```

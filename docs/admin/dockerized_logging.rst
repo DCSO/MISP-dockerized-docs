@@ -1,4 +1,4 @@
-Logging mechanism of  MISP-dockerized
+Logging mechanism of MISP-dockerized
 #####################################
 
 

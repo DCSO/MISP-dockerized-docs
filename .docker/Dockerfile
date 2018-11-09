@@ -1,4 +1,4 @@
-FROM python
+FROM python:alpine
 
 #     Variables for Labels:
 ARG VENDOR="DCSO GmbH"
@@ -42,6 +42,7 @@ LABEL   org.opencontainers.image.created="${BUILD_DATE}" \
 RUN mkdir /data/
 WORKDIR /data/
 COPY requirements.txt /data/requirements.txt
+RUN apk add --no-cache git make
 RUN PATH="$PATH:/$(whoami)/.local/bin"
 RUN pip install --user -r requirements.txt
 RUN pip install -e git+https://github.com/bitprophet/releases/#egg=releases

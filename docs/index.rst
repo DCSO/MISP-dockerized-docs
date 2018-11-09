@@ -17,6 +17,7 @@ Welcome to MISP-dockerized's |version| documentation!
    :maxdepth: 2    
     
    intro/index
+   container-information/index
    admin/index
    .. design/index
    .. contribute/index
@@ -36,6 +37,12 @@ MISP-dockerized Main Project Information
 +---------------+-------------------+
 | Travis Master | |MISP-dockerized| |
 +---------------+-------------------+
+
+
+Available MISP Version's
+------------------------
+
+See https://dcso.github.io/MISP-dockerized-docs/container-information/MISP-dockerized-server.html for more details like available and supported tags.
 
 
 Docker Container Information
@@ -144,56 +151,41 @@ Docker Container Information
    * - MISP-dockerized-robot
      - |MISP-dockerized-robot|
 
-.. list-table:: Docker Container Latest Image Information
-   :header-rows: 1
-   :align: left
 
-   * - Name
-     - Latest Image
-   * - MISP-dockerized-server
-     - |MISP-dockerized-server-image|
-   * - MISP-dockerized-proxy
-     - |MISP-dockerized-proxy-image|
-   * - MISP-dockerized-postfix     
-     - |MISP-dockerized-postfix-image|
-   * - MISP-dockerized-modules     
-     - |MISP-dockerized-modules-image|
-   * - MISP-dockerized-robot
-     - |MISP-dockerized-robot-image|
 
-.. list-table:: Docker Container Latest Version Information
-   :header-rows: 1
-   :align: left
+What's missing
+==============
+Currently the following things are not yet implemented but are planned:
 
-   * - Name
-     - Latest Version
-   * - MISP-dockerized-server
-     - |MISP-dockerized-server-version|
-   * - MISP-dockerized-proxy
-     - |MISP-dockerized-proxy-version|
-   * - MISP-dockerized-postfix     
-     - |MISP-dockerized-postfix-version|
-   * - MISP-dockerized-modules     
-     - |MISP-dockerized-modules-version|
-   * - MISP-dockerized-robot
-     - |MISP-dockerized-robot-version|
+* Wiki
+* FAQ's
 
-.. list-table:: Docker Container Latest Commit Information
-   :header-rows: 1
-   :align: left
 
-   * - Name
-     - Latest Commit
-   * - MISP-dockerized-server
-     - |MISP-dockerized-server-commit|
-   * - MISP-dockerized-proxy
-     - |MISP-dockerized-proxy-commit|
-   * - MISP-dockerized-postfix     
-     - |MISP-dockerized-postfix-commit|
-   * - MISP-dockerized-modules     
-     - |MISP-dockerized-modules-commit|
-   * - MISP-dockerized-robot
-     - |MISP-dockerized-robot-commit|
+Additional Informations
+=======================
+
+MariaDB and Docker
+--------------------
+
+.. seealso:: https://mariadb.com/kb/en/library/installing-and-using-mariadb-via-docker/
+             https://hub.docker.com/r/_/mariadb/
+
+MISP
+----
+
+.. seealso:: https://github.com/MISP/MISP
+             https://www.misp-project.org/
+
+
+
+We want to say Thank
+---------------------
+
+We would say thanks to the maker of:
+* Mailu
+* Mailcow
+
+We have oriented on their docker container to build our enterprise ready ones.
 
 
 .. Indices and tables

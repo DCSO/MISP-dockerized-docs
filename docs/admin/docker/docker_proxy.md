@@ -1,4 +1,4 @@
-# Configure Docker to use a proxy server
+# Docker Proxy Configuration
 
 If your container needs to use an HTTP, HTTPS, or FTP proxy server, you can configure it in different ways:
 * In Docker 17.07 and higher, you can configure the Docker client to pass proxy information to containers automatically.
