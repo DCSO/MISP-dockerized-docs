@@ -1,4 +1,4 @@
-# MISP-dockerized-misp-server
+# MISP-dockerized-server
 Since Release Candiate 0.3.0 we changed the development process from an Release Canditate change to an feature change development process.
 
 ## Changelog for feat.MDD126 - Add MISP Version 2.4.97

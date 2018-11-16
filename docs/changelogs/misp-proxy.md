@@ -1,4 +1,4 @@
-# MISP-dockerized-misp-proxy
+# MISP-dockerized-proxy
 Since Release Candiate 0.3.0 we changed the development process from an Release Canditate change to an feature change development process.
 
 

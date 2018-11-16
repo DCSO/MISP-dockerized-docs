@@ -1,7 +1,4 @@
-Changelog MISP-dockerized
-=========================
-
-
+# MISP-dockerized
 
 
 ## Changelog for Release Candidate 0.3.4

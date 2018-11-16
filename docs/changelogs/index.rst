@@ -12,3 +12,7 @@ Changelogs of MISP-dockerized repositories.
    misp-modules
    misp-postfix
    misp-robot
+
+
+.. warning::
+    Since MISP-dockerized release 0.3.5 the MISP-dockerized-postfix Container is currently not used.

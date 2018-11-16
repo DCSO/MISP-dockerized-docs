@@ -23,9 +23,9 @@ copyright = '2018, DCSO GmbH'
 author = 'DCSO GmbH'
 
 # The short X.Y version
-version = '0.3.4'
+version = '0.3.5'
 # The full version, including alpha/beta/rc tags
-release = '0.3.4-beta'
+release = '0.3.5-beta'
 
 github_doc_root = 'https://github.com/DCSO/MISP-dockerized-docs/tree/master/docs/'
 

@@ -1,15 +1,16 @@
-# MISP-dockerized-misp-postfix
+# MISP-dockerized-postfix
+
 Since Release Candiate 0.3.0 we changed the development process from an Release Canditate change to an feature change development process.
 
 `Since MISP-dockerized Version 0.3.5 Postfix container is not more used.`
 
-# Postfix Changelog for Release Candidate 0.3.0
-## Update Informations
+## Changelog for Release Candidate 0.3.0
+### Update Informations
 In this Release Candidate we add a new container with improved configurations, updated the old one for a bugfix and improved the build scripts for gitlab-ci support.
-## General Changes
+### General Changes
 We add a new container 1.0.1.
 
-## Fixes & Improvements
+### Fixes & Improvements
 - Add internal gitlab-ci support
 - 1.0.0
   - Change LABELs on 1.0.0
@@ -17,7 +18,7 @@ We add a new container 1.0.1.
   - Bugfixing syslog-ng configuration
 - Add new container 1.0.1
 
-## Detailed Changes
+### Detailed Changes
 - Add internal gitlab-ci support
   We change the shell scripts to support a second docker registry. Now the scripts look for a variable with the name `INTERNAL_REGISTRY_HOST`.  
 - 1.0.0
@@ -31,7 +32,7 @@ We add a new container 1.0.1.
     We add a new LABEL standard and prepared dockerfile for the next upgrade release.
 
 
-## Postfix Changelog for Release Candidate 0.2.0 - `New Postfix container for mail relaying`
+## Changelog for Release Candidate 0.2.0 - `New Postfix container for mail relaying`
 
 * This close ticket MDD-14 with Postfix as relay.
 * Add new Postfix container with version 1.0.0 with alpine as base
