@@ -33,7 +33,7 @@ build-docker:
 push:
 	./push.sh
 
-start:
+docker_bash:
 	docker run --rm -ti -v $(CURDIR)/../:/data dockerhub.dcso.de/sphinx bash
 
 build-html-docker:

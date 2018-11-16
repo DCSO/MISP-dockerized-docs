@@ -1,44 +1,119 @@
-*Container* Changelog MISP-dockerized-misp-postfix
-=====================================================
-
-USING: https://releases.readthedocs.io/en/latest/usage.html
+# MISP-dockerized-misp-postfix
+Since Release Candiate 0.3.0 we changed the development process from an Release Canditate change to an feature change development process.
 
 
-- :release:`2.4.0 <2018-09-13>`
-- :release:`2.3.2 <2018-09-13>`
-- :release:`2.2.3 <2018-09-13>`
-- :release:`2.1.6 <2018-09-13>`
-- :release:`2.0.5 <2018-09-13>`
-- :feature:`1780` Add context manager behavior to `~fabric.group.Group`, to
-  match the same feature in `~fabric.connection.Connection`. Feature request by
-  István Sárándi.
-- :feature:`1709` Add `Group.close <fabric.group.Group.close>` to allow closing
-  an entire group's worth of connections at once. Patch via Johannes Löthberg.
-- :bug:`-` Fix a bug preventing tab completion (using the Invoke-level
-  ``--complete`` flag) from completing task names correctly (behavior was to
-  act as if there were never any tasks present, even if there was a valid
-  fabfile nearby).
-- :bug:`1850` Skip over ``ProxyJump`` configuration directives in SSH config
-  data when they would cause self-referential ``RecursionError`` (e.g. due to
-  wildcard-using ``Host`` stanzas which include the jump server itself).
-  Reported by Chris Adams.
-- :bug:`-` Some debug logging was reusing Invoke's logger object, generating
-  log messages "named" after ``invoke`` instead of ``fabric``. This has been
-  fixed by using Fabric's own logger everywhere instead.
-- :bug:`1852` Grant internal `~fabric.connection.Connection` objects created
-  during ``ProxyJump`` based gateways/proxies a copy of the outer
-  ``Connection``'s configuration object. This was not previously done, which
-  among other things meant one could not fully disable SSH config file loading
-  (as the internal ``Connection`` objects would revert to the default
-  behavior). Thanks to Chris Adams for the report.
-- :release:`2.3.1 <2018-08-08>`
-- :bug:`- (2.3+)` Update the new functionality added for :issue:`1826` so it
-  uses ``export``; without this, nontrivial shell invocations like ``command1
-  && command2`` end up only applying the env vars to the first command.
-- :release:`2.3.0 <2018-08-08>`
-- :feature:`1826` Add a new Boolean configuration and
-  `~fabric.connection.Connection` parameter, ``inline_ssh_env``, which (when
-  set to ``True``) changes how Fabric submits shell environment variables to
-  remote servers; this feature helps work around commonly restrictive
-  ``AcceptEnv`` settings on SSH servers. Thanks to Massimiliano Torromeo and
-  Max Arnold for the reports.
+# Postfix Changelog for Release Candidate 0.3.0
+## Update Informations
+In this Release Candidate we add a new container with improved configurations, updated the old one for a bugfix and improved the build scripts for gitlab-ci support.
+## General Changes
+We add a new container 1.0.1.
+
+## Fixes & Improvements
+- Add internal gitlab-ci support
+- 1.0.0
+  - Change LABELs on 1.0.0
+  - Remove debugging mode from entrypoint file
+  - Bugfixing syslog-ng configuration
+- Add new container 1.0.1
+
+## Detailed Changes
+- Add internal gitlab-ci support
+  We change the shell scripts to support a second docker registry. Now the scripts look for a variable with the name `INTERNAL_REGISTRY_HOST`.  
+- 1.0.0
+  - Change LABELs on 1.0.0
+    We made the LABELs more variable.
+  - Remove debugging mode from entrypoint file
+    We changed `set -exv` to `set -e`
+  - Bugfixing syslog-ng configuration
+    We fixed mistakes with semicolons.
+- Add new container 1.0.1
+    We add a new LABEL standard and prepared dockerfile for the next upgrade release.
+
+
+## Postfix Changelog for Release Candidate 0.2.0 - `New Postfix container for mail relaying`
+
+* This close ticket MDD-14 with Postfix as relay.
+* Add new Postfix container with version 1.0.0 with alpine as base
+* Delete Hub.docker.com Hooks
+
+### Environment Variables
+
+| Variable | Default Value | Description|
+|---|---|---|
+HOSTNAME|misp|Hostname for the Mailserver | 
+|DOMAIN|example.com| Domain for Outgoing Mail |
+|SENDER_ADDRESS|admin@example.com|Sender for local postfix outgoing Mails|
+|RELAYHOST|smtp.example.com:587|Relahost to Send Mails|
+|RELAY_USER|misp|Username for the authentication on the Relayhost|
+|RELAY_PASSWORD|ChangeMe| Password for the authentication on the Relayhost|
+|DOCKER_NETWORK|192.168.47.0/28|Restrict access to postfix to this IP-range|
+|DEBUG_PEER|none| If you need debugging log for a specified host set this to the domain, FQDN or ip address|
+
+### Using with docker-compose
+``` bash
+services:
+  ### Postfix ###
+  misp-postfix:
+    image: dcso/misp-dockerized-postfix:${POSTFIX_CONTAINER_TAG}
+    container_name: misp-postfix
+    restart: on-failure
+    environment:
+      HOSTNAME: ${HOSTNAME}
+      DOMAIN: ${DOMAIN}
+      SENDER_ADDRESS: ${SENDER_ADDRESS}
+      RELAYHOST: ${RELAYHOST}
+      RELAY_USER: ${RELAY_USER}
+      RELAY_PASSWORD: ${RELAY_PASSWORD}
+      DOCKER_NETWORK: ${DOCKER_NETWORK}
+      DEBUG_PEER: ${DEBUG_PEER}
+    networks:
+      misp-backend:
+        aliases:
+          - misp-postfix
+
+```
+
+#### .env file for docker-compose variable
+If you want to use the postfix container with variables you require a .env file with the following content:
+``` bash
+#=================================================
+# ------------------------------
+# Hostname
+# ------------------------------
+HOSTNAME=misp.example.com
+# ------------------------------
+# Network Configuration
+# ------------------------------
+DOCKER_NETWORK="192.168.47.0/28"
+BRIDGE_NAME="mispbr0"
+# ------------------------------
+# Container Configuration
+# ------------------------------
+POSTFIX_CONTAINER_TAG=1.0.0-alpine-dev
+# ------------------------------
+# Postfix Configuration
+# ------------------------------
+DOMAIN=example.com
+RELAYHOST=mail.example.com
+RELAY_USER=MrDQQUHXeg
+RELAY_PASSWORD=g093bJljQUhLzgwK2LYIE77UUGIS
+SENDER_ADDRESS=admin@misp.example.com
+QUESTION_DEBUG_PEERS=no
+DEBUG_PEER=none
+##################################################################
+```
+
+### Usign with `docker run`
+``` bash
+docker run \
+    --name misp-postfix \
+    -e HOSTNAME: ${HOSTNAME} \
+    -e DOMAIN: ${DOMAIN} \
+    -e SENDER_ADDRESS: ${SENDER_ADDRESS} \
+    -e RELAYHOST: ${RELAYHOST} \
+    -e RELAY_USER: ${RELAY_USER} \
+    -e RELAY_PASSWORD: ${RELAY_PASSWORD} \
+    -e  DOCKER_NETWORK: ${DOCKER_NETWORK} \
+    -e  DEBUG_PEER: ${DEBUG_PEER} \
+    image: dcso/misp-dockerized-postfix
+```
