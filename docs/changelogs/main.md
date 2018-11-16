@@ -1,6 +1,5 @@
 # MISP-dockerized
 
-
 ## Changelog for Release Candidate 0.3.4
 ### Update Informations
 This update fixes an error with incorrectly mounted MISP volumes that caused the required disk space to exceed the normal value. Therefore, before updating, make sure that you have up-to-date backups. We have also made small bugfixes for the Docker-compose, ansible and build_script.sh.

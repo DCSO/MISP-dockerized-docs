@@ -63,7 +63,7 @@ Docker Container Information
 .. |MISP-dockerized-proxy-commit| image:: https://images.microbadger.com/badges/commit/dcso/misp-dockerized-proxy.svg
     :target: https://microbadger.com/images/dcso/misp-dockerized-proxy
     :align: middle
-
+MISP
 
 .. |MISP-dockerized-server| image:: https://travis-ci.org/DCSO/MISP-dockerized-server.svg?branch=master
     :target: https://travis-ci.org/DCSO/MISP-dockerized-server
@@ -153,6 +153,7 @@ Docker Container Information
 
 
 
+
 What's missing
 ==============
 Currently the following things are not yet implemented but are planned:
@@ -161,29 +162,30 @@ Currently the following things are not yet implemented but are planned:
 * FAQ's
 
 
-Additional Informations
+Additional Information
 =======================
 
 MariaDB and Docker
 --------------------
 
-.. seealso:: https://mariadb.com/kb/en/library/installing-and-using-mariadb-via-docker/
-             https://hub.docker.com/r/_/mariadb/
+.. seealso:: * https://mariadb.com/kb/en/library/installing-and-using-mariadb-via-docker/
+             * https://hub.docker.com/r/_/mariadb/
 
 MISP
 ----
 
-.. seealso:: https://github.com/MISP/MISP
-             https://www.misp-project.org/
+.. seealso:: * https://github.com/MISP/MISP
+             * https://www.misp-project.org/
 
 
 
-We want to say Thank
----------------------
+We want to say Thank You
+--------------------------
 
 We would say thanks to the maker of:
-* Mailu
-* Mailcow
+
+* Mailu (https://github.com/mailu)
+* Mailcow (https://github.com/mailcow/)
 
 We have oriented on their docker container to build our enterprise ready ones.
 
