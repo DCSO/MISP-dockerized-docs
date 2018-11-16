@@ -1,6 +1,7 @@
 # MISP-dockerized-misp-postfix
 Since Release Candiate 0.3.0 we changed the development process from an Release Canditate change to an feature change development process.
 
+`Since MISP-dockerized Version 0.3.5 Postfix container is not more used.`
 
 # Postfix Changelog for Release Candidate 0.3.0
 ## Update Informations
