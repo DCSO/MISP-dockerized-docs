@@ -3,7 +3,7 @@ Roadmap
 
 In which direction is the project going? What exciting new features are coming soon?
 
-We do not publish detailed roadmaps, but it’s possible to get a sense for our general direction
+We do not publish detailed roadmaps, but it’s possible to get a impression for our general direction
 by utilizing the following resources:
 
 * Our `feedback and planning group`_ is used to host early discussion about what will be worked on next.

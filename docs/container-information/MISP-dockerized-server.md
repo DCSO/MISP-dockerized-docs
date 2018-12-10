@@ -11,7 +11,7 @@ The following versions of MISP where used during the beta of MISP-dockerized (v0
 
 | Version                         | Status   | Status                        | Notes                                                                                                                                                     |
 | ------------------------------- | -------- | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`2.4.nightly-ubuntu`][10]      | Oct'2018 | unsupported                   | The Nightly version is a build based on the latest development version of MISP-dockerized. This build is experimental and therefore not supported.        |
+| [`2.4.nightly-ubuntu`][10]      | Oct'2018 | unsupported                   | The nightly version is a build based on the latest development version of MISP-dockerized. This build is experimental and therefore not supported.        |
 | [`2.4.88-ubuntu`][1]            | Apr'2018 | supported                     |                                                                                                                                                           |
 | [`2.4.89-ubuntu`][2]            | Apr'2018 | supported                     |                                                                                                                                                           |
 | [`2.4.90-ubuntu`][3]            | Apr'2018 | supported                     |                                                                                                                                                           |
