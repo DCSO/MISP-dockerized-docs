@@ -4,7 +4,7 @@
 | Version                         | Status   | Status                        | Notes                                                                                                                                                     |
 | ------------------------------- | -------- | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`2.4.98-ubuntu`][12]           | Dec'2018 | supported                     |                                                                                                                                                           |
-| [`2.4.99-ubuntu`][13]           | Dec'2018 | supported                     |                                                                                                                                                           |
+| [`2.4.99-ubuntu`][13]           | Dec'2018 | supported                     | Default version for release 1.0.0                                                                                                                         |
 
 ### Beta Builds
 The following versions of MISP where used during the beta of MISP-dockerized (v0.X.X). However, we highly recommend to upgrade to the current version of MISP-dockerized.
