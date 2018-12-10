@@ -1,7 +1,7 @@
 Container Information
 #####################
 
-This page get you the most information which you get normally from hub.docker.com or github Readme files.
+On this page you get most of the information you normally get from hub.docker.com or github readme files.
 
 .. toctree::
    :maxdepth: 2 

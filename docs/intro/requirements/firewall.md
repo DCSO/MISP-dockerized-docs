@@ -1,6 +1,6 @@
 # Firewall Prerequsites
 
-For the Installation the followed Connections need to available:
+Connections to the following URLs are required during installation. Please make sure that they are available before you start:
 
 | URL                  | Direction    | Protocol | Destination Port |
 | -------------------- | ------------ | -------- | ---------------- |
@@ -9,7 +9,7 @@ For the Installation the followed Connections need to available:
 | hub.docker.com       | outgoing     | TCP      | 443              |
 
 ### Why registry-1.docker.io:
-This contains all required docker container:
+The registry-1.docker.io provides all required containers for MISP-dockerized.
 
 | Container   | based on         | purpose                        |
 | ----------- | ---------------- | ------------------------------ |
@@ -20,6 +20,4 @@ This contains all required docker container:
 | misp-robot  | ubuntu           | deploy & configuration manager |
 
 ### Why github.com
-This contains:
-- scripts
-- tools
+The registry-1.docker.io provides all tools, files and scripts needed for the installation of MISP-dockerized.
