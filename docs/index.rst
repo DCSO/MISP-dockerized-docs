@@ -19,7 +19,7 @@ Welcome to MISP-dockerized's |version| documentation!
    intro/index
    container-information/index
    admin/index
-   .. design/index
+   design/index
    contribute/index
    appendix/index
    changelogs/index
