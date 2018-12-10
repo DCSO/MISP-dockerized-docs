@@ -1,12 +1,18 @@
 # MISP-dockerized-server
 
 ## Available MISP-Versions (Supported tags and respective `Dockerfile` links)
+| Version                         | Status   | Status                        | Notes                                                                                                                                                     |
+| ------------------------------- | -------- | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`2.4.98-ubuntu`][12]           | Dec'2018 | supported                     |                                                                                                                                                           |
+| [`2.4.99-ubuntu`][13]           | Dec'2018 | supported                     |                                                                                                                                                           |
+
+### Beta Builds
+The following versions of MISP where used during the beta of MISP-dockerized (v0.X.X). However, we highly recommend to upgrade to the current version of MISP-dockerized.
 
 | Version                         | Status   | Status                        | Notes                                                                                                                                                     |
 | ------------------------------- | -------- | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`2.4.nightly-ubuntu`][10]      | Oct'2018 | unsupported                   |
-|                                 |
-| [`2.4.88-ubuntu`][1]            | Apr'2018 | supported                 until June 2019     |                                                                                                                                                           |
+| [`2.4.nightly-ubuntu`][10]      | Oct'2018 | unsupported                   | The Nightly version is a build based on the latest development version of MISP-dockerized. This build is experimental and therefore not supported.        |
+| [`2.4.88-ubuntu`][1]            | Apr'2018 | supported                     |                                                                                                                                                           |
 | [`2.4.89-ubuntu`][2]            | Apr'2018 | supported                     |                                                                                                                                                           |
 | [`2.4.90-ubuntu`][3]            | Apr'2018 | supported                     |                                                                                                                                                           |
 | [`2.4.91-ubuntu`][4]            | Jun'2018 | supported                     |                                                                                                                                                           |
@@ -14,8 +20,10 @@
 | [`2.4.93-ubuntu`][6]            | Sep'2018 | supported                     |                                                                                                                                                           |
 | [`2.4.94-ubuntu`][7]            | Sep'2018 | supported                     |                                                                                                                                                           |
 | [`2.4.95-ubuntu`][8]            | Sep'2018 | available but not recommended | MISP Pull mechanism is currently not working. The ticket to that issue can be found here: https://github.com/MISP/MISP/issues/3613#issuecomment-419459107 |
-| [`2.4.96-ubuntu`][9]            | Oct'2018 | supported                     |
-| [`2.4.97-ubuntu`, `latest`][11] | Oct'2018 | supported                     |
+| [`2.4.96-ubuntu`][9]            | Oct'2018 | supported                     |                                                                                                                                                           |                
+| [`2.4.97-ubuntu`][11]           | Oct'2018 | supported                     |                                                                                                                                                           |
+
+
 
 [1]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.88-ubuntu/Dockerfile
 [2]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.89-ubuntu/Dockerfile
@@ -28,6 +36,8 @@
 [9]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.96-ubuntu/Dockerfile
 [10]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.nightly-ubuntu/Dockerfile
 [11]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.97-ubuntu/Dockerfile
+[12]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.98-ubuntu/Dockerfile
+[13]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.99-ubuntu/Dockerfile
 
 
 ## Image Information
@@ -164,6 +174,6 @@ You can also find the [docker file](https://github.com/DCSO/MISP-dockerized-serv
 
 View [license information](https://github.com/DCSO/MISP-dockerized-server/blob/master/LICENSE) for the software contained in this image.
 
-As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+As with all Docker images, these likely also contains other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
 
 As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

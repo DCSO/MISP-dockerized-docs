@@ -187,7 +187,7 @@ We would say thanks to the maker of:
 * Mailu (https://github.com/mailu)
 * Mailcow (https://github.com/mailcow/)
 
-We have oriented on their docker container to build our enterprise ready ones.
+With their projects they have done an amazing job with Docker which we could orient ourselves on and which inspired us to develop MISP-dockerized.
 
 
 .. Indices and tables

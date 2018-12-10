@@ -1,7 +1,7 @@
 
 ## Backup and Recovery of  MISP-dockerized
 ### Backup
-To back up your instance, **MISP dockerized** comes with a backup and restore script that will do the job for you. To create a backup start:
+To back up your instance, **MISP dockerized** provides a backup and restore script that will do the job for you. To create a backup start:
 ```
 $> ./scripts/backup_restore backup [service]
 or 

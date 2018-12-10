@@ -1,7 +1,7 @@
 Roadmap
 #######
 
-What direction is the project going? What exciting new features are coming soon?
+In which direction is the project going? What exciting new features are coming soon?
 
 We do not publish detailed roadmaps, but it’s possible to get a sense for our general direction
 by utilizing the following resources:

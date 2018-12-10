@@ -54,8 +54,7 @@
 ## How to use this image
 
 ### Usage
-
-For the Usage please read the [MISP-dockerized](https://github.com/DCSO/MISP-dockerized) Github Repository.
+For the usage please read the [MISP-dockerized](https://github.com/DCSO/MISP-dockerized) Github Repository.
 
 
 ## Documentation
