@@ -2,20 +2,17 @@
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`1.0.4-debian`, `latest`][8]
-- [`1.0.3-ubuntu`][5]
-- [`1.0.2-ubuntu`][3]
-- [`1.0.1-ubuntu`][2]
-- [`1.0.0-ubuntu`][1]
+- [`2`, `2.0`, `1.0.4-debian`, `latest`][5]
+- [`1`, `1.3`, `1.0.3-ubuntu`][4]
+- [`1.2`, `1.0.2-ubuntu`][3]
+- [`1.1`, `1.0.1-ubuntu`][2]
+- [`1.0`, `1.0.0-ubuntu`][1]
 
-[1]: https://github.com/DCSO/MISP-dockerized-robot/blob/master/1.0.0-ubuntu/Dockerfile
-[2]: https://github.com/DCSO/MISP-dockerized-robot/blob/master/1.0.1-ubuntu/Dockerfile
-[3]: https://github.com/DCSO/MISP-dockerized-robot/blob/master/1.0.2-ubuntu/Dockerfile
-[4]: https://github.com/DCSO/MISP-dockerized-robot/blob/master/1.0.2-debian/Dockerfile
-[5]: https://github.com/DCSO/MISP-dockerized-robot/blob/master/1.0.3-ubuntu/Dockerfile
-[6]: https://github.com/DCSO/MISP-dockerized-robot/blob/master/1.0.3-debian/Dockerfile
-[7]: https://github.com/DCSO/MISP-dockerized-robot/blob/master/1.0.4-ubuntu/Dockerfile
-[8]: https://github.com/DCSO/MISP-dockerized-robot/blob/master/1.0.4-debian/Dockerfile
+[1]: https://github.com/DCSO/MISP-dockerized-robot/blob/master/1.0-ubuntu/Dockerfile
+[2]: https://github.com/DCSO/MISP-dockerized-robot/blob/master/1.1-ubuntu/Dockerfile
+[3]: https://github.com/DCSO/MISP-dockerized-robot/blob/master/1.2-ubuntu/Dockerfile
+[4]: https://github.com/DCSO/MISP-dockerized-robot/blob/master/1.3-ubuntu/Dockerfile
+[5]: https://github.com/DCSO/MISP-dockerized-robot/blob/master/2.0-debian/Dockerfile
 
 ## Quick reference
 
@@ -53,8 +50,65 @@
 
 ## How to use this image
 
-### Usage
-For the usage please read the [MISP-dockerized](https://github.com/DCSO/MISP-dockerized) Github Repository.
+### Available Environment Variables
+
+| Environment Variables                       | Example                          | Type                    |
+| ------------------------------------------- | -------------------------------- | ----------------------- |
+| HTTP_PROXY: ${HTTP_PROXY}                   | http://proxy.example.com:3128    | OPTIONAL                |
+| HTTPS_PROXY: ${HTTPS_PROXY}                 | http://proxy.example.com:3128    | OPTIONAL                |
+| NO_PROXY: ${NO_PROXY}                       | internal.example.com example.com | OPTIONAL                |
+
+
+### Using with docker-compose
+``` bash
+services:
+  ### MISP-Robot ###
+  misp-robot:
+    image: dcso/misp-dockerized-robot:${MISP_ROBOT_TAG}
+    container_name: misp-robot
+    environment:
+      NO_PROXY: ${NO_PROXY} 
+    volumes:
+    - <GIT REPO PATH>/MISP-dockerized:/srv/MISP-dockerized:rw
+    - misp-vol-db-data:/srv/misp-db:rw
+    - misp-vol-pgp:/srv/misp-pgp:rw
+    - misp-vol-proxy-conf:/srv/misp-proxy/conf.d:rw
+    - misp-vol-redis-data:/srv/misp-redis:rw
+    - misp-vol-server-MISP-cakeresque-config:/srv/misp-server/MISP/CakeResque/Config:rw
+    - misp-vol-server-MISP-app-Config:/srv/misp-server/MISP/Config:rw
+    - misp-vol-server-MISP-attachments:/srv/misp-server/MISP/app/files:rw
+    - misp-vol-server-MISP-tmp:/srv/misp-server/MISP/app/tmp:rw
+    - misp-vol-server-apache2-config-sites-enabled:/srv/misp-server/apache2/sites-enabled:rw
+    - misp-vol-smime:/srv/misp-smime:rw
+    - misp-vol-ssl:/srv/misp-ssl:rw
+    - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      misp-backend:
+        aliases:
+        - misp-robot
+
+```
+
+
+### Usign with `docker run`
+``` bash
+docker run \
+    --name misp-robot \
+    -e NO_PROXY: ${NO_PROXY}  \
+    -v misp-vol-db-data:/srv/misp-db:rw \
+    -v misp-vol-pgp:/srv/misp-pgp:rw\
+    -v misp-vol-proxy-conf:/srv/misp-proxy/conf.d:rw\
+    -v misp-vol-redis-data:/srv/misp-redis:rw\
+    -v misp-vol-server-MISP-cakeresque-config:/srv/misp-server/MISP/CakeResque/Config:rw\
+    -v misp-vol-server-MISP-app-Config:/srv/misp-server/MISP/Config:rw\
+    -v misp-vol-server-MISP-attachments:/srv/misp-server/MISP/app/files:rw\
+    -v misp-vol-server-MISP-tmp:/srv/misp-server/MISP/app/tmp:rw\
+    -v misp-vol-server-apache2-config-sites-enabled:/srv/misp-server/apache2/sites-enabled:rw\
+    -v misp-vol-smime:/srv/misp-smime:rw\
+    -v misp-vol-ssl:/srv/misp-ssl:rw\
+    -v /var/run/docker.sock:/var/run/docker.sock:ro\
+    image: dcso/misp-dockerized-robot \
+```
 
 
 ## Documentation

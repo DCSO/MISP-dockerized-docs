@@ -2,15 +2,13 @@
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`1.0.2-alpine`, `latest`][4]
-- [`1.0.1-alpine`][3]
-- [`1.0.0-alpine`][2]
-- [`1.0.0-ubuntu`][1]
+- [`1`, `1.2`, `1.0.2-alpine`, `latest`][3]
+- [`1.1`,`1.0.1-alpine`][2]
+- [`1.1`,`1.0.0-alpine`][1]
 
-[1]: https://github.com/DCSO/MISP-dockerized-proxy/blob/master/1.0.0-ubuntu/Dockerfile
-[2]: https://github.com/DCSO/MISP-dockerized-proxy/blob/master/1.0.0-alpine/Dockerfile
-[3]: https://github.com/DCSO/MISP-dockerized-proxy/blob/master/1.0.1-alpine/Dockerfile
-[4]: https://github.com/DCSO/MISP-dockerized-proxy/blob/master/1.0.2-alpine/Dockerfile
+[1]: https://github.com/DCSO/MISP-dockerized-proxy/blob/master/1.0-alpine/Dockerfile
+[2]: https://github.com/DCSO/MISP-dockerized-proxy/blob/master/1.1-alpine/Dockerfile
+[3]: https://github.com/DCSO/MISP-dockerized-proxy/blob/master/1.2-alpine/Dockerfile
 
 ## Quick reference
 
@@ -48,10 +46,61 @@
 
 ## How to use this image
 
-### Usage
+### Available Environment Variables
 
-For the usage please read the [MISP-dockerized](https://github.com/DCSO/MISP-dockerized) Github Repository.
+| Environment Variables                 | Example                            | Type     |
+| ------------------------------------- | ---------------------------------- | -------- |
+| HOSTNAME: ${myHOSTNAME}               | misp.example.com                   | REQUIRED |
+| HTTP_SERVERADMIN: ${HTTP_SERVERADMIN} | support@example.com                | REQUIRED |
+| HTTP_PROXY: ${HTTP_PROXY}             | http://proxy.example.com:3128      | OPTIONAL |
+| HTTPS_PROXY: ${HTTPS_PROXY}           | http://proxy.example.com:3128      | OPTIONAL |
+| NO_PROXY: ${NO_PROXY}                 | internal.example.com example.com   | OPTIONAL |
+| IP: ${HTTP_ALLOWED_IP}                | 192.157.12.2 8.8.8.8 172.16.0.0/16 | OPTIONAL |
 
+### Using with docker-compose
+``` bash
+services:
+  ### MISP-proxy ###
+  misp-proxy:
+    image: dcso/misp-dockerized-proxy:${MISP_proxy_TAG}
+    container_name: misp-proxy
+    environment:
+      HOSTNAME: ${myHOSTNAME}
+      HTTP_SERVERADMIN: ${HTTP_SERVERADMIN}
+      HTTP_PROXY: ${HTTP_PROXY}
+      HTTPS_PROXY: ${HTTPS_PROXY}
+      NO_PROXY: ${NO_PROXY}
+      IP: ${HTTP_ALLOWED_IP}
+    volumes:
+    - misp-vol-proxy-conf:/etc/nginx/conf.d:rw
+    - misp-vol-ssl:/etc/nginx/ssl:rw
+    networks:
+      misp-backend:
+        aliases:
+        - misp-proxy
+
+```
+
+
+### Usign with `docker run`
+``` bash
+docker run \
+    --name misp-proxy \
+    -e NO_PROXY: ${NO_PROXY}  \
+    -v misp-vol-db-data:/srv/misp-db:rw \
+    -v misp-vol-pgp:/srv/misp-pgp:rw\
+    -v misp-vol-proxy-conf:/srv/misp-proxy/conf.d:rw\
+    -v misp-vol-redis-data:/srv/misp-redis:rw\
+    -v misp-vol-server-MISP-cakeresque-config:/srv/misp-server/MISP/CakeResque/Config:rw\
+    -v misp-vol-server-MISP-app-Config:/srv/misp-server/MISP/Config:rw\
+    -v misp-vol-server-MISP-attachments:/srv/misp-server/MISP/app/files:rw\
+    -v misp-vol-server-MISP-tmp:/srv/misp-server/MISP/app/tmp:rw\
+    -v misp-vol-server-apache2-config-sites-enabled:/srv/misp-server/apache2/sites-enabled:rw\
+    -v misp-vol-smime:/srv/misp-smime:rw\
+    -v misp-vol-ssl:/srv/misp-ssl:rw\
+    -v /var/run/docker.sock:/var/run/docker.sock:ro\
+    image: dcso/misp-dockerized-proxy \
+```
 
 ### Documentation
 You can also find the [docker file](https://github.com/DCSO/MISP-dockerized-proxy/) at Github.

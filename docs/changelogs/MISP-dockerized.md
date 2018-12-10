@@ -1,5 +1,15 @@
 # MISP-dockerized
 
+
+
+
+
+
+
+
+
+
+
 ## Changelog for Release Candidate 0.3.4
 ### Update Informations
 This update fixes an error with incorrectly mounted MISP volumes that caused the required disk space to exceed the normal value. Therefore, before updating, make sure that you have up-to-date backups. We have also made small bugfixes for the Docker-compose, ansible and build_script.sh.
@@ -12,8 +22,6 @@ No general changes have been made in this release.
 - FIX: Fixed a bug that caused a password with special characters like pip | to fail and docker-compose could not be executed.
 - FIX: A bug in the Ansible Server Playbook with incorrectly mounted MISP volumes has been fixed.
 - ADD: Add `sleep` times into makefile for better user experience
-
-
 
 
 

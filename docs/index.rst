@@ -10,7 +10,7 @@ Welcome to MISP-dockerized's |version| documentation!
 **MISP dockerized** uses MISP (Open Source Threat Intelligence Platform - https://github.com/MISP/MISP), which is maintend and developed by the MISP project team (https://www.misp-project.org/).
 
 .. warning::
-    THIS PROJECT IS IN BETA PHASE
+    ALL VERSIONS BEFORE 1.0.0 ARE ONLY BETA!
 
 
 .. toctree::
@@ -20,8 +20,8 @@ Welcome to MISP-dockerized's |version| documentation!
    container-information/index
    admin/index
    .. design/index
-   .. contribute/index
-   .. appendix/index
+   contribute/index
+   appendix/index
    changelogs/index
 
 
@@ -63,7 +63,7 @@ Docker Container Information
 .. |MISP-dockerized-proxy-commit| image:: https://images.microbadger.com/badges/commit/dcso/misp-dockerized-proxy.svg
     :target: https://microbadger.com/images/dcso/misp-dockerized-proxy
     :align: middle
-MISP
+
 
 .. |MISP-dockerized-server| image:: https://travis-ci.org/DCSO/MISP-dockerized-server.svg?branch=master
     :target: https://travis-ci.org/DCSO/MISP-dockerized-server
@@ -171,6 +171,7 @@ MariaDB and Docker
 .. seealso:: * https://mariadb.com/kb/en/library/installing-and-using-mariadb-via-docker/
              * https://hub.docker.com/r/_/mariadb/
 
+
 MISP
 ----
 
@@ -179,19 +180,9 @@ MISP
 
 
 
-We want to say Thank You
---------------------------
-
-We would say thanks to the maker of:
-
-* Mailu (https://github.com/mailu)
-* Mailcow (https://github.com/mailcow/)
-
-With their projects they have done an amazing job with Docker which we could orient ourselves on and which inspired us to develop MISP-dockerized.
-
 
 .. Indices and tables
-==================
+.. ==================
 
 .. * :ref:`genindex`
 .. * :ref:`modindex`

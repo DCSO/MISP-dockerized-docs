@@ -1,4 +1,6 @@
-# MISP-dockerized-postfix
+# [DEPRECATED] MISP-dockerized-postfix
+`Since MISP-dockerized Version 0.3.4 the Postfix container is not more used. Postfix is installed on MISP-server since 2.4.97.`
+
 
 ## Supported tags and respective `Dockerfile` links
 
