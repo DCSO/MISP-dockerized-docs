@@ -1,11 +1,12 @@
 Features
 ########
 
-* 3-steps ready MISP instance for docker native nodes (since 1.0.0)
-* MISP-Modules Support (since 1.0.0)
-* Mail transport via postfix (since 1.0.0)
+* 3-steps (and 5 minute or less) ready MISP instance (since 1.0.0)
+* Buildin MISP modules (since 1.0.0)
+* Buildin mail transport via postfix (since 1.0.0)
+* Prehardened TLS configuration (since 1.0.0)
 * Default http to https redirect to secure the communication beetween client and server (since 1.0.0)
 * Backup and Restore capabilities (since 1.0.0)
-* Make commands to make complex commands easier
-* Docker Container which are build daily
-* Tests if MISP are ready
+* Prebuilt management commands to ease maintenance efforts (since 1.0.0)
+* Daily build docker container (since 1.0.0)
+* Automated testframework to test new misp releases (since 1.0.0)
