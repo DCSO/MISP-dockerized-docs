@@ -6,13 +6,12 @@ Changelogs of MISP-dockerized repositories.
 .. toctree::
    :maxdepth: 1
 
-   main
-   misp-server
-   misp-proxy
-   misp-modules
-   misp-postfix
-   misp-robot
+   MISP-dockerized-server
+   MISP-dockerized-postfix
+   MISP-dockerized-proxy
+   MISP-dockerized-misp-modules
+   MISP-dockerized-robot
 
 
 .. warning::
-    Since MISP-dockerized release 0.3.5 the MISP-dockerized-postfix Container is currently not used.
+    Since MISP-dockerized release 0.3.4 the MISP-dockerized-postfix Container is currently not used.

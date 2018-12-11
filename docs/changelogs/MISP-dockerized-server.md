@@ -1,6 +1,76 @@
 # MISP-dockerized-server
 Since Release Candiate 0.3.0 we changed the development process from an Release Canditate change to an feature change development process.
 
+
+## Changelog for bug.MDD143 - Fix for function "create_certificate" deadlock Bug
+### Update Informations 
+Proxy version 1.4-alpine creates a file to prevent the misp-server from creating its own certificate. This should be deleted once the creation is complete. Unfortunately the proxy with verison 1.4-alpine interrupted the script before removing the file. Therefore it has not been deleted anymore. Since only one file was used for both the proxy and the misp-server this bug has the consequence that the apache2 entrypoint of the misp-server version 2.4.97-2.4.99 is also deadlocked.
+
+### General Changes
+No general changes were made.
+
+### Fixes & Improvements
+- Added on the misp-server 2.4.97-2.4.99 a own pid file for misp-server and misp-proxy.
+
+### Detailed Changes
+- We have added an additional pid file. So we now have one that creates the misp-proxy and queries the misp-server and one that is created by the misp-server and queries the misp-proxy. Its own file can overwrite both the proxy and the server. Therefore such deadlocks should be a thing of the past in the future.
+
+
+
+## Changelog for bug.MDD141 - Wrong common name in the certificate after installation
+### Update  
+We change existing container versions to fix the false common name in the certificate.
+
+### General changes
+No general changes were made.
+
+### Corrections & Improvements
+- Change Version 2.4.97-debian
+- Change Version 2.4.98-debian
+- Change Version 2.4.99-debian
+
+### Detailed changes
+- We have modified the Entrypoint script so that the common name is now the same as the FQDN hostname. 
+- We have adapted the gitlab-ci test job so that it will now only be executed if something has changed on this container. Otherwise the testjob will not be executed.
+
+## Changelog for feat.MDD139 - Add MISP Version 2.4.99
+### Update Informations 
+Features of the release:
+- Added MISP-Server Container for MISP release 2.4.99.
+  For more information please have a look at the official changelog at https://github.com/MISP/MISP/releases/tag/v2.4.99
+- Added gitlab-ci test job
+
+### General Changes
+Besides the new MISP version, no general changes were made.
+
+### Fixes & Improvements
+- Added MISP-Server Container with MISP Version 2.4.99
+- Added gitlab-ci test job
+
+### Detailed Changes
+- Added new MISP Server 2.4.99 on base of 2.4.97.
+- Gitlab-CI can now test the server before it is merged to master.
+
+
+## Changelog for feat.MDD126 - Add MISP Version 2.4.98
+### Update Informations 
+Features of the release:
+- Add MISP-Server Container for MISP release 2.4.98.
+  For more information please have a look at the official changelog at https://github.com/MISP/MISP/releases/tag/v2.4.98
+- Change few Files for 2.4.97
+
+### General Changes
+Besides the new MISP version, no general changes were made.
+
+### Fixes & Improvements
+- Add MISP-Server Container with MISP Version 2.4.98
+- Change few Files for Entrypoint Files of Apache2 and Postfix
+
+### Detailed Changes
+- Add new MISP Server 2.4.98 on base of 2.4.97
+- Change Entrypoint Files of MISP Server 2.4.97 for Apache2 and Postfix
+  We improve the postfix configuration, so that the postfix configuration are new written on every container start. Fix also an Bug for MISP Application configuration for GnuPGP Homedir Path.
+
 ## Changelog for feat.MDD126 - Add MISP Version 2.4.97
 ### Update Informations 
 Features of the release:

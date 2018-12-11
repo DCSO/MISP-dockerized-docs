@@ -2,11 +2,11 @@
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`1.0.1-debian`, `latest`][2]
-- [`1.0.0-debian`][1]
+- [`1`, `1.1`, `1.0.1-debian`, `latest`][2]
+- [1.0`, `1.0.0-debian`][1]
 
-[1]: https://github.com/DCSO/MISP-dockerized-misp-modules/blob/master/1.0.0-debian/Dockerfile
-[2]: https://github.com/DCSO/MISP-dockerized-misp-modules/blob/master/1.0.1-debian/Dockerfile
+[1]: https://github.com/DCSO/MISP-dockerized-misp-modules/blob/master/1.0-debian/Dockerfile
+[2]: https://github.com/DCSO/MISP-dockerized-misp-modules/blob/master/1.1-debian/Dockerfile
 
 ## Quick reference
 
@@ -46,52 +46,41 @@
 
 ## How to use this image
 
-### Usage
+### Available Environment Variables
 
-For the usage please read the [MISP-dockerized](https://github.com/DCSO/MISP-dockerized) Github Repository.
+| Environment Variables       | Example                          | Type     |
+| --------------------------- | -------------------------------- | -------- |
+| HTTP_PROXY: ${HTTP_PROXY}   | http://proxy.example.com:3128    | OPTIONAL |
+| HTTPS_PROXY: ${HTTPS_PROXY} | http://proxy.example.com:3128    | OPTIONAL |
+| NO_PROXY: ${NO_PROXY}       | internal.example.com example.com | OPTIONAL |
+| REDIS_FQDN: ${REDIS_FQDN}   | misp-redis                       | OPTIONAL |
 
-
-#### Using with docker-compose
+### Using with docker-compose
 ``` bash
 services:
-  ### misp-modules ###
+  ### MISP-misp-modules ###
   misp-modules:
-    image: dcso/misp-dockerized-misp-modules:${misp-modules_CONTAINER_TAG}
+    image: dcso/misp-dockerized-misp-modules:${MISP_misp-modules_TAG}
     container_name: misp-modules
-    restart: on-failure
+    environment: 
+      REDIS_FQDN: ${REDIS_FQDN}
+      HTTP_PROXY: ${HTTP_PROXY}
+      HTTPS_PROXY: ${HTTPS_PROXY}
+      NO_PROXY: ${NO_PROXY}
     networks:
       misp-backend:
         aliases:
-          - misp-modules
+        - misp-modules
 
 ```
 
-##### .env file for docker-compose variable
-If you want to use the misp-modules container with variables you require a .env file with the following content:
-``` bash
-#=================================================
-# ------------------------------
-# Hostname
-# ------------------------------
-HOSTNAME=misp.example.com
-# ------------------------------
-# Network Configuration
-# ------------------------------
-DOCKER_NETWORK="192.168.47.0/28"
-BRIDGE_NAME="mispbr0"
-# ------------------------------
-# Container Configuration
-# ------------------------------
-MISP_MODULES_CONTAINER_TAG=1.0.0-debian-dev
-##################################################################
-```
 
-#### Using with `docker run`
+### Usign with `docker run`
 ``` bash
 docker run \
-    --name misp-modules \
-    image: dcso/misp-dockerized-MISP_MODULES
-    
+    --name misp-misp-modules \
+    -e NO_PROXY: ${NO_PROXY}  \
+    image: dcso/misp-dockerized-misp-modules \
 ```
 
 

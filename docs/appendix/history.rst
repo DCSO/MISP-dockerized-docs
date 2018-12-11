@@ -1,15 +1,14 @@
 History
 #######
 
-The name comes from `a town in Switzerland`__. It also means "elk" or "moose" in Danish.
+The name comes from `Mailcow-dockerized`__. + MISP. It means (Enterprise Ready) MISP Environment @ Docker
 
-__ http://www.elgg.ch/de/
+__ https://mailcow.io
 
-Elgg's initial funding was by a company called Curverider Ltd, which was started by David Tosh and Ben Werdmuller.
-In 2010, Curverider was acquired by Thematic Networks and control of the open-source project was turned over to `The Elgg Foundation`_.
-Today, Elgg is a community-driven open source project and has a variety of contributors and supporters.
+MISP-dockerized is an opensource project and initial funding was by a company called Deutsche Cyber-Sicherheitsorganisation GmbH (short: DCSO).
+In 2018 `DCSO`_. was starting with this development to help its enterprise customers which had mostly Suse Linux Enterprise Server or Red Hat. 
 
-.. _The Elgg Foundation: http://theelggfoundation.org
+.. _DCSO: https://dcso.de
 
 
 

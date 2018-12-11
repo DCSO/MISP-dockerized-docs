@@ -2,6 +2,32 @@
 Since Release Candiate 0.3.0 we changed the development process from an Release Canditate change to an feature change development process.
 
 
+
+
+
+
+
+## Changelog for feat.MDD123 - Changed the container version scheme from three (3) to two (2) digits.
+### Update information 
+In the past, we decided to use a three-digit version number for small and large changes for this container repository. This has proved unnecessary as the main repository is the central repository for new releases and all changes are already tracked here. We have therefore decided to change the 3-digit version number in all minor repositories to a 2-digit version number.
+For example: 1.0.1 -> 1.1
+
+The second digit is changed any time we make minor changes. The first digit changes whenever we make major changes, e.g. a new base image.
+
+### General changes
+In general, we change all versions from three to two digits....
+### Corrections & Improvements
+- ALL folder names changed
+- Improved Gitlab-ci structure
+- Minimization of the readme file
+### Detailed changes
+- All folders have been renamed, e.g. from 1.0.0.0-alpin to 1.0-alpin.
+- We have made working with gitlab-ci easier with new extensions and includes.
+- We have also reduced the readme as much as possible, as the documentation is now available centrally in our own documentation repository `https://dcso.github.io/MISP-dockerized-docs/`.
+
+
+
+
 ## Changelog for bug.MDD120 - misp-robot version 1.0.4-debian ansible is only available in travis-ci and not in gitlab-ci 
 ### Update Informations 
 Fixed a bug where ansible package are not installed on our internal gitlab-ci. Travis-CI are not affected.
@@ -19,6 +45,7 @@ No general changes have been made in this release.
     - 1.0.3-debian
     - 1.0.4-ubuntu
   Since 1.0.4-debian we use now the debian image also for all future robot versions.
+
 
 
 

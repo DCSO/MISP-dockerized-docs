@@ -10,7 +10,7 @@ Here are some ways you can help:
    :maxdepth: 1
    
    issues
-   code
-   docs
-   releases
+   .. code
+   .. docs
+   .. releases
    
