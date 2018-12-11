@@ -2,6 +2,21 @@
 Since Release Candiate 0.3.0 we changed the development process from an Release Canditate change to an feature change development process.
 
 
+## Changelog for bug.MDD143 - Fix for function "create_certificate" deadlock Bug
+### Update Informations 
+Proxy version 1.4-alpine creates a file to prevent the misp-server from creating its own certificate. This should be deleted once the creation is complete. Unfortunately the proxy with verison 1.4-alpine interrupted the script before removing the file. Therefore it has not been deleted anymore. Since only one file was used for both the proxy and the misp-server this bug has the consequence that the apache2 entrypoint of the misp-server version 2.4.97-2.4.99 is also deadlocked.
+
+### General Changes
+No general changes were made.
+
+### Fixes & Improvements
+- Added a new misp-proxy version 1.5 with a own pid file for misp-server and misp-proxy.
+
+### Detailed Changes
+- We have added an additional pid file. So we now have one that creates the misp-proxy and queries the misp-server and one that is created by the misp-server and queries the misp-proxy. Its own file can overwrite both the proxy and the server. Therefore such deadlocks should be a thing of the past in the future.
+
+
+
 
 ## Changelog for bug.MDD141 - Wrong common name in the certificate after installation### Update  
 We have created a new container version to fix the false common name in the certificate.
