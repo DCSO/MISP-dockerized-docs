@@ -17,8 +17,8 @@ build_only:
 
 build_and_publish:
   stage: deploy
-  only:
-    - master
+  # only:
+  #   - master
   before_script:
     - apk add --no-cache make git
   script:
