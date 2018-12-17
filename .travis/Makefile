@@ -33,17 +33,18 @@ build-docker:
 push:
 	./push.sh
 
-docker_bash:
-	docker run --rm -ti -v $(CURDIR)/../:/data dockerhub.dcso.de/sphinx bash
+docker-bash:
+	docker run --rm -ti -v $(CURDIR)/../:/data -w /data dockerhub.dcso.de/sphinx sh
 
 build-html-docker:
 	docker run --rm -v $(CURDIR)/../:/data dockerhub.dcso.de/sphinx make clean
-	docker run --rm -v $(CURDIR)/../:/data dockerhub.dcso.de/sphinx
+	docker run --rm -v $(CURDIR)/../:/data dockerhub.dcso.de/sphinx make html
+
+build-docx-docker:
+	docker run --rm -v $(CURDIR)/../:/data dockerhub.dcso.de/sphinx make clean
+	docker run --rm -v $(CURDIR)/../:/data dockerhub.dcso.de/sphinx make docx
 
 local-test: build-html-docker
-
-test-start:
-	docker run --rm -ti -v $(CURDIR)/../:/data python:alpine sh
 
 execute-CI:
 	./execute_CI_tasks.sh
