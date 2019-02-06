@@ -2,6 +2,9 @@ dist: xenial
 language: python
 python: 3.6
 
+env:
+  global:
+  - PATH="$PATH:/$(whoami)/.local/bin"
 
 # before_install:
 #   - sudo apt-get install make git pip
@@ -10,6 +13,7 @@ python: 3.6
 script:
   - sudo apt-get install libc-dev libgcc libstdc++ libxml2-dev libxslt-dev g++
   - make -C .travis execute-CI
+  - make html
   #- $MAKEFILE push
 
 

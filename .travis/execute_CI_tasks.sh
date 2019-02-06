@@ -61,9 +61,4 @@ git clone https://github.com/mherkazandjian/docxsphinx.git; \
     cd docxsphinx;  \
     pip install -r requirements.txt; \
     python setup.py install
-export PATH="$PATH:/$(whoami)/.local/bin"
 
-#script: 
-
-echo "Build sphinx docs..."
-make -C ../ html
