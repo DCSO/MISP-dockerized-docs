@@ -6,7 +6,6 @@ Since release candidate 0.3.0, we changed the development process from an releas
 
 
 
-
 ## Bug.MDD174: Travis CI and Gitlab CI does not Build and Push the Images Correctly
 ### Update information 
 We added a new misp-robot version 2.3-debian and cleaned the CI helper scripts.
