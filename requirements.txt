@@ -1,0 +1,8 @@
+sphinx 
+sphinx_rtd_theme
+sphinxcontrib-httpdomain
+recommonmark
+# for https://pypi.org/project/ghp-import/
+ghp-import
+# for https://robpol86.github.io/sphinxcontrib-versioning/install.html
+sphinxcontrib-versioning
