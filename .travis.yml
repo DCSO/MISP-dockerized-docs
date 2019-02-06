@@ -1,7 +1,10 @@
+dist: xenial
+language: python
+python: 3.7
 
 
-before_install:
-  - apk add --no-cache make git
+# before_install:
+#   - sudo apt-get install make git pip
 
 script:
   - make -C .travis execute-CI
