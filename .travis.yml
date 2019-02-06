@@ -1,0 +1,18 @@
+
+
+before_install:
+  - apk add --no-cache make git
+
+script:
+  - make -C .travis execute-CI
+  #- $MAKEFILE push
+
+
+deploy:
+  provider: pages
+  local-dir: _build
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  on:
+    branch: master
