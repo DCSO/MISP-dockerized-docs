@@ -57,6 +57,10 @@ echo "  UserKnownHostsFile /dev/null" >> ~/.ssh/config
 echo "Install dependencies..."
 pip install -r ../requirements.txt
 pip install -e git+https://github.com/bitprophet/releases/#egg=releases
+git clone https://github.com/mherkazandjian/docxsphinx.git; \
+    cd docxsphinx;  \
+    pip install -r requirements.txt; \
+    python setup.py install
 export PATH="$PATH:/$(whoami)/.local/bin"
 
 #script: 
