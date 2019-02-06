@@ -11,17 +11,15 @@ env:
 
 
 script:
-  - sudo apt-get install libc-dev libgcc libstdc++ libxml2-dev libxslt-dev g++
   - make -C .travis execute-CI
   - make html
-  #- $MAKEFILE push
 
 
 deploy:
   provider: pages
-  local-dir: _build
+  local-dir: _build/html
   skip-cleanup: true
   github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep-history: true
-  # on:
-  #   branch: master
+  on:
+    branch: dev
