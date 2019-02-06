@@ -3,30 +3,31 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to MISP-dockerized's |version| documentation!
+Welcome to MISP-dockerized's |version| Documentation!
 =====================================================
-**MISP dockerized** is a project designed to provide an easy-to-use and easy-to-install 'out of the box' MISP instance that includes everything you need to run MISP with minimal host-side requirements. 
+**MISP-dockerized** is a project designed to provide an easy-to-use and easy-to-install 'out of the box' MISP instance that includes everything you need to run MISP with minimal host-side requirements. 
 
-**MISP dockerized** uses MISP (Open Source Threat Intelligence Platform - https://github.com/MISP/MISP), which is maintend and developed by the MISP project team (https://www.misp-project.org/).
+**MISP-dockerized** uses [MISP](https://github.com/MISP/MISP) (Open Source Threat Intelligence Platform), which is maintained and developed by the MISP project team (https://www.misp-project.org/).
 
 .. warning::
-    THIS PROJECT IS IN BETA PHASE
+    ALL VERSIONS BEFORE 1.0.0 ARE ONLY BETA!
 
 
 .. toctree::
    :maxdepth: 2    
     
    intro/index
+   container-information/index
    admin/index
-   .. design/index
-   .. contribute/index
-   .. appendix/index
+   design/index
+   contribute/index
    changelogs/index
+   appendix/index
 
 
 
-Project Information
--------------------------
+MISP-dockerized Main Project Information
+----------------------------------------
 
 .. |MISP-dockerized| image:: https://travis-ci.org/DCSO/MISP-dockerized.svg?branch=master
     :target: https://travis-ci.org/DCSO/MISP-dockerized  
@@ -36,6 +37,12 @@ Project Information
 +---------------+-------------------+
 | Travis Master | |MISP-dockerized| |
 +---------------+-------------------+
+
+
+Available MISP Version's
+------------------------
+
+For more details like available and supported tags, see https://dcso.github.io/MISP-dockerized-docs/container-information/MISP-dockerized-server.html
 
 
 Docker Container Information
@@ -127,20 +134,55 @@ Docker Container Information
     :align: middle
 
 
+.. list-table:: Docker Container Travis Information
+   :header-rows: 1
+   :align: left
 
-.. csv-table:: Docker Container Information
-   :header: "Name", "Travis", "Docker size & layers", "Latest Docker version", "Commit"
-   :widths: 10, 20, 20, 20, 20
+   * - Name
+     - Travis
+   * - MISP-dockerized-server
+     - |MISP-dockerized-server|
+   * - MISP-dockerized-proxy
+     - |MISP-dockerized-proxy|
+   * - MISP-dockerized-postfix     
+     - |MISP-dockerized-postfix|
+   * - MISP-dockerized-modules     
+     - |MISP-dockerized-modules|
+   * - MISP-dockerized-robot
+     - |MISP-dockerized-robot|
 
-   "MISP-dockerized-server", |MISP-dockerized-server|, |MISP-dockerized-server-image|,|MISP-dockerized-server-version|,|MISP-dockerized-server-commit|
-   "MISP-dockerized-proxy", |MISP-dockerized-proxy|, |MISP-dockerized-proxy-image|,|MISP-dockerized-proxy-version|,|MISP-dockerized-proxy-commit|
-   "MISP-dockerized-robot", |MISP-dockerized-robot|, |MISP-dockerized-robot-image|,|MISP-dockerized-robot-version|,|MISP-dockerized-robot-commit|
-   "MISP-dockerized-postfix", |MISP-dockerized-postfix|, |MISP-dockerized-postfix-image|,|MISP-dockerized-postfix-version|,|MISP-dockerized-postfix-commit|
-   "MISP-dockerized-modules", |MISP-dockerized-modules|, |MISP-dockerized-modules-image|,|MISP-dockerized-modules-version|,|MISP-dockerized-modules-commit|
+
+
+
+What's Missing
+-----------------------------
+Currently, the following are not yet implemented but are planned:
+
+* Wiki
+* FAQ's
+
+
+Additional Information
+-----------------------------
+
+MariaDB and Docker
+--------------------
+
+.. seealso:: * https://mariadb.com/kb/en/library/installing-and-using-mariadb-via-docker/
+             * https://hub.docker.com/r/_/mariadb/
+
+
+MISP
+----
+
+.. seealso:: * https://github.com/MISP/MISP
+             * https://www.misp-project.org/
+
+
 
 
 .. Indices and tables
-==================
+.. ==================
 
 .. * :ref:`genindex`
 .. * :ref:`modindex`

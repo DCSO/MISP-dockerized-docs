@@ -1,10 +1,10 @@
-# Configure Docker to use a proxy server
+# Docker Proxy Configuration
 
 If your container needs to use an HTTP, HTTPS, or FTP proxy server, you can configure it in different ways:
 * In Docker 17.07 and higher, you can configure the Docker client to pass proxy information to containers automatically.
 * In Docker 17.06 and lower, you must set appropriate environment variables within the container. You can do this when you build the image (which makes the image less portable) or when you create or run the container.
 
-## Configure the Docker client
+## Configure the Docker Client
 
 On the Docker client, create or edit the file `~/.docker/config.json` in the home directory of the user which starts containers. Add JSON such as the following, substituting the type of proxy with httpsProxy or ftpProxy if necessary, and substituting the address and port of the proxy server. You can configure multiple proxy servers at the same time.
 
@@ -30,7 +30,7 @@ Save the file.
 When you create or start new containers, the environment variables are set automatically within the container.
 
 
-## Use environment variables
+## Use Environment Variables
 Set the environment variables manually:
 
 |Variable|	Dockerfile example	docker run Example|
