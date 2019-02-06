@@ -1,6 +1,6 @@
 # Software Prerequsites
 
-For the installation of MISP dockerized the following software is required:
+For the installation of MISP dockerized, the following software is required:
 
 | Component | minimum Version                  |
 | --------- | -------------------------------- |

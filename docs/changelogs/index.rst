@@ -6,11 +6,12 @@ Changelogs of MISP-dockerized repositories.
 .. toctree::
    :maxdepth: 1
 
+   MISP-dockerized
    MISP-dockerized-server
-   MISP-dockerized-postfix
    MISP-dockerized-proxy
    MISP-dockerized-misp-modules
    MISP-dockerized-robot
+   MISP-dockerized-postfix
 
 
 .. warning::

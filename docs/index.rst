@@ -3,11 +3,11 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to MISP-dockerized's |version| documentation!
+Welcome to MISP-dockerized's |version| Documentation!
 =====================================================
-**MISP dockerized** is a project designed to provide an easy-to-use and easy-to-install 'out of the box' MISP instance that includes everything you need to run MISP with minimal host-side requirements. 
+**MISP-dockerized** is a project designed to provide an easy-to-use and easy-to-install 'out of the box' MISP instance that includes everything you need to run MISP with minimal host-side requirements. 
 
-**MISP dockerized** uses MISP (Open Source Threat Intelligence Platform - https://github.com/MISP/MISP), which is maintend and developed by the MISP project team (https://www.misp-project.org/).
+**MISP-dockerized** uses [MISP](https://github.com/MISP/MISP) (Open Source Threat Intelligence Platform), which is maintained and developed by the MISP project team (https://www.misp-project.org/).
 
 .. warning::
     ALL VERSIONS BEFORE 1.0.0 ARE ONLY BETA!
@@ -21,8 +21,8 @@ Welcome to MISP-dockerized's |version| documentation!
    admin/index
    design/index
    contribute/index
-   appendix/index
    changelogs/index
+   appendix/index
 
 
 
@@ -42,7 +42,7 @@ MISP-dockerized Main Project Information
 Available MISP Version's
 ------------------------
 
-See https://dcso.github.io/MISP-dockerized-docs/container-information/MISP-dockerized-server.html for more details like available and supported tags.
+For more details like available and supported tags, see https://dcso.github.io/MISP-dockerized-docs/container-information/MISP-dockerized-server.html
 
 
 Docker Container Information
@@ -154,16 +154,16 @@ Docker Container Information
 
 
 
-What's missing
-==============
-Currently the following things are not yet implemented but are planned:
+What's Missing
+-----------------------------
+Currently, the following are not yet implemented but are planned:
 
 * Wiki
 * FAQ's
 
 
 Additional Information
-=======================
+-----------------------------
 
 MariaDB and Docker
 --------------------

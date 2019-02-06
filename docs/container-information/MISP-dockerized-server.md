@@ -1,13 +1,13 @@
-# MISP-dockerized-server
+# [MISP-dockerized-server](https://github.com/DCSO/MISP-dockerized-server)
 
-## Available MISP-Versions (Supported tags and respective `Dockerfile` links)
+## Available MISP Versions (Supported Tags and Respective `Dockerfile` Links)
 | Version               | Status   | Status    | Notes                             |
 | --------------------- | -------- | --------- | --------------------------------- |
-| [`2.4.98-ubuntu`][12] | Dec'2018 | supported |                                   |
-| [`2.4.99-ubuntu`][13] | Dec'2018 | supported | Default version for release 1.0.0 |
+| [`2.4.99-ubuntu`][13] | Dec'2018 | supported | Default version for release 1.0.0, 1.0.1 |
+
 
 ### Beta Builds
-The following versions of MISP where used during the beta of MISP-dockerized (v0.X.X). However, we highly recommend to upgrade to the current version of MISP-dockerized.
+The following versions of MISP were used during the beta of MISP-dockerized (v0.X.X). However, we highly recommend upgrading to the current version of MISP-dockerized.
 
 | Version                    | Status   | Status                        | Notes                                                                                                                                                     |
 | -------------------------- | -------- | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -22,7 +22,10 @@ The following versions of MISP where used during the beta of MISP-dockerized (v0
 | [`2.4.95-ubuntu`][8]       | Sep'2018 | available but not recommended | MISP Pull mechanism is currently not working. The ticket to that issue can be found here: https://github.com/MISP/MISP/issues/3613#issuecomment-419459107 |
 | [`2.4.96-ubuntu`][9]       | Oct'2018 | supported                     |                                                                                                                                                           |
 | [`2.4.97-ubuntu`][11]      | Oct'2018 | supported                     |                                                                                                                                                           |
-
+| [`2.4.98-ubuntu`][12]      | Oct'2018 | supported                     |                                                                                                                                                           |
+| [`2.4.99-ubuntu`][13]      | Dec'2018 | supported                     |                                                                                                                                                           |
+| [`2.4.100-ubuntu`][14]      | Jan'2019 | supported                     |                                                                                                                                                           |
+| [`2.4.101-ubuntu`][15]      | Jan'2019 | supported                     |                                                                                                                                                           |
 
 
 [1]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.88-ubuntu/Dockerfile
@@ -38,6 +41,8 @@ The following versions of MISP where used during the beta of MISP-dockerized (v0
 [11]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.97-debian/Dockerfile
 [12]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.98-debian/Dockerfile
 [13]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.99-debian/Dockerfile
+[14]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.100-debian/Dockerfile
+[15]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.101-debian/Dockerfile
 
 
 ## Image Information
@@ -69,7 +74,7 @@ The following versions of MISP where used during the beta of MISP-dockerized (v0
     - maec
 
 
-## Quick reference
+## Quick Reference
 
 -	**Where to file issues**:  
 	[https://github.com/DCSO/MISP-dockerized-server/issues](https://github.com/DCSO/MISP-dockerized-server/issues)
@@ -78,10 +83,10 @@ The following versions of MISP where used during the beta of MISP-dockerized (v0
 	[DCSO](https://github.com/DCSO)
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest)
+	[The latest release](https://github.com/docker/docker-ce/releases/latest)
 
 
-## How to use this image
+## How to Use this Image
 
 ### Available Environment Variables
 
@@ -106,7 +111,7 @@ The following versions of MISP where used during the beta of MISP-dockerized (v0
 | PHP_MEMORY: ${PHP_MEMORY}                   | 512M                             | OPTIONAL                |
 | REDIS_FQDN: ${REDIS_FQDN}                   | misp-redis                       | OPTIONAL                |
 
-### Using with docker-compose
+### Using With `docker-compose`
 ``` bash
 services:
   ### MISP-Server ###
@@ -168,7 +173,7 @@ services:
 ```
 
 
-### Usign with `docker run`
+### Using With `docker run`
 ``` bash
 docker run \
     --name misp-server \
@@ -191,13 +196,13 @@ docker run \
 ```
 
 ### Documentation
-You can also find the [docker file](https://github.com/DCSO/MISP-dockerized-server/) at Github.
+You can also find the [Dockerfile](https://github.com/DCSO/MISP-dockerized-server/) at Github.com.
 
 
 ## License
 
 View [license information](https://github.com/DCSO/MISP-dockerized-server/blob/master/LICENSE) for the software contained in this image.
 
-As with all Docker images, these likely also contains other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+As with all Docker images, these likely also contain other software that may be under other licenses (such as Bash, etc., from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
 
 As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.

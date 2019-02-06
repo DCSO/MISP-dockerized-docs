@@ -16,6 +16,11 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+# At top on conf.py (with other import statements)
+import recommonmark
+from recommonmark.transform import AutoStructify
+
+
 # -- Project information -----------------------------------------------------
 
 project = 'MISP-dockerized'
@@ -307,3 +312,11 @@ scv_show_banner = True
 scv_banner_greatest_tag = True
 scv_grm_exclude = ('.gitignore', '.nojekyll', 'README.rst')
 scv_sort = ('semver', 'time')
+
+# -- Options for Releases -----------------------------------------
+def setup(app):
+    app.add_config_value('recommonmark_config', {
+            'url_resolver': lambda url: github_doc_root + url,
+            'auto_toc_tree_section': 'Contents',
+            }, True)
+    app.add_transform(AutoStructify)

@@ -1,7 +1,7 @@
 Requirements
 ############
 
-The following Requirements exists for `MISP-dockerized`.
+The following requirements exist for `MISP-dockerized`.
 
 .. toctree::
     :maxdepth: 1

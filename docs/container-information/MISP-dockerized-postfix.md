@@ -1,8 +1,8 @@
-# [DEPRECATED] MISP-dockerized-postfix
-`Since MISP-dockerized Version 0.3.4 the Postfix container is not more used. Postfix is installed on MISP-server since 2.4.97.`
+# [Deprecated] [MISP-dockerized-postfix](https://github.com/DCSO/MISP-dockerized-postfix)
+`Since MISP-dockerized version 0.3.4, the Postfix container is no longer used. Postfix is installed on misp-server container since 2.4.97.`
 
 
-## Supported tags and respective `Dockerfile` links
+## Supported Tags and Respective `Dockerfile` Links
 
 - [`1.0.1-alpine`, `latest`][2]
 - [`1.0.0-alpine`][1]
@@ -10,7 +10,7 @@
 [1]: https://github.com/DCSO/MISP-dockerized-postfix/blob/master/1.0.0-alpine/Dockerfile
 [2]: https://github.com/DCSO/MISP-dockerized-postfix/blob/master/1.0.1-alpine/Dockerfile
 
-## Quick reference
+## Quick Reference
 
 -	**Where to file issues**:  
 	[https://github.com/DCSO/MISP-dockerized-postfix/issues](https://github.com/DCSO/MISP-dockerized-postfix/issues)
@@ -19,13 +19,7 @@
 	[DCSO](https://github.com/DCSO)
 
 -	**Supported Docker versions**:  
-	[the latest release](https://github.com/docker/docker-ce/releases/latest)
-
-## What is MISP dockerized?
-
-**MISP dockerized** is a project designed to provide an easy-to-use and easy-to-install'out of the box' MISP instance that includes everything you need to run MISP with minimal host-side requirements. 
-
-**MISP dockerized** uses MISP (Open Source Threat Intelligence Platform - https://github.com/MISP/MISP), which is maintend and developed by the MISP project team (https://www.misp-project.org/)
+	[The latest release](https://github.com/docker/docker-ce/releases/latest)
 
 ### Project Information
 
@@ -46,11 +40,11 @@
 
 
 
-## How to use this image
+## How to Use this Image
 
 ### Usage
 
-For the usage please read the [MISP-dockerized](https://github.com/DCSO/MISP-dockerized) Github Repository.
+For the usage please read the [MISP-dockerized](https://github.com/DCSO/MISP-dockerized) Git repository.
 
 #### Environment Variables
 
@@ -65,7 +59,7 @@ HOSTNAME|misp|Hostname for the Mailserver |
 |DOCKER_NETWORK|192.168.47.0/28|Restrict access to postfix to this IP-range|
 |DEBUG_PEER|none| If you need debugging log for a specified host set this to the domain, FQDN or ip address|
 
-#### Using with docker-compose
+#### Using With `docker-compose`
 ``` bash
 services:
   ### Postfix ###
@@ -89,37 +83,7 @@ services:
 
 ```
 
-##### .env file for docker-compose variable
-If you want to use the postfix container with variables you require a .env file with the following content:
-``` bash
-#=================================================
-# ------------------------------
-# Hostname
-# ------------------------------
-HOSTNAME=misp.example.com
-# ------------------------------
-# Network Configuration
-# ------------------------------
-DOCKER_NETWORK="192.168.47.0/28"
-BRIDGE_NAME="mispbr0"
-# ------------------------------
-# Container Configuration
-# ------------------------------
-POSTFIX_CONTAINER_TAG=1.0.0-alpine-dev
-# ------------------------------
-# Postfix Configuration
-# ------------------------------
-DOMAIN=example.com
-RELAYHOST=mail.example.com
-RELAY_USER=MrDQQUHXeg
-RELAY_PASSWORD=g093bJljQUhLzgwK2LYIE77UUGIS
-SENDER_ADDRESS=admin@misp.example.com
-QUESTION_DEBUG_PEERS=no
-DEBUG_PEER=none
-##################################################################
-```
-
-#### Usign with `docker run`
+#### Using with `docker run`
 ``` bash
 docker run \
     --name misp-postfix \
@@ -132,27 +96,17 @@ docker run \
     -e  DOCKER_NETWORK: ${DOCKER_NETWORK} \
     -e  DEBUG_PEER: ${DEBUG_PEER} \
     image: dcso/misp-dockerized-postfix
-    
-    
 ```
 
 
 ## Documentation
-You can also find the [docker file](https://github.com/DCSO/MISP-dockerized-postfix/) at Github.
+You can also find the [Dockerfile](https://github.com/DCSO/MISP-dockerized-postfix/) at Github.com.
 
 
 ## License
 
 View [license information](https://github.com/DCSO/MISP-dockerized-proxy/blob/master/LICENSE) for the software contained in this image.
 
-As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+As with all Docker images, these likely also contain other software that may be under other licenses (such as Bash, etc., from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
 
 As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.
-
-## Contributions
-
-We would say thanks to maker of:
-- Mailu
-- Mailcow
-
-We have oriented on their docker container to build our ones.

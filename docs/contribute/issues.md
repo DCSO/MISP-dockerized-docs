@@ -1,39 +1,37 @@
-Reporting Issues
-================
+# Reporting Issues
 
-Report bugs and features requests to https://github.com/DCSO/MISP-dockerized/issues.
+
+Report bugs and feature requests to https://github.com/DCSO/MISP-dockerized/issues.
 See below for guidelines.
 
-DISCLAIMERS
------------
+## Disclaimers
+
 
 -  We cannot make any guarantees as to when your ticket will be resolved.
 
 
-Bug reports
------------
+## Bug Reports
+
 
 Before submitting a bug report:
 
--  Search for an existing ticket on the issue you’re having. Add any
-   extra info there.
--  Verify the problem is reproducible
-   -  On the latest version of MISP-dockerized
+-  Search for an existing ticket on the issue you’re having. Add any extra information there.
+-  Verify the problem is reproducible on the latest version of MISP-dockerized.
 
 
 Good bug report checklist:
 
 -  Expected behavior and actual behavior
 -  Clear steps to reproduce the problem
--  The version of MISP-dockerized you’re running
--  The version of MISP-dockerized Container you’re running
+-  The version of MISP-dockerized you are running
+-  The version of MISP-dockerized container you are running
 -  Browsers affected by this problem
--  Docker version you're running
--  Node Host OS
+-  Docker version you are running
+-  Node host OS
 
 
-Feature requests
-----------------
+## Feature Requests
+
 
 Before submitting a feature request:
 
@@ -44,4 +42,4 @@ Before submitting a feature request:
 Good feature request checklist:
 
 -  Detailed explanation of the feature
--  Real-life use-cases
+-  Real-life use cases

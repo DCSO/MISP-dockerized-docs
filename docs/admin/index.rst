@@ -2,7 +2,7 @@
 Administrator Guides
 ####################
 
-Best practices for effectively managing an MISP-dockerized Environment.
+Best practices for effectively managing an MISP-dockerized environment.
 
 .. toctree::
 	:maxdepth: 2

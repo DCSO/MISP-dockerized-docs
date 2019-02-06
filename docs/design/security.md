@@ -1,5 +1,4 @@
-Security
-########
+# Security
 
 To ensure that all required security patches are applied, the containers are rebuilt daily. 
 However, this cannot prevent security vulnerabilities from occurring. 

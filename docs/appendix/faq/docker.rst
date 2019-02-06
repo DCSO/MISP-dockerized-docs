@@ -1,12 +1,12 @@
 Cannot download Docker images behind a proxy
 -------------------------------------------------
 
-First, create a systemd drop-in directory for the docker service:
+First, create a systemd drop-in directory for the Docker service:
 
 .. code-block:: bash
   :linenos:
 
-    $> mkdir /etc/systemd/system/docker.service.d
+    mkdir /etc/systemd/system/docker.service.d
 
 Now create a file called ``/etc/systemd/system/docker.service.d/http-proxy.conf`` that adds the HTTP_PROXY environment variable:
 
@@ -32,21 +32,21 @@ Flush changes:
 .. code-block:: bash
   :linenos:
 
-    $> sudo systemctl daemon-reload
+    sudo systemctl daemon-reload
 
 Verify that the configuration has been loaded:
 
 .. code-block:: bash
   :linenos:
 
-    $> sudo systemctl show --property Environment docker
+    sudo systemctl show --property Environment docker
     
 Restart Docker:
 
 .. code-block:: bash
   :linenos:
 
-    $> sudo systemctl restart docker
+    sudo systemctl restart docker
 
 Sources
 -------
