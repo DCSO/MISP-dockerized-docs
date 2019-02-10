@@ -1,6 +1,7 @@
 # [MISP-dockerized-server](https://github.com/DCSO/MISP-dockerized-server)
 
 ## Available MISP Versions (Supported Tags and Respective `Dockerfile` Links)
+
 | Version               | Status   | Status    | Notes                             |
 | --------------------- | -------- | --------- | --------------------------------- |
 | [`2.4.99-ubuntu`][13] | Dec'2018 | supported | Default version for release 1.0.0, 1.0.1 |

@@ -1,7 +1,7 @@
 # MISP-dockerized-proxy
 Since release candidate 0.3.0, we changed the development process from an release candidate change to a feature change development process.
 
-
+---
 ## Bug.MDD143: Fix for Function "create_certificate" Deadlock Bug
 ### Update Information 
 Proxy version 1.4-alpine creates a file to prevent the misp-server from creating its own certificate. This should be deleted once the creation is complete. Unfortunately the proxy with version 1.4-alpine interrupted the script before removing the file. Therefore it has not been deleted anymore. Since only one file was used for both the proxy and the misp-server this bug results in the Apache2 entrypoint of the misp-server version 2.4.97-2.4.99 also being deadlocked.
@@ -14,7 +14,7 @@ No general changes were made.
 
 
 
-
+---
 ## Bug.MDD141: Wrong Common Name in the Certificate After Installation
 ### Update Information
 We have created a new container version to fix the false common name in the certificate.
@@ -29,7 +29,7 @@ No general changes were made.
 
 
 
-
+---
 ## Feat.MDD137: Add Container Version 1.3-Alpine
 ### Update Information 
 We have created a new proxy version to eliminate the Ansible playbook.
@@ -45,7 +45,7 @@ No general changes were made.
 
 
 
-
+---
 ## Feat.MDD123: Changed the Container Version Scheme from 3 to 2 digits.
 ### Update information 
 In the past, we decided to use a three digit version number for small and large changes for this container repository. This has proved unnecessary as the main repository is the central repository for new releases and all changes are already tracked here. We have therefore decided to change the three digit version number in all minor repositories to a three digit version number.
@@ -65,7 +65,7 @@ In general, we changed all versions from three to two digits.
 
 
 
-
+---
 ## Bug.MDD122: Disable 3DES Cipher in `misp-proxy`
 ### Update Information 
 The 3DES ciphers may be vulnerable to CVE-2016-2183, also known as the “Sweet32"-attack.
@@ -80,7 +80,7 @@ Besides the new proxy version, no general changes were made.
 
 
 
-
+---
 ## Beta Release Candidate 0.3.0
 ### Update Information
 In this release candidate we added a new container with improved configurations, updated the old one for a bug fix, and improved the push and tagging scripts.
@@ -110,7 +110,7 @@ Please make sure to disable the NGINX configuration volume to get the new file. 
 
 
 
-
+---
 ## Beta Release Candidate 0.2.0
 ### Update Information 
 Features of the release:
@@ -135,7 +135,7 @@ See "Update Information" above.
 
 
 
-
+---
 ## Beta Release Candidate 0.1.0
 ### Update Information 
 Features of the release:
@@ -152,4 +152,4 @@ We added Travis CI to build all proxy containers continuously.
 - Since this release, we built the container automatically via Travis CI
 - We built from now the 1.0.0-alpine and 1.0.0-ubuntu automatically
 - We also added a lot of information to our readme.
-
+---

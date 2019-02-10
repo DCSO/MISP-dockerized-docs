@@ -5,7 +5,7 @@ Since release candidate 0.3.0, we changed the development process from an releas
 
 
 
-
+---
 ## Feat.MDD123: Changed the Container Version Scheme from 3 to 2 digits.
 ### Update Information
 In the past, we decided to use a three-digit version number for small and large changes for this container repository. This has proved unnecessary as the main repository is the central repository for new releases and all changes are already tracked here. We have therefore decided to change the three digit version number in all minor repositories to a two digit version number.
@@ -26,10 +26,7 @@ In general, we changed all versions from three to two digits.
 
 
 
-
-
-
-
+---
 ## Beta Release Candidate 0.3.0
 ### Update Informations
 In this release candidate we added a new container with improved configurations, updated the old one for a bugfix and improved the build scripts for Gitlab CI support.
@@ -59,9 +56,10 @@ We added a new container 1.0.1.
 
 
 
-
+---
 ## Beta Release Candidate 0.2.0
 `New Postfix container for mail relaying`
 * This closed ticket MDD-14 with Postfix as relay.
 * Added new Postfix container with version 1.0.0 with Alpine as base
 * Deleted hub.docker.com hooks
+---

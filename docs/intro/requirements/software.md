@@ -1,4 +1,4 @@
-# Software Prerequsites
+# Software Prerequisites
 
 For the installation of MISP dockerized, the following software is required:
 
@@ -6,3 +6,5 @@ For the installation of MISP dockerized, the following software is required:
 | --------- | -------------------------------- |
 | Docker    | 17.03.0-ce                       |
 | Git       | newest Version from Distribution |
+
+---

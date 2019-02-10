@@ -4,7 +4,7 @@ Changelogs
 Changelogs of MISP-dockerized repositories.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
 
    MISP-dockerized
    MISP-dockerized-server

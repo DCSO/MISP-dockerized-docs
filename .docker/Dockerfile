@@ -1,4 +1,4 @@
-FROM python:alpine
+FROM python:3-alpine
 
 #     Variables for Labels:
 ARG VENDOR="DCSO GmbH"
