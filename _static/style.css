@@ -1,0 +1,15 @@
+/* Max Page width */
+.wy-nav-content {
+    max-width: 1200px !important;
+
+}
+
+/* Sidebar header (and topbar for mobile) */
+.wy-side-nav-search, .wy-nav-top {
+    background: #808080;
+  }
+
+  /* Sidebar */
+/* .wy-nav-side {
+    background: #808080;
+} */

@@ -5,7 +5,7 @@ Administrator Guides
 Best practices for effectively managing an MISP-dockerized environment.
 
 .. toctree::
-	:maxdepth: 2
+	:maxdepth: 3
 
 	dockerized_upgrading
 	dockerized_backup-restore

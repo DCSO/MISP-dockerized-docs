@@ -1,37 +1,35 @@
 # MISP-dockerized
 
 
+---
+## Release Candidate 1.0.2
+[View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v1.0.2)
+This MISP-dockerized release is a minor release.
+### Update Information
+This release includes new CI files and we fixed a bug which prevents the CI to test the MISP-dockerized environment.
+### General Changes
+No general changes where made.
+### Detailed Information
+- We have moved the CI scripts from ROOT/VERSION/.travis to ROOT/.ci
+- We have improved the CI scripts for Gitlab and Travis CI.
+- From now on the Gitlab CI is responsible for hub.docker.com and internal Docker registry.
+- We fixed an bug which prevents the CI to test the environment.
+
+---
 ## Release Candidate 1.0.1
 [View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v1.0.1)
-### About
-MISP dockerized is a project designed to provide an easy-to-use and easy-to-install 'out of the box' MISP instance that includes everything you need to run MISP with minimal host-side requirements.
-
-MISP dockerized uses MISP (Open Source Threat Intelligence Platform - https://github.com/MISP/MISP), which is maintained and developed by the MISP project team (https://www.misp-project.org/).
-
-MISP-dockerized provides the following features:
-* 3-steps (in 5 minute or less) ready MISP instance
-* Built in MISP modules
-* Built in mail transport via postfix
-* Prehardened TLS configuration
-* Default http to https redirect
-* Easy-to-use script based backup and restore function
-* Prebuilt management commands to ease maintenance efforts
-* Periodically built Docker containers
-* Automated test framework to test new MISP releases
----
-### Update Informations
-This release is a minor release and has fixed a bug in the CI files.
+This MISP-dockerized release is a minor release.
+### Update Information
+This release includes new CI files and we fixed a bug which prevents the CI to test the MISP-dockerized environment.
 ### General Changes
-No general changes have been made in this release.
-### Detailed Changes
-#### Main Repository
-##### Detailed Changes, Fixes & Improvements
-- We fixed a bug in the container tag mechanism for the Travis CI
-- we fixed a bug in the container tag mechanism for the Gitlab CI
-- Added a new parameter variable 'DEV' for build_config.sh
+No general changes where made.
+### Detailed Information
+- We have moved the CI scripts from ROOT/VERSION/.travis to ROOT/.ci
+- We have improved the CI scripts for Gitlab and Travis CI.
+- From now on the Gitlab CI is responsible for hub.docker.com and internal Docker registry.
+- We fixed an bug which prevents the CI to test the environment.
 
 ---
-
 ## Release Candidate 1.0.0
 [View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v1.0.0)
 This release represents the first production release of MISP-Dockerized in version 1.0.0.
@@ -150,7 +148,7 @@ The second digit is changed any time we make minor changes. The first digit chan
 
 
 
-
+---
 ## Beta Release Candidate 0.3.4 
 [View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v0.3.4-beta)
 ### Update Information
@@ -166,7 +164,7 @@ No general changes have been made in this release.
 - Added `sleep` times into makefile for better user experience
 
 
-
+---
 ## Beta Release Candidate 0.3.3 
 [View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v0.3.3-beta)
 ### Update Information
@@ -179,7 +177,7 @@ No general changes have been made in this release.
 - Fixed Gitlab CI for the repository url parameter to tagging.sh
 - Fixed tagging.sh shell script to find the right image and re-tag it
 
-
+---
 ## Beta Release Candidate 0.3.2 
 [View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v0.3.2-beta)
 ### Update Information
@@ -192,7 +190,7 @@ No general changes have been made in this release.
 - Modified pull branch for Travis CI from stable to master.
 - Modified push.sh shell script to force '-dev' image deletion
 
-
+---
 ## Beta Release Candidate 0.3.1 
 [View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v0.3.1-beta)
 ### Update Information
@@ -206,7 +204,7 @@ No general changes have been made in this release.
 - Modified pull branch for travis from stable to master.
 - Modified push.sh shell script to made more clear why it delete images
 
-
+---
 ## Beta Release Candidate 0.3.0 
 [View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v0.3.0-beta)
 ### Update Information
@@ -336,7 +334,7 @@ A new container which contains the [MISP-Modules|https://github.com/MISP/misp-mo
 
 
 
-
+---
 ## Beta Release Candidate 0.2.0 
 [View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v0.2.0-beta)
 ### Update Information 
@@ -412,7 +410,7 @@ Another significant change results from an error described here: https://github.
 
 
 
-
+---
 ## Beta Release Candidate 0.1.2 
 [View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v0.1.2-beta)
 ### Update Information
@@ -452,7 +450,7 @@ No general changes have been made in this release.
 - Added check write permissions to `requirements.sh` script
 - Removed dependency of docker-compose and Ansible on the Docker node and moved this into an robot container.
 
-
+---
 ## Beta Release Candidate 0.1.1 
 [View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v0.1.1-beta)
 ### Update Information 
@@ -469,7 +467,7 @@ Included in the Release:
 * Removed starting space for .env file
 
 
-
+---
 ## Beta Release Candidate 0.1.0 
 [View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v0.1.0-beta)
 ### About

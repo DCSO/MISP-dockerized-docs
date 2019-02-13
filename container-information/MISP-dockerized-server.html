@@ -19,22 +19,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'1.0.2',
+              LANGUAGE:'en',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="MISP-dockerized-proxy" href="MISP-dockerized-proxy.html" />
-    <link rel="prev" title="Container Information" href="index.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
+    <link rel="prev" title="Container Information" href="index.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -42,11 +56,10 @@
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -91,7 +104,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../intro/features.html">Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../intro/requirements/index.html">Requirements</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../intro/requirements/software.html">Software Prerequsites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../intro/requirements/firewall.html">Firewall Prerequisites</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../intro/requirements/firewall.html#customers-which-have-access-to-dcso-misp">Customers which have access to DCSO MISP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intro/requirements/firewall.html#non-customers">Non-Customers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intro/requirements/firewall.html#why-docker-io">Why *.docker.io:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intro/requirements/firewall.html#why-github-com">Why github.com</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../intro/requirements/software.html">Software Prerequisites</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../intro/install_nativ_docker.html">Docker Native: 3-Step Installation Guide</a><ul>
@@ -267,73 +287,78 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../changelogs/index.html">Changelogs</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../changelogs/MISP-dockerized.html">MISP-dockerized</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../changelogs/MISP-dockerized.html#release-candidate-1-0-1">Release Candidate 1.0.1</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#about">About</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#update-informations">Update Informations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../changelogs/MISP-dockerized.html#release-candidate-1-0-2">Release Candidate 1.0.2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#update-information">Update Information</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#general-changes">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#detailed-changes">Detailed Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#detailed-information">Detailed Information</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../changelogs/MISP-dockerized.html#release-candidate-1-0-1">Release Candidate 1.0.1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id1">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id2">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id3">Detailed Information</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../changelogs/MISP-dockerized.html#release-candidate-1-0-0">Release Candidate 1.0.0</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id1">About</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id2">Update Informations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id3">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id4">Detailed Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#about">About</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#update-informations">Update Informations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id4">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#detailed-changes">Detailed Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../changelogs/MISP-dockerized.html#beta-release-candidate-0-3-4">Beta Release Candidate 0.3.4</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#update-information">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id15">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id16">Detailed Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id13">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id14">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id15">Detailed Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../changelogs/MISP-dockerized.html#beta-release-candidate-0-3-3">Beta Release Candidate 0.3.3</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id18">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id19">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id20">Detailed Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id17">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id18">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id19">Detailed Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../changelogs/MISP-dockerized.html#beta-release-candidate-0-3-2">Beta Release Candidate 0.3.2</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id23">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id24">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id25">Detailed Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id22">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id23">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id24">Detailed Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../changelogs/MISP-dockerized.html#beta-release-candidate-0-3-1">Beta Release Candidate 0.3.1</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id28">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id29">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id30">Detailed Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id27">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id28">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id29">Detailed Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../changelogs/MISP-dockerized.html#beta-release-candidate-0-3-0">Beta Release Candidate 0.3.0</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id33">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id34">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id35">Detailed Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id32">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id33">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id34">Detailed Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../changelogs/MISP-dockerized.html#beta-release-candidate-0-2-0">Beta Release Candidate 0.2.0</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id50">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id51">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id52">Detailed Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id49">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id50">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id51">Detailed Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../changelogs/MISP-dockerized.html#beta-release-candidate-0-1-2">Beta Release Candidate 0.1.2</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id53">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id54">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id52">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id53">General Changes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#fixes-and-improvements">Fixes and Improvements</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../changelogs/MISP-dockerized.html#beta-release-candidate-0-1-1">Beta Release Candidate 0.1.1</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id55">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id56">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id57">Fixes and Improvements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id54">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id55">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id56">Fixes and Improvements</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../changelogs/MISP-dockerized.html#beta-release-candidate-0-1-0">Beta Release Candidate 0.1.0</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id58">About</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id59">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id60">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id61">Fixes and Improvements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id57">About</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id58">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id59">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized.html#id60">Fixes and Improvements</a></li>
 </ul>
 </li>
 </ul>
@@ -492,36 +517,43 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html">MISP-dockerized-misp-modules</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#bug-mdd134-added-misp-modules-container-version-1-2-for-gitlab-ci">Bug.MDD134: Added MISP-Modules Container Version 1.2 for Gitlab CI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#bug-mdd179-misp-modules-is-not-starting-correctly">Bug/MDD179: MISP Modules is not Starting Correctly</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#update-information">Update Information</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#general-changes">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#corrections-improvements">Corrections &amp; Improvements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#detailed-changes">Detailed changes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#bug-mdd134-added-misp-modules-container-version-1-2-for-gitlab-ci">Bug.MDD134: Added MISP-Modules Container Version 1.2 for Gitlab CI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id1">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id2">General Changes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#fixes-and-improvements">Fixes and Improvements</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#detailed-changes">Detailed Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id3">Detailed Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#feat-mdd123-changed-the-container-version-scheme-from-3-to-2-digits">Feat.MDD123: Changed the Container Version Scheme from 3 to 2 digits.</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id1">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id2">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id3">Fixes and Improvements</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id4">Detailed Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id4">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id5">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id6">Fixes and Improvements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id7">Detailed Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#beta-release-candidate-0-3-2">Beta Release Candidate 0.3.2</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id5">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id6">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id7">Fixes and Improvements</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id8">Detailed Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id8">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id9">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id10">Fixes and Improvements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id11">Detailed Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#beta-release-candidate-0-3-1">Beta Release Candidate 0.3.1</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id9">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id10">Fixes and Improvements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id12">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id13">Fixes and Improvements</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#beta-release-candidate-0-3-0">Beta Release Candidate 0.3.0</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id11">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id12">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id13">Fixes and Improvements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id14">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id15">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../changelogs/MISP-dockerized-misp-modules.html#id16">Fixes and Improvements</a></li>
 </ul>
 </li>
 </ul>
@@ -706,40 +738,157 @@
 <h1><a class="reference external" href="https://github.com/DCSO/MISP-dockerized-server">MISP-dockerized-server</a><a class="headerlink" href="#misp-dockerized-server" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="available-misp-versions-supported-tags-and-respective-dockerfile-links">
 <h2>Available MISP Versions (Supported Tags and Respective <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> Links)<a class="headerlink" href="#available-misp-versions-supported-tags-and-respective-dockerfile-links" title="Permalink to this headline">¶</a></h2>
-<p>| Version               | Status   | Status    | Notes                             |
-| ——————— | ——– | ——— | ——————————— |
-| <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.99-debian/Dockerfile"><code class="docutils literal notranslate"><span class="pre">2.4.99-ubuntu</span></code></a> | Dec’2018 | supported | Default version for release 1.0.0, 1.0.1 |</p>
-<div class="section" id="beta-builds">
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Version</th>
+<th>Status</th>
+<th>Status</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[<code>2.4.99-ubuntu</code>][13]</td>
+<td>Dec'2018</td>
+<td>supported</td>
+<td>Default version for release 1.0.0, 1.0.1</td>
+</tr>
+</tbody>
+</table><div class="section" id="beta-builds">
 <h3>Beta Builds<a class="headerlink" href="#beta-builds" title="Permalink to this headline">¶</a></h3>
 <p>The following versions of MISP were used during the beta of MISP-dockerized (v0.X.X). However, we highly recommend upgrading to the current version of MISP-dockerized.</p>
-<p>| Version                    | Status   | Status                        | Notes                                                                                                                                                     |
-| ————————– | ——– | —————————– | ——————————————————————————————————————————————————— |
-| <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.nightly-ubuntu/Dockerfile"><code class="docutils literal notranslate"><span class="pre">2.4.nightly-ubuntu</span></code></a> | Oct’2018 | unsupported                   | The nightly version is a build based on the latest development version of MISP-dockerized. This build is experimental and therefore not supported.        |
-| <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.88-ubuntu/Dockerfile"><code class="docutils literal notranslate"><span class="pre">2.4.88-ubuntu</span></code></a>       | Apr’2018 | supported                     |                                                                                                                                                           |
-| <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.89-ubuntu/Dockerfile"><code class="docutils literal notranslate"><span class="pre">2.4.89-ubuntu</span></code></a>       | Apr’2018 | supported                     |                                                                                                                                                           |
-| <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.90-ubuntu/Dockerfile"><code class="docutils literal notranslate"><span class="pre">2.4.90-ubuntu</span></code></a>       | Apr’2018 | supported                     |                                                                                                                                                           |
-| <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.91-ubuntu/Dockerfile"><code class="docutils literal notranslate"><span class="pre">2.4.91-ubuntu</span></code></a>       | Jun’2018 | supported                     |                                                                                                                                                           |
-| <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.92-ubuntu/Dockerfile"><code class="docutils literal notranslate"><span class="pre">2.4.92-ubuntu</span></code></a>       | Jun’2018 | supported                     |                                                                                                                                                           |
-| <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.93-ubuntu/Dockerfile"><code class="docutils literal notranslate"><span class="pre">2.4.93-ubuntu</span></code></a>       | Sep’2018 | supported                     |                                                                                                                                                           |
-| <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.94-ubuntu/Dockerfile"><code class="docutils literal notranslate"><span class="pre">2.4.94-ubuntu</span></code></a>       | Sep’2018 | supported                     |                                                                                                                                                           |
-| <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.95-ubuntu/Dockerfile"><code class="docutils literal notranslate"><span class="pre">2.4.95-ubuntu</span></code></a>       | Sep’2018 | available but not recommended | MISP Pull mechanism is currently not working. The ticket to that issue can be found here: https://github.com/MISP/MISP/issues/3613#issuecomment-419459107 |
-| <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.96-ubuntu/Dockerfile"><code class="docutils literal notranslate"><span class="pre">2.4.96-ubuntu</span></code></a>       | Oct’2018 | supported                     |                                                                                                                                                           |
-| <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.97-debian/Dockerfile"><code class="docutils literal notranslate"><span class="pre">2.4.97-ubuntu</span></code></a>      | Oct’2018 | supported                     |                                                                                                                                                           |
-| <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.98-debian/Dockerfile"><code class="docutils literal notranslate"><span class="pre">2.4.98-ubuntu</span></code></a>      | Oct’2018 | supported                     |                                                                                                                                                           |
-| <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.99-debian/Dockerfile"><code class="docutils literal notranslate"><span class="pre">2.4.99-ubuntu</span></code></a>      | Dec’2018 | supported                     |                                                                                                                                                           |
-| <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.100-debian/Dockerfile"><code class="docutils literal notranslate"><span class="pre">2.4.100-ubuntu</span></code></a>      | Jan’2019 | supported                     |                                                                                                                                                           |
-| <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.101-debian/Dockerfile"><code class="docutils literal notranslate"><span class="pre">2.4.101-ubuntu</span></code></a>      | Jan’2019 | supported                     |                                                                                                                                                           |</p>
-</div>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Version</th>
+<th>Status</th>
+<th>Status</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[<code>2.4.nightly-ubuntu</code>][10]</td>
+<td>Oct'2018</td>
+<td>unsupported</td>
+<td>The nightly version is a build based on the latest development version of MISP-dockerized. This build is experimental and therefore not supported.</td>
+</tr>
+<tr>
+<td>[<code>2.4.88-ubuntu</code>][1]</td>
+<td>Apr'2018</td>
+<td>supported</td>
+<td></td>
+</tr>
+<tr>
+<td>[<code>2.4.89-ubuntu</code>][2]</td>
+<td>Apr'2018</td>
+<td>supported</td>
+<td></td>
+</tr>
+<tr>
+<td>[<code>2.4.90-ubuntu</code>][3]</td>
+<td>Apr'2018</td>
+<td>supported</td>
+<td></td>
+</tr>
+<tr>
+<td>[<code>2.4.91-ubuntu</code>][4]</td>
+<td>Jun'2018</td>
+<td>supported</td>
+<td></td>
+</tr>
+<tr>
+<td>[<code>2.4.92-ubuntu</code>][5]</td>
+<td>Jun'2018</td>
+<td>supported</td>
+<td></td>
+</tr>
+<tr>
+<td>[<code>2.4.93-ubuntu</code>][6]</td>
+<td>Sep'2018</td>
+<td>supported</td>
+<td></td>
+</tr>
+<tr>
+<td>[<code>2.4.94-ubuntu</code>][7]</td>
+<td>Sep'2018</td>
+<td>supported</td>
+<td></td>
+</tr>
+<tr>
+<td>[<code>2.4.95-ubuntu</code>][8]</td>
+<td>Sep'2018</td>
+<td>available but not recommended</td>
+<td>MISP Pull mechanism is currently not working. The ticket to that issue can be found here: https://github.com/MISP/MISP/issues/3613#issuecomment-419459107</td>
+</tr>
+<tr>
+<td>[<code>2.4.96-ubuntu</code>][9]</td>
+<td>Oct'2018</td>
+<td>supported</td>
+<td></td>
+</tr>
+<tr>
+<td>[<code>2.4.97-ubuntu</code>][11]</td>
+<td>Oct'2018</td>
+<td>supported</td>
+<td></td>
+</tr>
+<tr>
+<td>[<code>2.4.98-ubuntu</code>][12]</td>
+<td>Oct'2018</td>
+<td>supported</td>
+<td></td>
+</tr>
+<tr>
+<td>[<code>2.4.99-ubuntu</code>][13]</td>
+<td>Dec'2018</td>
+<td>supported</td>
+<td></td>
+</tr>
+<tr>
+<td>[<code>2.4.100-ubuntu</code>][14]</td>
+<td>Jan'2019</td>
+<td>supported</td>
+<td></td>
+</tr>
+<tr>
+<td>[<code>2.4.101-ubuntu</code>][15]</td>
+<td>Jan'2019</td>
+<td>supported</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
 </div>
 <div class="section" id="image-information">
 <h2>Image Information<a class="headerlink" href="#image-information" title="Permalink to this headline">¶</a></h2>
-<p>|                                   |                 |
-|-                                  |-                |
-| Travis Master                     | <a class="reference external" href="https://travis-ci.org/DCSO/MISP-dockerized-server"><img alt="https://travis-ci.org/DCSO/MISP-dockerized-server.svg?branch=master" src="https://travis-ci.org/DCSO/MISP-dockerized-server.svg?branch=master" /></a> |
-| Docker Size &amp; Layers              | <a class="reference external" href="https://microbadger.com/images/dcso/misp-dockerized-server"><img alt="https://images.microbadger.com/badges/image/dcso/misp-dockerized-server.svg" src="https://images.microbadger.com/badges/image/dcso/misp-dockerized-server.svg" /></a> |
-| Latest Docker Version             | <a class="reference external" href="https://microbadger.com/images/dcso/misp-dockerized-server"><img alt="https://images.microbadger.com/badges/version/dcso/misp-dockerized-server.svg" src="https://images.microbadger.com/badges/version/dcso/misp-dockerized-server.svg" /></a> |
-| Commit for Latest Docker Version  | <a class="reference external" href="https://microbadger.com/images/dcso/misp-dockerized-server"><img alt="https://images.microbadger.com/badges/commit/dcso/misp-dockerized-server.svg" src="https://images.microbadger.com/badges/commit/dcso/misp-dockerized-server.svg" /></a> |</p>
-</div>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Travis Master</td>
+<td>[![][101]][102]</td>
+</tr>
+<tr>
+<td>Docker Size &amp; Layers</td>
+<td>[![][104]][107]</td>
+</tr>
+<tr>
+<td>Latest Docker Version</td>
+<td>[![][105]][107]</td>
+</tr>
+<tr>
+<td>Commit for Latest Docker Version</td>
+<td>[![][106]][107]</td>
+</tr>
+</tbody>
+</table></div>
 <div class="section" id="integrated-misp-modules">
 <h2>Integrated MISP Modules<a class="headerlink" href="#integrated-misp-modules" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -767,27 +916,107 @@
 <h2>How to Use this Image<a class="headerlink" href="#how-to-use-this-image" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="available-environment-variables">
 <h3>Available Environment Variables<a class="headerlink" href="#available-environment-variables" title="Permalink to this headline">¶</a></h3>
-<p>| Environment Variables                       | Example                          | Type                    |
-| ——————————————- | ——————————– | ———————– |
-| MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD} | PleaseChangeMe                   | REQUIRED                |
-| MYSQL_DATABASE: ${MYSQL_DATABASE}           | misp                             | OPTIONAL                |
-| MYSQL_USER: ${MYSQL_USER}                   | misp                             | OPTIONAL                |
-| MYSQL_PASSWORD: ${MYSQL_PASSWORD}           | PleaseChangeMe                   | REQUIRED                |
-| HTTP_PROXY: ${HTTP_PROXY}                   | http://proxy.example.com:3128    | OPTIONAL                |
-| HTTPS_PROXY: ${HTTPS_PROXY}                 | http://proxy.example.com:3128    | OPTIONAL                |
-| NO_PROXY: ${NO_PROXY}                       | internal.example.com example.com | OPTIONAL                |
-| SENDER_ADDRESS: ${SENDER_ADDRESS}           | no-reply&#64;example.com             | REQUIRED, only for MAIL |
-| HOSTNAME: ${myHOSTNAME}                     | misp.example.com                 | REQUIRED                |
-| DOMAIN: ${DOMAIN}                           | example.com                      | REQUIRED, only for MAIL |
-| HTTP_SERVERADMIN: ${HTTP_SERVERADMIN}       | support&#64;example.com              | REQUIRED                |
-| RELAYHOST: ${RELAYHOST}                     | mail.example.com                 | REQUIRED, only for MAIL |
-| RELAY_USER: ${RELAY_USER}                   | Mailuser42                       | REQUIRED, only for MAIL |
-| RELAY_PASSWORD: ${RELAY_PASSWORD}           | PleaseChangeMe                   | REQUIRED, only for MAIL |
-| DOCKER_NETWORK: ${DOCKER_NETWORK}           | 192.168.42.0/24                  | OPTIONAL                |
-| DEBUG_PEER: ${DEBUG_PEER}                   | mail.example.com                 | OPTIONAL                |
-| PHP_MEMORY: ${PHP_MEMORY}                   | 512M                             | OPTIONAL                |
-| REDIS_FQDN: ${REDIS_FQDN}                   | misp-redis                       | OPTIONAL                |</p>
-</div>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Environment Variables</th>
+<th>Example</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}</td>
+<td>PleaseChangeMe</td>
+<td>REQUIRED</td>
+</tr>
+<tr>
+<td>MYSQL_DATABASE: ${MYSQL_DATABASE}</td>
+<td>misp</td>
+<td>OPTIONAL</td>
+</tr>
+<tr>
+<td>MYSQL_USER: ${MYSQL_USER}</td>
+<td>misp</td>
+<td>OPTIONAL</td>
+</tr>
+<tr>
+<td>MYSQL_PASSWORD: ${MYSQL_PASSWORD}</td>
+<td>PleaseChangeMe</td>
+<td>REQUIRED</td>
+</tr>
+<tr>
+<td>HTTP_PROXY: ${HTTP_PROXY}</td>
+<td>http://proxy.example.com:3128</td>
+<td>OPTIONAL</td>
+</tr>
+<tr>
+<td>HTTPS_PROXY: ${HTTPS_PROXY}</td>
+<td>http://proxy.example.com:3128</td>
+<td>OPTIONAL</td>
+</tr>
+<tr>
+<td>NO_PROXY: ${NO_PROXY}</td>
+<td>internal.example.com example.com</td>
+<td>OPTIONAL</td>
+</tr>
+<tr>
+<td>SENDER_ADDRESS: ${SENDER_ADDRESS}</td>
+<td>no-reply@example.com</td>
+<td>REQUIRED, only for MAIL</td>
+</tr>
+<tr>
+<td>HOSTNAME: ${myHOSTNAME}</td>
+<td>misp.example.com</td>
+<td>REQUIRED</td>
+</tr>
+<tr>
+<td>DOMAIN: ${DOMAIN}</td>
+<td>example.com</td>
+<td>REQUIRED, only for MAIL</td>
+</tr>
+<tr>
+<td>HTTP_SERVERADMIN: ${HTTP_SERVERADMIN}</td>
+<td>support@example.com</td>
+<td>REQUIRED</td>
+</tr>
+<tr>
+<td>RELAYHOST: ${RELAYHOST}</td>
+<td>mail.example.com</td>
+<td>REQUIRED, only for MAIL</td>
+</tr>
+<tr>
+<td>RELAY_USER: ${RELAY_USER}</td>
+<td>Mailuser42</td>
+<td>REQUIRED, only for MAIL</td>
+</tr>
+<tr>
+<td>RELAY_PASSWORD: ${RELAY_PASSWORD}</td>
+<td>PleaseChangeMe</td>
+<td>REQUIRED, only for MAIL</td>
+</tr>
+<tr>
+<td>DOCKER_NETWORK: ${DOCKER_NETWORK}</td>
+<td>192.168.42.0/24</td>
+<td>OPTIONAL</td>
+</tr>
+<tr>
+<td>DEBUG_PEER: ${DEBUG_PEER}</td>
+<td>mail.example.com</td>
+<td>OPTIONAL</td>
+</tr>
+<tr>
+<td>PHP_MEMORY: ${PHP_MEMORY}</td>
+<td>512M</td>
+<td>OPTIONAL</td>
+</tr>
+<tr>
+<td>REDIS_FQDN: ${REDIS_FQDN}</td>
+<td>misp-redis</td>
+<td>OPTIONAL</td>
+</tr>
+</tbody>
+</table></div>
 <div class="section" id="using-with-docker-compose">
 <h3>Using With <code class="docutils literal notranslate"><span class="pre">docker-compose</span></code><a class="headerlink" href="#using-with-docker-compose" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>services:
@@ -896,7 +1125,7 @@
         <a href="MISP-dockerized-proxy.html" class="btn btn-neutral float-right" title="MISP-dockerized-proxy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Container Information" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Container Information" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -906,7 +1135,9 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2018, DCSO GmbH
-      Last updated on Feb 06, 2019.
+      <span class="lastupdated">
+        Last updated on Feb 13, 2019.
+      </span>
 
     </p>
   </div>
@@ -923,47 +1154,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript">
-          var DOCUMENTATION_OPTIONS = {
-              URL_ROOT:'../',
-              VERSION:'1.0.2',
-              LANGUAGE:'en',
-              COLLAPSE_INDEX:false,
-              FILE_SUFFIX:'.html',
-              HAS_SOURCE:  true,
-              SOURCELINK_SUFFIX: '.txt'
-          };
-      </script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>  
+  </script>
 
-  <style>
-    /* Sidebar header (and topbar for mobile) */
-    .wy-side-nav-search, .wy-nav-top {
-      background: #808080;
-    }
-    /* Sidebar */
-    .wy-nav-side {
-      /* background: #808080;*/
-    }
-  </style>
-
+  
+  
+    
+   
 
 </body>
 </html>

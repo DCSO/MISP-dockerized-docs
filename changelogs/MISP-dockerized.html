@@ -19,22 +19,36 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'1.0.2',
+              LANGUAGE:'en',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="MISP-dockerized-server" href="MISP-dockerized-server.html" />
-    <link rel="prev" title="Changelogs" href="index.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
+    <link rel="prev" title="Changelogs" href="index.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -42,11 +56,10 @@
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -91,7 +104,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../intro/features.html">Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../intro/requirements/index.html">Requirements</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../intro/requirements/software.html">Software Prerequsites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../intro/requirements/firewall.html">Firewall Prerequisites</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../intro/requirements/firewall.html#customers-which-have-access-to-dcso-misp">Customers which have access to DCSO MISP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intro/requirements/firewall.html#non-customers">Non-Customers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intro/requirements/firewall.html#why-docker-io">Why *.docker.io:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../intro/requirements/firewall.html#why-github-com">Why github.com</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../intro/requirements/software.html">Software Prerequisites</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../intro/install_nativ_docker.html">Docker Native: 3-Step Installation Guide</a><ul>
@@ -267,73 +287,78 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Changelogs</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">MISP-dockerized</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#release-candidate-1-0-1">Release Candidate 1.0.1</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#about">About</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#update-informations">Update Informations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#release-candidate-1-0-2">Release Candidate 1.0.2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#update-information">Update Information</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#general-changes">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#detailed-changes">Detailed Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detailed-information">Detailed Information</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#release-candidate-1-0-1">Release Candidate 1.0.1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Detailed Information</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#release-candidate-1-0-0">Release Candidate 1.0.0</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">About</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id2">Update Informations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id3">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id4">Detailed Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#about">About</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#update-informations">Update Informations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detailed-changes">Detailed Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#beta-release-candidate-0-3-4">Beta Release Candidate 0.3.4</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#update-information">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id15">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id16">Detailed Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id13">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id15">Detailed Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#beta-release-candidate-0-3-3">Beta Release Candidate 0.3.3</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id18">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id19">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id20">Detailed Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id17">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id18">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id19">Detailed Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#beta-release-candidate-0-3-2">Beta Release Candidate 0.3.2</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id23">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id24">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id25">Detailed Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id22">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id23">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id24">Detailed Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#beta-release-candidate-0-3-1">Beta Release Candidate 0.3.1</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id28">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id29">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id30">Detailed Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id27">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id28">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id29">Detailed Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#beta-release-candidate-0-3-0">Beta Release Candidate 0.3.0</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id33">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id34">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id35">Detailed Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id32">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id33">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id34">Detailed Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#beta-release-candidate-0-2-0">Beta Release Candidate 0.2.0</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id50">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id51">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id52">Detailed Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id49">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id50">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id51">Detailed Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#beta-release-candidate-0-1-2">Beta Release Candidate 0.1.2</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id53">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id54">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id52">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id53">General Changes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#fixes-and-improvements">Fixes and Improvements</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#beta-release-candidate-0-1-1">Beta Release Candidate 0.1.1</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id55">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id56">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id57">Fixes and Improvements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id54">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id55">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id56">Fixes and Improvements</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#beta-release-candidate-0-1-0">Beta Release Candidate 0.1.0</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id58">About</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id59">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id60">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id61">Fixes and Improvements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id57">About</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id58">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id59">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id60">Fixes and Improvements</a></li>
 </ul>
 </li>
 </ul>
@@ -492,36 +517,43 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="MISP-dockerized-misp-modules.html">MISP-dockerized-misp-modules</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="MISP-dockerized-misp-modules.html#bug-mdd134-added-misp-modules-container-version-1-2-for-gitlab-ci">Bug.MDD134: Added MISP-Modules Container Version 1.2 for Gitlab CI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MISP-dockerized-misp-modules.html#bug-mdd179-misp-modules-is-not-starting-correctly">Bug/MDD179: MISP Modules is not Starting Correctly</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#update-information">Update Information</a></li>
 <li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#general-changes">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#corrections-improvements">Corrections &amp; Improvements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#detailed-changes">Detailed changes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="MISP-dockerized-misp-modules.html#bug-mdd134-added-misp-modules-container-version-1-2-for-gitlab-ci">Bug.MDD134: Added MISP-Modules Container Version 1.2 for Gitlab CI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id1">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id2">General Changes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#fixes-and-improvements">Fixes and Improvements</a></li>
-<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#detailed-changes">Detailed Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id3">Detailed Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="MISP-dockerized-misp-modules.html#feat-mdd123-changed-the-container-version-scheme-from-3-to-2-digits">Feat.MDD123: Changed the Container Version Scheme from 3 to 2 digits.</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id1">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id2">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id3">Fixes and Improvements</a></li>
-<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id4">Detailed Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id4">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id5">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id6">Fixes and Improvements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id7">Detailed Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="MISP-dockerized-misp-modules.html#beta-release-candidate-0-3-2">Beta Release Candidate 0.3.2</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id5">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id6">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id7">Fixes and Improvements</a></li>
-<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id8">Detailed Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id8">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id9">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id10">Fixes and Improvements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id11">Detailed Changes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="MISP-dockerized-misp-modules.html#beta-release-candidate-0-3-1">Beta Release Candidate 0.3.1</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id9">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id10">Fixes and Improvements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id12">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id13">Fixes and Improvements</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="MISP-dockerized-misp-modules.html#beta-release-candidate-0-3-0">Beta Release Candidate 0.3.0</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id11">Update Information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id12">General Changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id13">Fixes and Improvements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id14">Update Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id15">General Changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-misp-modules.html#id16">Fixes and Improvements</a></li>
 </ul>
 </li>
 </ul>
@@ -704,9 +736,57 @@
             
   <div class="section" id="misp-dockerized">
 <h1>MISP-dockerized<a class="headerlink" href="#misp-dockerized" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="release-candidate-1-0-2">
+<h2>Release Candidate 1.0.2<a class="headerlink" href="#release-candidate-1-0-2" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/DCSO/MISP-dockerized/releases/tag/v1.0.2">View release on Github.com</a>
+This MISP-dockerized release is a minor release.</p>
+<div class="section" id="update-information">
+<h3>Update Information<a class="headerlink" href="#update-information" title="Permalink to this headline">¶</a></h3>
+<p>This release includes new CI files and we fixed a bug which prevents the CI to test the MISP-dockerized environment.</p>
+</div>
+<div class="section" id="general-changes">
+<h3>General Changes<a class="headerlink" href="#general-changes" title="Permalink to this headline">¶</a></h3>
+<p>No general changes where made.</p>
+</div>
+<div class="section" id="detailed-information">
+<h3>Detailed Information<a class="headerlink" href="#detailed-information" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>We have moved the CI scripts from ROOT/VERSION/.travis to ROOT/.ci</li>
+<li>We have improved the CI scripts for Gitlab and Travis CI.</li>
+<li>From now on the Gitlab CI is responsible for hub.docker.com and internal Docker registry.</li>
+<li>We fixed an bug which prevents the CI to test the environment.</li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
 <div class="section" id="release-candidate-1-0-1">
 <h2>Release Candidate 1.0.1<a class="headerlink" href="#release-candidate-1-0-1" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://github.com/DCSO/MISP-dockerized/releases/tag/v1.0.1">View release on Github.com</a></p>
+<p><a class="reference external" href="https://github.com/DCSO/MISP-dockerized/releases/tag/v1.0.1">View release on Github.com</a>
+This MISP-dockerized release is a minor release.</p>
+<div class="section" id="id1">
+<h3>Update Information<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>This release includes new CI files and we fixed a bug which prevents the CI to test the MISP-dockerized environment.</p>
+</div>
+<div class="section" id="id2">
+<h3>General Changes<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>No general changes where made.</p>
+</div>
+<div class="section" id="id3">
+<h3>Detailed Information<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>We have moved the CI scripts from ROOT/VERSION/.travis to ROOT/.ci</li>
+<li>We have improved the CI scripts for Gitlab and Travis CI.</li>
+<li>From now on the Gitlab CI is responsible for hub.docker.com and internal Docker registry.</li>
+<li>We fixed an bug which prevents the CI to test the environment.</li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="release-candidate-1-0-0">
+<h2>Release Candidate 1.0.0<a class="headerlink" href="#release-candidate-1-0-0" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/DCSO/MISP-dockerized/releases/tag/v1.0.0">View release on Github.com</a>
+This release represents the first production release of MISP-Dockerized in version 1.0.0.</p>
 <div class="section" id="about">
 <h3>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h3>
 <p>MISP dockerized is a project designed to provide an easy-to-use and easy-to-install ‘out of the box’ MISP instance that includes everything you need to run MISP with minimal host-side requirements.</p>
@@ -727,52 +807,6 @@
 <hr class="docutils" />
 <div class="section" id="update-informations">
 <h3>Update Informations<a class="headerlink" href="#update-informations" title="Permalink to this headline">¶</a></h3>
-<p>This release is a minor release and has fixed a bug in the CI files.</p>
-</div>
-<div class="section" id="general-changes">
-<h3>General Changes<a class="headerlink" href="#general-changes" title="Permalink to this headline">¶</a></h3>
-<p>No general changes have been made in this release.</p>
-</div>
-<div class="section" id="detailed-changes">
-<h3>Detailed Changes<a class="headerlink" href="#detailed-changes" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="main-repository">
-<h4>Main Repository<a class="headerlink" href="#main-repository" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="detailed-changes-fixes-improvements">
-<h5>Detailed Changes, Fixes &amp; Improvements<a class="headerlink" href="#detailed-changes-fixes-improvements" title="Permalink to this headline">¶</a></h5>
-<ul class="simple">
-<li>We fixed a bug in the container tag mechanism for the Travis CI</li>
-<li>we fixed a bug in the container tag mechanism for the Gitlab CI</li>
-<li>Added a new parameter variable ‘DEV’ for build_config.sh</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<hr class="docutils" />
-<div class="section" id="release-candidate-1-0-0">
-<h2>Release Candidate 1.0.0<a class="headerlink" href="#release-candidate-1-0-0" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://github.com/DCSO/MISP-dockerized/releases/tag/v1.0.0">View release on Github.com</a>
-This release represents the first production release of MISP-Dockerized in version 1.0.0.</p>
-<div class="section" id="id1">
-<h3>About<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>MISP dockerized is a project designed to provide an easy-to-use and easy-to-install ‘out of the box’ MISP instance that includes everything you need to run MISP with minimal host-side requirements.</p>
-<p>MISP dockerized uses MISP (Open Source Threat Intelligence Platform - https://github.com/MISP/MISP), which is maintained and developed by the MISP project team (https://www.misp-project.org/).</p>
-<p>MISP-dockerized provides the following features:</p>
-<ul class="simple">
-<li>3-steps (in 5 minute or less) ready MISP instance</li>
-<li>Built in MISP modules</li>
-<li>Built in mail transport via postfix</li>
-<li>Prehardened TLS configuration</li>
-<li>Default http to https redirect</li>
-<li>Easy-to-use script based backup and restore function</li>
-<li>Prebuilt management commands to ease maintenance efforts</li>
-<li>Periodically built Docker containers</li>
-<li>Automated test framework to test new MISP releases</li>
-</ul>
-</div>
-<hr class="docutils" />
-<div class="section" id="id2">
-<h3>Update Informations<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>This release includes the new MISP server container version 2.4.99
 In addition, we have changed the following:</p>
 <ul class="simple">
@@ -781,8 +815,8 @@ In addition, we have changed the following:</p>
 <li>the misp-module container version to the latest version 1.X</li>
 </ul>
 </div>
-<div class="section" id="id3">
-<h3>General Changes<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id4">
+<h3>General Changes<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>We have changed our complete directories. Now you have access to all unsupported and old version of MISP-dockerized.</li>
 <li>There is a new NEW_FRESH_INSTAL.sh script</li>
@@ -791,12 +825,12 @@ In addition, we have changed the following:</p>
 <li>Added the new MISP-Server Container with MISP Version 2.4.99 (#39)</li>
 </ul>
 </div>
-<div class="section" id="id4">
-<h3>Detailed Changes<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id5">
-<h4>Main Repository<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="id6">
-<h5>Detailed Changes, Fixes &amp; Improvements<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="detailed-changes">
+<h3>Detailed Changes<a class="headerlink" href="#detailed-changes" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="main-repository">
+<h4>Main Repository<a class="headerlink" href="#main-repository" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="detailed-changes-fixes-improvements">
+<h5>Detailed Changes, Fixes &amp; Improvements<a class="headerlink" href="#detailed-changes-fixes-improvements" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li>Deactivated the Ansible script for database and server, because since version 2.4.97 the misp-server container does not require Ansible anymore</li>
 <li>Changed misp-robot from 1.0.3-ubuntu to 2.x-debian</li>
@@ -810,8 +844,8 @@ In addition, we have changed the following:</p>
 </div>
 <div class="section" id="container-misp-dockerized-server">
 <h4>Container <code class="docutils literal notranslate"><span class="pre">misp-dockerized-server</span></code><a class="headerlink" href="#container-misp-dockerized-server" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="id7">
-<h5>Update Informations<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id5">
+<h5>Update Informations<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h5>
 <p>Features of the release:</p>
 <ul class="simple">
 <li>Added a new MISP-Server Container for MISP release 2.4.99 on base of 2.4.97. (closes #39)
@@ -823,8 +857,8 @@ For more information please have a look at the official changelog at https://git
 <li>Built in MariaDB</li>
 </ul>
 </div>
-<div class="section" id="id8">
-<h5>Detailed Changes, Fixes &amp; Improvements<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id6">
+<h5>Detailed Changes, Fixes &amp; Improvements<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li>The following base changes were made in addition to the new <code class="docutils literal notranslate"><span class="pre">misp-server</span> <span class="pre">version</span> <span class="pre">2.4.97</span></code>:<ul>
 <li>The base image is now <strong>debian stretch</strong> instead of ubuntu 18.04</li>
@@ -843,8 +877,8 @@ Included statements in the Gitlab CI main file allow us to improve and simplify 
 </div>
 <div class="section" id="container-misp-dockerized-robot">
 <h4>Container <code class="docutils literal notranslate"><span class="pre">misp-dockerized-robot</span></code><a class="headerlink" href="#container-misp-dockerized-robot" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="id9">
-<h5>Update Informations<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id7">
+<h5>Update Informations<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h5>
 <p>Features of the release:</p>
 <ul class="simple">
 <li>Built in Docker</li>
@@ -856,8 +890,8 @@ Included statements in the Gitlab CI main file allow us to improve and simplify 
 For example: 1.0.1 -&gt; 1.1</p>
 <p>The second digit is changed any time we make minor changes. The first digit changes whenever we make major changes, e.g. a new base image.</p>
 </div>
-<div class="section" id="id10">
-<h5>Detailed Changes, Fixes &amp; Improvements<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id8">
+<h5>Detailed Changes, Fixes &amp; Improvements<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li>Changed from the base image debian:stable-slim to debian:stretch-slim</li>
 <li>Remove unused robot versions:<ul>
@@ -874,8 +908,8 @@ For example: 1.0.1 -&gt; 1.1</p>
 </div>
 <div class="section" id="container-misp-dockerized-proxy">
 <h4>Container <code class="docutils literal notranslate"><span class="pre">misp-dockerized-proxy</span></code><a class="headerlink" href="#container-misp-dockerized-proxy" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="id11">
-<h5>Update Informations<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id9">
+<h5>Update Informations<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h5>
 <p>Features of the release:</p>
 <ul class="simple">
 <li>Prehardened TLS configuration</li>
@@ -887,8 +921,8 @@ For example: 1.0.1 -&gt; 1.1</p>
 For example: 1.0.1 -&gt; 1.1</p>
 <p>The second digit is changed any time we make minor changes. The first digit changes whenever we make major changes, e.g. a new base image.</p>
 </div>
-<div class="section" id="id12">
-<h5>Detailed Changes, Fixes &amp; Improvements<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id10">
+<h5>Detailed Changes, Fixes &amp; Improvements<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li>Added an own entrypoint script to create user defined files</li>
 <li>Added the possibility to create self-signed certificates</li>
@@ -900,8 +934,8 @@ For example: 1.0.1 -&gt; 1.1</p>
 </div>
 <div class="section" id="container-misp-dockerized-misp-modules">
 <h4>Container <code class="docutils literal notranslate"><span class="pre">misp-dockerized-misp-modules</span></code><a class="headerlink" href="#container-misp-dockerized-misp-modules" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="id13">
-<h5>Update Informations<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id11">
+<h5>Update Informations<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h5>
 <p>Features of the release:</p>
 <ul class="simple">
 <li>Pre-Installed MISP modules</li>
@@ -910,8 +944,8 @@ For example: 1.0.1 -&gt; 1.1</p>
 For example: 1.0.1 -&gt; 1.1</p>
 <p>The second digit is changed any time we make minor changes. The first digit changes whenever we make major changes, e.g. a new base image.</p>
 </div>
-<div class="section" id="id14">
-<h5>Detailed Changes, Fixes &amp; Improvements<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id12">
+<h5>Detailed Changes, Fixes &amp; Improvements<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li>Pre-Installed debian stretch MISP modules container</li>
 <li>All folders have been renamed, e.g. from 1.0.0.0-debian to 1.0-debian.</li>
@@ -922,21 +956,22 @@ For example: 1.0.1 -&gt; 1.1</p>
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="section" id="beta-release-candidate-0-3-4">
 <h2>Beta Release Candidate 0.3.4<a class="headerlink" href="#beta-release-candidate-0-3-4" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/DCSO/MISP-dockerized/releases/tag/v0.3.4-beta">View release on Github.com</a></p>
-<div class="section" id="update-information">
-<h3>Update Information<a class="headerlink" href="#update-information" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id13">
+<h3>Update Information<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
 <p>This update fixes an error with incorrectly mounted MISP volumes that caused the required disk space to exceed the normal value. Therefore, before updating, make sure that you have up-to-date backups. We fixed small bugs for the docker-compose, Ansible and build_script.sh.</p>
 </div>
-<div class="section" id="id15">
-<h3>General Changes<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id14">
+<h3>General Changes<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
 <p>No general changes have been made in this release.</p>
 </div>
+<div class="section" id="id15">
+<h3>Detailed Changes<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id16">
-<h3>Detailed Changes<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id17">
-<h4>Main Repository<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
+<h4>Main Repository<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
 <div class="section" id="detailed-changes-fixes-and-improvements">
 <h5>Detailed Changes, Fixes and Improvements<a class="headerlink" href="#detailed-changes-fixes-and-improvements" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
@@ -949,23 +984,24 @@ For example: 1.0.1 -&gt; 1.1</p>
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="section" id="beta-release-candidate-0-3-3">
 <h2>Beta Release Candidate 0.3.3<a class="headerlink" href="#beta-release-candidate-0-3-3" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/DCSO/MISP-dockerized/releases/tag/v0.3.3-beta">View release on Github.com</a></p>
-<div class="section" id="id18">
-<h3>Update Information<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id17">
+<h3>Update Information<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
 <p>In this release, we fixed only small bugs that affect the tagging and build process for creating the productive MISP-dockerized images on hub.docker.com and internal Gitlab CI.</p>
 </div>
-<div class="section" id="id19">
-<h3>General Changes<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id18">
+<h3>General Changes<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
 <p>No general changes have been made in this release.</p>
 </div>
+<div class="section" id="id19">
+<h3>Detailed Changes<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id20">
-<h3>Detailed Changes<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<h4>Main Repository<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
 <div class="section" id="id21">
-<h4>Main Repository<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="id22">
-<h5>Detailed Changes, Fixes and Improvements<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h5>
+<h5>Detailed Changes, Fixes and Improvements<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li>Fixed Gitlab CI for the repository url parameter to tagging.sh</li>
 <li>Fixed tagging.sh shell script to find the right image and re-tag it</li>
@@ -974,23 +1010,24 @@ For example: 1.0.1 -&gt; 1.1</p>
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="section" id="beta-release-candidate-0-3-2">
 <h2>Beta Release Candidate 0.3.2<a class="headerlink" href="#beta-release-candidate-0-3-2" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/DCSO/MISP-dockerized/releases/tag/v0.3.2-beta">View release on Github.com</a></p>
-<div class="section" id="id23">
-<h3>Update Information<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id22">
+<h3>Update Information<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
 <p>In this release, we fixed only small bugs that affect the tagging and build process for creating the productive MISP-dockerized images on hub.docker.com and internal Gitlab CI.</p>
 </div>
-<div class="section" id="id24">
-<h3>General Changes<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id23">
+<h3>General Changes<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
 <p>No general changes have been made in this release.</p>
 </div>
+<div class="section" id="id24">
+<h3>Detailed Changes<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id25">
-<h3>Detailed Changes<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+<h4>Main Repository<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h4>
 <div class="section" id="id26">
-<h4>Main Repository<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="id27">
-<h5>Detailed Changes, Fixes and Improvements<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h5>
+<h5>Detailed Changes, Fixes and Improvements<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li>Modified pull branch for Travis CI from stable to master.</li>
 <li>Modified push.sh shell script to force ‘-dev’ image deletion</li>
@@ -999,23 +1036,24 @@ For example: 1.0.1 -&gt; 1.1</p>
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="section" id="beta-release-candidate-0-3-1">
 <h2>Beta Release Candidate 0.3.1<a class="headerlink" href="#beta-release-candidate-0-3-1" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/DCSO/MISP-dockerized/releases/tag/v0.3.1-beta">View release on Github.com</a></p>
-<div class="section" id="id28">
-<h3>Update Information<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id27">
+<h3>Update Information<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
 <p>In this release, we fixed only small bugs that affect the tagging and build process for creating the productive MISP-dockerized images on hub.docker.com and internal Gitlab CI.</p>
 </div>
-<div class="section" id="id29">
-<h3>General Changes<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id28">
+<h3>General Changes<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
 <p>No general changes have been made in this release.</p>
 </div>
+<div class="section" id="id29">
+<h3>Detailed Changes<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id30">
-<h3>Detailed Changes<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
+<h4>Main Repository<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h4>
 <div class="section" id="id31">
-<h4>Main Repository<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="id32">
-<h5>Detailed Changes, Fixes and Improvements<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h5>
+<h5>Detailed Changes, Fixes and Improvements<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li>Added alpine packages which are required for internal Gitlab CI</li>
 <li>Modified pull branch for travis from stable to master.</li>
@@ -1025,28 +1063,29 @@ For example: 1.0.1 -&gt; 1.1</p>
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="section" id="beta-release-candidate-0-3-0">
 <h2>Beta Release Candidate 0.3.0<a class="headerlink" href="#beta-release-candidate-0-3-0" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/DCSO/MISP-dockerized/releases/tag/v0.3.0-beta">View release on Github.com</a></p>
-<div class="section" id="id33">
-<h3>Update Information<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id32">
+<h3>Update Information<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h3>
 <p>In this release we made several improvements to the container and build scripts, which include the first preparations for support of Kubernetes and tools like Gitlab CI, which will help us to create more complex automated tests. We now also offer a new container for MISP modules. Additionally, we have added support for the new MISP versions 2.4.93, 2.4.94 and 2.4.95.</p>
 <p>With the new release it is now also possible to load containers from the <a class="reference external" href="https://dockerhub.dcso.de/v2">DCSO Docker Respository</a>, which only needs one network endpoint and is therefore easier to use in enterprise environments behind firewalls and/or proxies.</p>
 </div>
-<div class="section" id="id34">
-<h3>General Changes<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id33">
+<h3>General Changes<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>The MISP proxy now requires less configuration and is easier to set up, which is easier for us to support as well.</li>
 <li>1st preparation for a kubernetes installation method</li>
 <li>Added Support for MISP versions 2.4.93, 2.4.94, 2.4.95</li>
 </ul>
 </div>
+<div class="section" id="id34">
+<h3>Detailed Changes<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id35">
-<h3>Detailed Changes<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
+<h4>Main Repository<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h4>
 <div class="section" id="id36">
-<h4>Main Repository<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="id37">
-<h5>Detailed Changes, Fixes and Improvements<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h5>
+<h5>Detailed Changes, Fixes and Improvements<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li>Added internal Gitlab CI support</li>
 <li>Added support for different Docker registries that can be selected during installation.</li>
@@ -1073,14 +1112,14 @@ For example: 1.0.1 -&gt; 1.1</p>
 </ul>
 </div>
 </div>
-<div class="section" id="id38">
-<h4>Container <code class="docutils literal notranslate"><span class="pre">misp-dockerized-server</span></code><a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id37">
+<h4>Container <code class="docutils literal notranslate"><span class="pre">misp-dockerized-server</span></code><a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h4>
 <div class="section" id="general-update-information">
 <h5>General/Update Information<a class="headerlink" href="#general-update-information" title="Permalink to this headline">¶</a></h5>
 <p>In this release candidate we added a new container with improved configuration, updated the old container and improved the build scripts for Gitlab CI support.</p>
 </div>
-<div class="section" id="id39">
-<h5>Detailed Changes, Fixes and Improvements<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id38">
+<h5>Detailed Changes, Fixes and Improvements<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li>Added internal Gitlab CI support
 We have changed the shell scripts to support a second Docker registry. Now the script looks for a variable called <code class="docutils literal notranslate"><span class="pre">INTERNAL_REGISTRY_HOST</span></code>.</li>
@@ -1124,14 +1163,14 @@ We have made the LABELs more variable.</li>
 </ul>
 </div>
 </div>
+<div class="section" id="id39">
+<h4>Container <code class="docutils literal notranslate"><span class="pre">misp-dockerized-robot</span></code><a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h4>
 <div class="section" id="id40">
-<h4>Container <code class="docutils literal notranslate"><span class="pre">misp-dockerized-robot</span></code><a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="id41">
-<h5>General/Update Information<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h5>
+<h5>General/Update Information<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h5>
 <p>In this release candidate we added a new container with improved configuration, updated the old container and improved the build scripts for Gitlab CI support.</p>
 </div>
-<div class="section" id="id42">
-<h5>Detailed Changes, Fixes and Improvements<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id41">
+<h5>Detailed Changes, Fixes and Improvements<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li>Added internal Gitlab CI support
 We have changed the shell scripts to support a second Docker registry. Now the scripts look for a variable with the name <code class="docutils literal notranslate"><span class="pre">INTERNAL_REGISTRY_HOST</span></code>.</li>
@@ -1143,12 +1182,12 @@ We have added a new LABEL standard and prepared dockerfile for the next upgrade 
 </div>
 <div class="section" id="container-misp-dockerized-postfix">
 <h4>Container <code class="docutils literal notranslate"><span class="pre">misp-dockerized-postfix</span></code><a class="headerlink" href="#container-misp-dockerized-postfix" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="id43">
-<h5>General/Update Information<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id42">
+<h5>General/Update Information<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h5>
 <p>In this release candidate we added a new container with improved configuration, updated the old container and improved the build scripts for Gitlab CI support.</p>
 </div>
-<div class="section" id="id44">
-<h5>Detailed Changes, Fixes and Improvements<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id43">
+<h5>Detailed Changes, Fixes and Improvements<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li>Added internal Gitlab CI support
 We have changed the shell scripts to support a second Docker registry. Now the scripts looks for a variable with the name <code class="docutils literal notranslate"><span class="pre">INTERNAL_REGISTRY_HOST</span></code>.</li>
@@ -1166,16 +1205,16 @@ We add a new LABEL standard and prepared dockerfile for the next upgrade release
 </ul>
 </div>
 </div>
+<div class="section" id="id44">
+<h4>Container <code class="docutils literal notranslate"><span class="pre">misp-dockerized-proxy</span></code><a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h4>
 <div class="section" id="id45">
-<h4>Container <code class="docutils literal notranslate"><span class="pre">misp-dockerized-proxy</span></code><a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="id46">
-<h5>General/Update Information<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h5>
+<h5>General/Update Information<a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h5>
 <p>We have changed the file name convention for the NGINX configuration setup. In 1.0.0 and 1.0.1 we used two NGINX configuration files, one for HTTPS and one only for HTTP. We have changed this and are using now one HTTPS file only.
 At build time a self-signed cert is now created. Therefore a HTTP only configuration file is not required anymore.
 Please make sure to disable the NGINX configuration volume to get the new file. Or make a backup. Delete all and start from scratch and restore the backup.</p>
 </div>
-<div class="section" id="id47">
-<h5>Detailed Changes, Fixes and Improvements<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id46">
+<h5>Detailed Changes, Fixes and Improvements<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li>Fix Healthcheck of 1.0.0 and 1.0.1
 The cURL Package was not found and is now installed at build time.</li>
@@ -1195,12 +1234,12 @@ We have changed the shell scripts to support a second Docker registry. Now the s
 </div>
 <div class="section" id="container-misp-dockerized-modules">
 <h4>Container <code class="docutils literal notranslate"><span class="pre">misp-dockerized-modules</span></code><a class="headerlink" href="#container-misp-dockerized-modules" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="id48">
-<h5>General/Update Information<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id47">
+<h5>General/Update Information<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h5>
 <p>A new container which contains the [MISP-Modules|https://github.com/MISP/misp-modules] and is ready for use within the MISP platform.</p>
 </div>
-<div class="section" id="id49">
-<h5>Detailed Changes, Fixes and Improvements<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id48">
+<h5>Detailed Changes, Fixes and Improvements<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li>Added internal Gitlab CI support
 We have changed the shell scripts to support a second Docker registry. Now the scripts look for a variable with the name <code class="docutils literal notranslate"><span class="pre">INTERNAL_REGISTRY_HOST</span></code>.</li>
@@ -1213,17 +1252,18 @@ We have added a new LABEL standard and prepared dockerfile for the next upgrade 
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="section" id="beta-release-candidate-0-2-0">
 <h2>Beta Release Candidate 0.2.0<a class="headerlink" href="#beta-release-candidate-0-2-0" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/DCSO/MISP-dockerized/releases/tag/v0.2.0-beta">View release on Github.com</a></p>
-<div class="section" id="id50">
-<h3>Update Information<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id49">
+<h3>Update Information<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h3>
 <p>We have made some major changes in the container and build structure, therefore these version <strong>is not</strong> directly compatible to older versions of <strong>MISP-dockerized</strong>. An update from a old installation is possible but has to be done manually. However, we do not plan to have another breaking change within the beta and with all new release of <strong>MISP-dockerized</strong>, beginning with the upcoming release v0.3.0, all MISP-dockerized versions will have integrated an upgrade script which helps you to update your running instances.</p>
 <p>We found that the MISP linked versioning of our releases is somewhat unclear, as we support multiple versions of MISP and have therefore changed the tagging of our releases.</p>
 <p>Another significant change results from an error described here: https://github.com/DCSO/MISP-dockerized/issues/19. This is confirmed as an official MISP software bug (https://github.com/MISP/MISP/issues/3244). In order to provide a stable and running instance, we had to change our container structure due to this error. Therefore, the database and redis now run within the <code class="docutils literal notranslate"><span class="pre">misp-dockerized-server</span></code>. We plan to switch back to our original container design as soon as the bug is fixed.</p>
 </div>
-<div class="section" id="id51">
-<h3>General Changes<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id50">
+<h3>General Changes<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>New hub.docker.com repositories that we have changed from <code class="docutils literal notranslate"><span class="pre">misp-&lt;CONTAINER&gt;</span></code> to <code class="docutils literal notranslate"><span class="pre">misp-dockerized-&lt;CONTAINER&gt;</span></code></li>
 <li>Changed the build process for the container<ul>
@@ -1235,8 +1275,8 @@ We have added a new LABEL standard and prepared dockerfile for the next upgrade 
 <li>Improved backup and recovery scripts</li>
 </ul>
 </div>
-<div class="section" id="id52">
-<h3>Detailed Changes<a class="headerlink" href="#id52" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id51">
+<h3>Detailed Changes<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="changed-ansible-scripts">
 <h4>Changed Ansible Scripts<a class="headerlink" href="#changed-ansible-scripts" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
@@ -1331,11 +1371,12 @@ We have added a new LABEL standard and prepared dockerfile for the next upgrade 
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="section" id="beta-release-candidate-0-1-2">
 <h2>Beta Release Candidate 0.1.2<a class="headerlink" href="#beta-release-candidate-0-1-2" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/DCSO/MISP-dockerized/releases/tag/v0.1.2-beta">View release on Github.com</a></p>
-<div class="section" id="id53">
-<h3>Update Information<a class="headerlink" href="#id53" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id52">
+<h3>Update Information<a class="headerlink" href="#id52" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Removed all Docker container from misp-dockerized Git repository to own Docker container repositories:<ul>
 <li><a class="reference external" href="https://github.com/DCSO/MISP-dockerized-server">MISP-dockerized-server
@@ -1353,8 +1394,8 @@ We have added a new LABEL standard and prepared dockerfile for the next upgrade 
 </li>
 </ul>
 </div>
-<div class="section" id="id54">
-<h3>General Changes<a class="headerlink" href="#id54" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id53">
+<h3>General Changes<a class="headerlink" href="#id53" title="Permalink to this headline">¶</a></h3>
 <p>No general changes have been made in this release.</p>
 </div>
 <div class="section" id="fixes-and-improvements">
@@ -1393,19 +1434,20 @@ We have added a new LABEL standard and prepared dockerfile for the next upgrade 
 </ul>
 </div>
 </div>
+<hr class="docutils" />
 <div class="section" id="beta-release-candidate-0-1-1">
 <h2>Beta Release Candidate 0.1.1<a class="headerlink" href="#beta-release-candidate-0-1-1" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/DCSO/MISP-dockerized/releases/tag/v0.1.1-beta">View release on Github.com</a></p>
-<div class="section" id="id55">
-<h3>Update Information<a class="headerlink" href="#id55" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id54">
+<h3>Update Information<a class="headerlink" href="#id54" title="Permalink to this headline">¶</a></h3>
 <p>Minor release for the v2.4.88 MISP server version.</p>
 </div>
-<div class="section" id="id56">
-<h3>General Changes<a class="headerlink" href="#id56" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id55">
+<h3>General Changes<a class="headerlink" href="#id55" title="Permalink to this headline">¶</a></h3>
 <p>No general changes have been made in this release.</p>
 </div>
-<div class="section" id="id57">
-<h3>Fixes and Improvements<a class="headerlink" href="#id57" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id56">
+<h3>Fixes and Improvements<a class="headerlink" href="#id56" title="Permalink to this headline">¶</a></h3>
 <p>Included in the Release:</p>
 <ul class="simple">
 <li>Added LICENSE File</li>
@@ -1417,16 +1459,17 @@ We have added a new LABEL standard and prepared dockerfile for the next upgrade 
 </ul>
 </div>
 </div>
+<hr class="docutils" />
 <div class="section" id="beta-release-candidate-0-1-0">
 <h2>Beta Release Candidate 0.1.0<a class="headerlink" href="#beta-release-candidate-0-1-0" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/DCSO/MISP-dockerized/releases/tag/v0.1.0-beta">View release on Github.com</a></p>
-<div class="section" id="id58">
-<h3>About<a class="headerlink" href="#id58" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id57">
+<h3>About<a class="headerlink" href="#id57" title="Permalink to this headline">¶</a></h3>
 <p>MISP dockerized is a project designed to provide an easy-to-use and easy-to-install ‘out of the box’ MISP instance that includes everything you need to run MISP with minimal host-side requirements.</p>
 <p>MISP dockerized uses MISP (Open Source Threat Intelligence Platform - https://github.com/MISP/MISP), which is maintained and developed by the MISP project team (https://www.misp-project.org/).</p>
 </div>
-<div class="section" id="id59">
-<h3>Update Information<a class="headerlink" href="#id59" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id58">
+<h3>Update Information<a class="headerlink" href="#id58" title="Permalink to this headline">¶</a></h3>
 <p>Initial major release for the v2.4.88 MISP server version.
 Included in the Release:</p>
 <ul class="simple">
@@ -1439,12 +1482,12 @@ Included in the Release:</p>
 For more information, please have a look at the official changelog at https://github.com/MISP/MISP/releases/tag/v2.4.88</li>
 </ul>
 </div>
-<div class="section" id="id60">
-<h3>General Changes<a class="headerlink" href="#id60" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id59">
+<h3>General Changes<a class="headerlink" href="#id59" title="Permalink to this headline">¶</a></h3>
 <p>We introduced the new MISP-dockerized project.</p>
 </div>
-<div class="section" id="id61">
-<h3>Fixes and Improvements<a class="headerlink" href="#id61" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id60">
+<h3>Fixes and Improvements<a class="headerlink" href="#id60" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Added new container for an proxy server, robot server and an misp application server</li>
 </ul>
@@ -1463,7 +1506,7 @@ For more information, please have a look at the official changelog at https://gi
         <a href="MISP-dockerized-server.html" class="btn btn-neutral float-right" title="MISP-dockerized-server" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Changelogs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Changelogs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1473,7 +1516,9 @@ For more information, please have a look at the official changelog at https://gi
   <div role="contentinfo">
     <p>
         &copy; Copyright 2018, DCSO GmbH
-      Last updated on Feb 06, 2019.
+      <span class="lastupdated">
+        Last updated on Feb 13, 2019.
+      </span>
 
     </p>
   </div>
@@ -1490,47 +1535,16 @@ For more information, please have a look at the official changelog at https://gi
   
 
 
-  
-
-    
-    
-      <script type="text/javascript">
-          var DOCUMENTATION_OPTIONS = {
-              URL_ROOT:'../',
-              VERSION:'1.0.2',
-              LANGUAGE:'en',
-              COLLAPSE_INDEX:false,
-              FILE_SUFFIX:'.html',
-              HAS_SOURCE:  true,
-              SOURCELINK_SUFFIX: '.txt'
-          };
-      </script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>  
+  </script>
 
-  <style>
-    /* Sidebar header (and topbar for mobile) */
-    .wy-side-nav-search, .wy-nav-top {
-      background: #808080;
-    }
-    /* Sidebar */
-    .wy-nav-side {
-      /* background: #808080;*/
-    }
-  </style>
-
+  
+  
+    
+   
 
 </body>
 </html>
