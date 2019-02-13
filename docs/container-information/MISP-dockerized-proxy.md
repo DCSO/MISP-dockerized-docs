@@ -23,19 +23,12 @@
 
 ### Project Information
 
-| | |
-|-|-|
-| Travis Master | [![][101]][102] |
-| Docker Size & Layers | [![][104]][107]|
-| Latest Docker Version | [![][105]][107]|
-| Commit for Latest Docker Version | [![][106]][107]|
-
-[101]: https://travis-ci.org/DCSO/MISP-dockerized-proxy.svg?branch=master
-[102]: https://travis-ci.org/DCSO/MISP-dockerized-proxy
-[104]: https://images.microbadger.com/badges/image/dcso/misp-dockerized-proxy.svg
-[105]: https://images.microbadger.com/badges/version/dcso/misp-dockerized-proxy.svg
-[106]: https://images.microbadger.com/badges/commit/dcso/misp-dockerized-proxy.svg
-[107]: https://microbadger.com/images/dcso/misp-dockerized-proxy
+|                                  |                                                                                                                                                              |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Travis Master                    | [![](https://travis-ci.org/DCSO/MISP-dockerized-proxy.svg?branch=master)](https://travis-ci.org/DCSO/MISP-dockerized-proxy)                    |
+| Docker Size & Layers             | [![](https://images.microbadger.com/badges/image/dcso/misp-dockerized-proxy.svg)](https://microbadger.com/images/dcso/misp-dockerized-proxy)   |
+| Latest Docker Version            | [![](https://images.microbadger.com/badges/version/dcso/misp-dockerized-proxy.svg)](https://microbadger.com/images/dcso/misp-dockerized-proxy) |
+| Commit for Latest Docker Version | [![](https://images.microbadger.com/badges/commit/dcso/misp-dockerized-proxy.svg)](https://microbadger.com/images/dcso/misp-dockerized-proxy)  |
 
 
 ## How to Use this Image
