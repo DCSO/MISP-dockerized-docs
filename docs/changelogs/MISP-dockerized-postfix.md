@@ -62,4 +62,3 @@ We added a new container 1.0.1.
 * This closed ticket MDD-14 with Postfix as relay.
 * Added new Postfix container with version 1.0.0 with Alpine as base
 * Deleted hub.docker.com hooks
----

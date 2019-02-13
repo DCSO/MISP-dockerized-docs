@@ -152,4 +152,3 @@ We added Travis CI to build all proxy containers continuously.
 - Since this release, we built the container automatically via Travis CI
 - We built from now the 1.0.0-alpine and 1.0.0-ubuntu automatically
 - We also added a lot of information to our readme.
----

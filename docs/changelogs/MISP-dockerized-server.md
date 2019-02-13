@@ -259,4 +259,3 @@ We added for all containers new build argument variables and new labels.
 * All future Docker containers are to be built automatically via Travis CI. The Travis CI builds the Docker and pushes to hub.docker.com with a "-dev" tag; therefore, the container is misp-dockerized-server-2.4.88-dev. Only our main repository DCSO/MISP-dockerized can push this container into hub.docker.com without a "-dev" tag after the main repository test that the whole environment is ready.
 * We updated the readme file to fix smaller typos
 * On the Docker container for MISP version 2.4.88 and 2.4.89, we added the label version and MISP tag to detect the version and MISP tag into the Docker container itself.
----

@@ -186,4 +186,3 @@ Besides the new version, no general changes were made.
     * Improved task for copy cert, key and dh params to volume
     * Improved import database section
     * Improved all Ansible scripts to use Ansible modules if possible 
----

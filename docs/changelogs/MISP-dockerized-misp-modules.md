@@ -1,6 +1,25 @@
 # MISP-dockerized-misp-modules
 Since release candidate 0.3.0, we changed the development process from an release candidate change to a feature change development process.
 
+
+
+
+
+
+---
+## Bug/MDD179: MISP Modules is not Starting Correctly
+### Update Information
+We added a new Version 1.3-debian. The version 1.2-debian does not start correctly.
+### General Changes
+In general, we made no changes.
+### Corrections & Improvements
+- We added a new container version 1.3-debian
+- Improved CI scripts
+### Detailed changes
+- We added a new Version 1.3-debian. The version 1.2-debian does not start correctly. The root cause was that MISP modules Git repository adds a pip package which is not available for Python 3.5.x. In Debian is Python 3.5.x the default. The new Container 1.3-debian has now Installed Python 3.7.x from Debian unstable branch. This fixes the problem with pip package url-normalizer.
+- We improved the CI files to a more easier way. Travis CI only test the Image, but our internal Gitlab CI build, test, and push the Images to internal Docker registry and hub.docker.com registry.
+
+
 ---
 ## Bug.MDD134: Added MISP-Modules Container Version 1.2 for Gitlab CI
 ### Update Information 
@@ -68,4 +87,3 @@ With this release, we offered the first MISP modules container on a debian base.
 We added a standard debian base container with installed MISP modules content from `https://github.com/MISP/misp-modules`.
 ### Fixes and Improvements
 - Added Gitlab CI + Travis CI support
----

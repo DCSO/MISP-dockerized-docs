@@ -1,6 +1,21 @@
 # MISP-dockerized
 
 
+---
+## Release Candidate 1.0.2
+[View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v1.0.2)
+This MISP-dockerized release is a minor release.
+### Update Information
+This release includes new CI files and we fixed a bug which prevents the CI to test the MISP-dockerized environment.
+### General Changes
+No general changes where made.
+### Detailed Information
+- We have moved the CI scripts from ROOT/VERSION/.travis to ROOT/.ci
+- We have improved the CI scripts for Gitlab and Travis CI.
+- From now on the Gitlab CI is responsible for hub.docker.com and internal Docker registry.
+- We fixed an bug which prevents the CI to test the environment.
+
+---
 ## Release Candidate 1.0.1
 [View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v1.0.1)
 This MISP-dockerized release is a minor release.
@@ -473,4 +488,3 @@ Included in the Release:
 We introduced the new MISP-dockerized project.
 ### Fixes and Improvements
 - Added new container for an proxy server, robot server and an misp application server
----
