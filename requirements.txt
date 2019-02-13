@@ -4,3 +4,5 @@ sphinx_rtd_theme
 sphinxcontrib-httpdomain
 # for https://robpol86.github.io/sphinxcontrib-versioning/install.html
 sphinxcontrib-versioning
+# https://pypi.org/project/sphinx-markdown-tables/
+sphinx-markdown-tables

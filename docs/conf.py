@@ -54,6 +54,7 @@ extensions = [
     'sphinx.ext.viewcode',
     'docxsphinx',
     'sphinx.ext.githubpages',
+    'sphinx_markdown_tables',
     #'releases',
 ]
 
