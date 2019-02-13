@@ -2,6 +2,25 @@
 Since release candidate 0.3.0, we changed the development process from an release candidate change to a feature change development process.
 
 
+
+
+
+
+---
+## Bug/MDD179: MISP Modules is not Starting Correctly
+### Update Information
+We added a new Version 1.3-debian. The version 1.2-debian does not start correctly.
+### General Changes
+In general, we made no changes.
+### Corrections & Improvements
+- We added a new container version 1.3-debian
+- Improved CI scripts
+### Detailed changes
+- We added a new Version 1.3-debian. The version 1.2-debian does not start correctly. The root cause was that MISP modules Git repository adds a pip package which is not available for Python 3.5.x. In Debian is Python 3.5.x the default. The new Container 1.3-debian has now Installed Python 3.7.x from Debian unstable branch. This fixes the problem with pip package url-normalizer.
+- We improved the CI files to a more easier way. Travis CI only test the Image, but our internal Gitlab CI build, test, and push the Images to internal Docker registry and hub.docker.com registry.
+
+
+---
 ## Bug.MDD134: Added MISP-Modules Container Version 1.2 for Gitlab CI
 ### Update Information 
 In the past, we changed the version numbers and forgot the container with the version 1.2, but only in Gitlab CI. In Travis CI it existed. We fixed this situation.
@@ -13,7 +32,7 @@ No general changes were made.
 - Changed the Gitlab CI file in the root of the repository.
   We added an include statement for the 1.2-debian folder.
 
-
+---
 ## Feat.MDD123: Changed the Container Version Scheme from 3 to 2 digits.
 ### Update Information
 In the past, we decided to use a three-digit version number for small and large changes for this container repository. This has proved unnecessary as the main repository is the central repository for new releases and all changes are already tracked here. We have therefore decided to change the three digit version number in all minor repositories to a two digit version number.
@@ -32,7 +51,7 @@ In general, we changed all versions from three to two digits.
 - We have also reduced the readme as much as possible, as the documentation is now available centrally in our own documentation repository: `https://dcso.github.io/MISP-dockerized-docs/`
 
 
-
+---
 ## Beta Release Candidate 0.3.2
 #### Update Information
 In this release candidate we added a new container with improved configurations, updated the old one for a bug fix and improved the build scripts for Gitlab CI support.
@@ -51,7 +70,7 @@ We added a new container; no other general changes were made.
     We added a new LABEL standard and prepared Dockerfile for the next upgrade release.
 
 
-
+---
 ## Beta Release Candidate 0.3.1
 #### Update Information 
 Added hub.docker.com token so that Travis CI can update the image automatically.
@@ -60,7 +79,7 @@ Added hub.docker.com token so that Travis CI can update the image automatically.
 
 
 
-
+---
 ## Beta Release Candidate 0.3.0
 ### Update Information 
 With this release, we offered the first MISP modules container on a debian base.

@@ -4,8 +4,8 @@ Requirements
 The following requirements exist for `MISP-dockerized`.
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 3
   
-    .. firewall
+    firewall
     .. hardware
     software

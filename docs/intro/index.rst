@@ -4,7 +4,7 @@ Getting Started
 Discover if `MISP-dockerized` is right for your community / company.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    
    features
    requirements/index

@@ -4,7 +4,7 @@ Appendix
 Miscellaneous information about the project.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    faq/index
    releases

@@ -1,7 +1,7 @@
 # MISP-dockerized-server
 Since release candidate 0.3.0, we changed the development process from an release candidate change to a feature change development process.
 
-
+---
 ## Feat/MDD155: Add MISP Version 2.4.101
 ### Update Information
 Features of the release:
@@ -18,7 +18,7 @@ Besides the new MISP version, we improved the CI scripts for Gitlab and Travis C
 - Gitlab CI can now build the server image for internal Docker registry and hub.docker.com registry.
 
 
-
+---
 ## Bug.MDD143: Fix for Function "create_certificate" Deadlock Bug
 ### Update Information
 Proxy version 1.4-alpine creates a file to prevent the `misp-server` from creating its own certificate. This should be deleted once the creation is complete. Unfortunately the proxy with version 1.4-alpine interrupted the script before removing the file. Therefore, it has not been deleted. Since only one file was used for both the `misp-proxy` and the `misp-server`, this bug results in the Apache2 entrypoint of the `misp-server` version 2.4.97-2.4.99 also being deadlocked.
@@ -30,7 +30,7 @@ No general changes were made.
 - We have added an additional PID file, so we now have one that creates the `misp-proxy` and queries the `misp-server` and one that is created by the `misp-server` and queries the `misp-proxy`. Its own file can overwrite both the proxy and the server. Therefore, going forward, such deadlocks should be a thing of the past.
 
 
-
+---
 ## Bug.MDD141: Wrong Common Name in the Certificate After Installation
 ### Update  
 We changed existing container versions to fix the false common name in the certificate.
@@ -45,7 +45,7 @@ No general changes were made.
 - We have adapted the Gitlab CI test job so that it will now be executed only if something has changed on this container.
 
 
-
+---
 ## Feat.MDD139: Added MISP Version 2.4.99
 ### Update Information
 Features of the release:
@@ -62,7 +62,7 @@ Besides the new MISP version, no general changes were made.
 - Gitlab CI can now test the server before it is merged to master.
 
 
-
+---
 ## Feat.MDD132: Added MISP Version 2.4.98
 ### Update Informations
 Features of the release:
@@ -80,7 +80,7 @@ Besides the new MISP version, no general changes were made.
   We improved the Postfix configuration, so that the Postfix configuration are newly written on every container start. We also fixed a bug for MISP application configuration for GnuPGP homedir path.
 
 
-
+---
 ## Feat.MDD126: Added MISP Version 2.4.97
 ### Update Informations 
 Features of the release:
@@ -102,7 +102,7 @@ Besides the new MISP version, no general changes were made.
 - Gitlab CI structure: Include statements in the Gitlab CI main file allow us to improve and simplify our Gitlab CI main file.
 
 
-
+---
 ## Feat.MDD91: Added MISP Version 2.4.96
 ### Update Informations 
 Features of the release:
@@ -115,7 +115,7 @@ Besides the new MISP version, no general changes were made.
 ### Detailed Changes
 - We added the MISP version 2.4.96 on the container base of 2.4.95.
 
-
+---
 ## Feat.MDD86: Add Nightly 2.4 docker container
 ### Update Informations 
 Features of the release:
@@ -129,7 +129,7 @@ Besides the new MISP version, no general changes were made.
 - The MISP project is being developed very quickly and a release is not made for every pull request or commit is made. However, if you always want the newest code, you can now use the following container: `dcso/misp-dockerized-server:2.4.nightly-ubuntu-dev`
 
 
-
+---
 ## Beta Release Candidate 0.3.0
 ### Update Information
 In this release candidate we have added a new container with improved configurations, updated the old one for a bug fix and improved the build scripts for Gitlab CI support.
@@ -188,7 +188,7 @@ Besides the new MISP version, no general changes were made.
   - Added syslog-ng to collect all log file and extracted it to Docker standard stdout and stderr stream
 
 
-
+---
 ## Beta Release Candidate 0.2.2
 #### Update Informations
 In this release, we fixed a lot of bugs.
@@ -206,7 +206,7 @@ Besides the fixed bug, no general changes were made.
 * On the Docker node you could with **`docker logs <container_name>`**, show your logs in the container. These "logs" were all logs sent to /dev/stdout or /dev/stderr. Therefore, we linked all required log files to these files to get the output of all without the requirement of any log software.
 
 
-
+---
 ## Beta Release Candidate 0.2.1
 #### Update Informations
 In this release we cleaned up the files into the repository.
@@ -218,7 +218,7 @@ Besides the fixed bug, no general changes were made.
 * We deleted an unused site.yml Ansible playbook file
 
 
-
+---
 ## Beta Release Candidate 0.2.0
 #### Update Informations
 In this release we added a container for MISP version `2.4.88` and `2.4.89`. Additionally we added travis-ci for a continuous integration process.
@@ -244,7 +244,7 @@ We added for all container proxy support via environment variables and changed t
 * We deleted the build hook file for hub.docker.com because now Travis CI builds the container, no longer hub.docker.com. The reason is Travis CI builds more containers at the same time, is faster, and does not require any payment.
 
 
-
+---
 ## Beta Release Candidate 0.1.0
 #### Update Informations
 In this release we added a container for MISP version `2.4.88` and `2.4.89`. Additionally we added Travis CI for a continuous integration process.
