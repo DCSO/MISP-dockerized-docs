@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>MISP-dockerized-server &mdash; MISP-dockerized 1.0.2 documentation</title>
+  <title>MISP-dockerized-redis &mdash; MISP-dockerized 1.0.2 documentation</title>
   
 
   
@@ -46,8 +46,6 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="MISP-dockerized-proxy" href="MISP-dockerized-proxy.html" />
-    <link rel="prev" title="Container Information" href="index.html" />
     <link href="../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -100,7 +98,7 @@
               
             
             
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../intro/features.html">Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../intro/requirements/index.html">Requirements</a><ul>
@@ -133,25 +131,25 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Container Information</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">MISP-dockerized-server</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#available-misp-versions-supported-tags-and-respective-dockerfile-links">Available MISP Versions (Supported Tags and Respective <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> Links)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#supported-builds">Supported Builds</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#intermediate-builds">Intermediate Builds</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#beta-builds">Beta Builds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Container Information</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="MISP-dockerized-server.html">MISP-dockerized-server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MISP-dockerized-server.html#available-misp-versions-supported-tags-and-respective-dockerfile-links">Available MISP Versions (Supported Tags and Respective <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> Links)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-server.html#supported-builds">Supported Builds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-server.html#intermediate-builds">Intermediate Builds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-server.html#beta-builds">Beta Builds</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#image-information">Image Information</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#integrated-misp-modules">Integrated MISP Modules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#quick-reference">Quick Reference</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#how-to-use-this-image">How to Use this Image</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#available-environment-variables">Available Environment Variables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#using-with-docker-compose">Using With <code class="docutils literal notranslate"><span class="pre">docker-compose</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#using-with-docker-run">Using With <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#documentation">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MISP-dockerized-server.html#image-information">Image Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MISP-dockerized-server.html#integrated-misp-modules">Integrated MISP Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MISP-dockerized-server.html#quick-reference">Quick Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MISP-dockerized-server.html#how-to-use-this-image">How to Use this Image</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-server.html#available-environment-variables">Available Environment Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-server.html#using-with-docker-compose">Using With <code class="docutils literal notranslate"><span class="pre">docker-compose</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-server.html#using-with-docker-run">Using With <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="MISP-dockerized-server.html#documentation">Documentation</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#license">License</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MISP-dockerized-server.html#license">License</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="MISP-dockerized-proxy.html">MISP-dockerized-proxy</a><ul>
@@ -715,15 +713,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">Container Information</a> &raquo;</li>
-        
-      <li>MISP-dockerized-server</li>
+      <li>MISP-dockerized-redis</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/container-information/MISP-dockerized-server.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/container-information/MISP-dockerized-redis.md.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -736,152 +732,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="misp-dockerized-server">
-<h1><a class="reference external" href="https://github.com/DCSO/MISP-dockerized-server">MISP-dockerized-server</a><a class="headerlink" href="#misp-dockerized-server" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="available-misp-versions-supported-tags-and-respective-dockerfile-links">
-<h2>Available MISP Versions (Supported Tags and Respective <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> Links)<a class="headerlink" href="#available-misp-versions-supported-tags-and-respective-dockerfile-links" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="supported-builds">
-<h3>Supported Builds<a class="headerlink" href="#supported-builds" title="Permalink to this headline">¶</a></h3>
-<table border="1" class="docutils">
-<thead>
-<tr>
-<th>Version</th>
-<th>Release Date</th>
-<th>Status</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.99-debian/Dockerfile"><code>2.4.99-debian</code></a></td>
-<td>Dec'2018</td>
-<td>supported</td>
-<td>Default version for release 1.0.x</td>
-</tr>
-</tbody>
-</table></div>
-<div class="section" id="intermediate-builds">
-<h3>Intermediate Builds<a class="headerlink" href="#intermediate-builds" title="Permalink to this headline">¶</a></h3>
-<table border="1" class="docutils">
-<thead>
-<tr>
-<th>Version</th>
-<th>Release Date</th>
-<th>Status</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.100-debian/Dockerfile"><code>2.4.100-debian</code></a></td>
-<td>Jan'2019</td>
-<td>unsupported</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.101-debian/Dockerfile"><code>2.4.101-debian</code></a></td>
-<td>Jan'2019</td>
-<td>unsupported</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.nightly-ubuntu/Dockerfile"><code>2.4.nightly-ubuntu</code></a></td>
-<td>Oct'2018</td>
-<td>unsupported</td>
-<td>The nightly version is a build based on the latest development version of MISP-dockerized. This build is experimental and therefore not supported.</td>
-</tr>
-</tbody>
-</table></div>
-<div class="section" id="beta-builds">
-<h3>Beta Builds<a class="headerlink" href="#beta-builds" title="Permalink to this headline">¶</a></h3>
-<p>The following versions of MISP were used during the beta of MISP-dockerized (v0.X.X). However, we highly recommend upgrading to the current version of MISP-dockerized.</p>
-<table border="1" class="docutils">
-<thead>
-<tr>
-<th>Version</th>
-<th>Release Date</th>
-<th>Status</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.88-ubuntu/Dockerfile"><code>2.4.88-ubuntu</code></a></td>
-<td>Apr'2018</td>
-<td>End-Of-Life</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.89-ubuntu/Dockerfile"><code>2.4.89-ubuntu</code></a></td>
-<td>Apr'2018</td>
-<td>End-Of-Life</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.90-ubuntu/Dockerfile"><code>2.4.90-ubuntu</code></a></td>
-<td>Apr'2018</td>
-<td>End-Of-Life</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.91-ubuntu/Dockerfile"><code>2.4.91-ubuntu</code></a></td>
-<td>Jun'2018</td>
-<td>deprecated</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.92-ubuntu/Dockerfile"><code>2.4.92-ubuntu</code></a></td>
-<td>Jun'2018</td>
-<td>deprecated</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.93-ubuntu/Dockerfile"><code>2.4.93-ubuntu</code></a></td>
-<td>Sep'2018</td>
-<td>deprecated</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.94-ubuntu/Dockerfile"><code>2.4.94-ubuntu</code></a></td>
-<td>Sep'2018</td>
-<td>deprecated</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.95-ubuntu/Dockerfile"><code>2.4.95-ubuntu</code></a></td>
-<td>Sep'2018</td>
-<td>deprecated</td>
-<td>MISP Pull mechanism is currently not working. The ticket to that issue can be found here: https://github.com/MISP/MISP/issues/3613#issuecomment-419459107</td>
-</tr>
-<tr>
-<td><a href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.96-ubuntu/Dockerfile"><code>2.4.96-ubuntu</code></a></td>
-<td>Oct'2018</td>
-<td>deprecated</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.97-debian/Dockerfile"><code>2.4.97-debian</code></a></td>
-<td>Oct'2018</td>
-<td>deprecated</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.98-debian/Dockerfile"><code>2.4.98-debian</code></a></td>
-<td>Oct'2018</td>
-<td>deprecated</td>
-<td></td>
-</tr>
-</tbody>
-</table></div>
+  <div class="section" id="misp-dockerized-redis">
+<h1><a class="reference external" href="https://github.com/DCSO/MISP-dockerized-redis">MISP-dockerized-redis</a><a class="headerlink" href="#misp-dockerized-redis" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="supported-tags-and-respective-dockerfile-links">
+<h2>Supported Tags and Respective <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> Links<a class="headerlink" href="#supported-tags-and-respective-dockerfile-links" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>[<code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">1.0-alpine</span></code>, <code class="docutils literal notranslate"><span class="pre">latest</span></code>][5]</li>
+</ul>
 </div>
-<div class="section" id="image-information">
-<h2>Image Information<a class="headerlink" href="#image-information" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="quick-reference">
+<h2>Quick reference<a class="headerlink" href="#quick-reference" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>Where to file issues</strong>:<a class="reference external" href="https://github.com/DCSO/MISP-dockerized-redis/issues">https://github.com/DCSO/MISP-dockerized-redis/issues</a></li>
+<li><strong>Maintained by</strong>:<a class="reference external" href="https://github.com/DCSO">DCSO</a></li>
+<li><strong>Supported Docker versions</strong>:<a class="reference external" href="https://github.com/docker/docker-ce/releases/latest">The latest release</a></li>
+</ul>
+<div class="section" id="project-information">
+<h3>Project Information<a class="headerlink" href="#project-information" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <thead>
 <tr>
@@ -892,309 +759,55 @@
 <tbody>
 <tr>
 <td>Travis Master</td>
-<td><a href="https://travis-ci.org/DCSO/MISP-dockerized-server"><img alt="" src="https://travis-ci.org/DCSO/MISP-dockerized-server.svg?branch=master" /></a></td>
+<td><a href="https://travis-ci.org/DCSO/MISP-dockerized-redis"><img alt="" src="https://travis-ci.org/DCSO/MISP-dockerized-redis.svg?branch=master" /></a></td>
 </tr>
 <tr>
 <td>Docker Size &amp; Layers</td>
-<td><a href="https://microbadger.com/images/dcso/misp-dockerized-server"><img alt="" src="https://images.microbadger.com/badges/image/dcso/misp-dockerized-server.svg" /></a></td>
+<td><a href="https://microbadger.com/images/dcso/misp-dockerized-redis"><img alt="" src="https://images.microbadger.com/badges/image/dcso/misp-dockerized-redis.svg" /></a></td>
 </tr>
 <tr>
 <td>Latest Docker Version</td>
-<td><a href="https://microbadger.com/images/dcso/misp-dockerized-server"><img alt="" src="https://images.microbadger.com/badges/version/dcso/misp-dockerized-server.svg" /></a></td>
+<td><a href="https://microbadger.com/images/dcso/misp-dockerized-redis"><img alt="" src="https://images.microbadger.com/badges/version/dcso/misp-dockerized-redis.svg" /></a></td>
 </tr>
 <tr>
 <td>Commit for Latest Docker Version</td>
-<td><a href="https://microbadger.com/images/dcso/misp-dockerized-server"><img alt="" src="https://images.microbadger.com/badges/commit/dcso/misp-dockerized-server.svg" /></a></td>
+<td><a href="https://microbadger.com/images/dcso/misp-dockerized-redis"><img alt="" src="https://images.microbadger.com/badges/commit/dcso/misp-dockerized-redis.svg" /></a></td>
 </tr>
 </tbody>
 </table></div>
-<div class="section" id="integrated-misp-modules">
-<h2>Integrated MISP Modules<a class="headerlink" href="#integrated-misp-modules" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>since 2.4.92:<ul>
-<li>pyzmq</li>
-<li>pymisp</li>
-<li>ssdeep</li>
-<li>pydeep</li>
-<li>python-magic</li>
-<li>lief</li>
-<li>maec</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section" id="quick-reference">
-<h2>Quick Reference<a class="headerlink" href="#quick-reference" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><strong>Where to file issues</strong>:<a class="reference external" href="https://github.com/DCSO/MISP-dockerized-server/issues">https://github.com/DCSO/MISP-dockerized-server/issues</a></li>
-<li><strong>Maintained by</strong>:<a class="reference external" href="https://github.com/DCSO">DCSO</a></li>
-<li><strong>Supported Docker versions</strong>:<a class="reference external" href="https://github.com/docker/docker-ce/releases/latest">The latest release</a></li>
-</ul>
 </div>
 <div class="section" id="how-to-use-this-image">
-<h2>How to Use this Image<a class="headerlink" href="#how-to-use-this-image" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="available-environment-variables">
-<h3>Available Environment Variables<a class="headerlink" href="#available-environment-variables" title="Permalink to this headline">¶</a></h3>
-<table border="1" class="docutils">
-<thead>
-<tr>
-<th>Environment Variables</th>
-<th>Example</th>
-<th>Type</th>
-<th>Component</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>MYSQL_ROOT_PASSWORD</td>
-<td>PleaseChangeMe</td>
-<td>REQUIRED</td>
-<td>DB</td>
-</tr>
-<tr>
-<td>MYSQL_DATABASE</td>
-<td>misp</td>
-<td>OPTIONAL</td>
-<td>DB</td>
-</tr>
-<tr>
-<td>MYSQL_USER</td>
-<td>misp</td>
-<td>OPTIONAL</td>
-<td>DB</td>
-</tr>
-<tr>
-<td>MYSQL_PASSWORD</td>
-<td>PleaseChangeMe</td>
-<td>REQUIRED</td>
-<td>DB</td>
-</tr>
-<tr>
-<td>REDIS_FQDN</td>
-<td>misp-redis</td>
-<td>OPTIONAL</td>
-<td>Redis</td>
-</tr>
-<tr>
-<td>HTTP_PROXY</td>
-<td>http://proxy.example.com:3128</td>
-<td>OPTIONAL</td>
-<td>Base</td>
-</tr>
-<tr>
-<td>HTTPS_PROXY</td>
-<td>http://proxy.example.com:3128</td>
-<td>OPTIONAL</td>
-<td>Base</td>
-</tr>
-<tr>
-<td>NO_PROXY</td>
-<td>internal.example.com example.com</td>
-<td>OPTIONAL</td>
-<td>Base</td>
-</tr>
-<tr>
-<td>SENDER_ADDRESS</td>
-<td>no-reply@example.com</td>
-<td>REQUIRED, only for MAIL</td>
-<td>Mail</td>
-</tr>
-<tr>
-<td>DOMAIN</td>
-<td>example.com</td>
-<td>REQUIRED, only for MAIL</td>
-<td>Mail</td>
-</tr>
-<tr>
-<td>HTTP_SERVERADMIN</td>
-<td>support@example.com</td>
-<td>REQUIRED</td>
-<td>Web</td>
-</tr>
-<tr>
-<td>RELAYHOST</td>
-<td>mail.example.com</td>
-<td>REQUIRED, only for MAIL</td>
-<td>Mail</td>
-</tr>
-<tr>
-<td>RELAY_USER</td>
-<td>Mailuser42</td>
-<td>REQUIRED, only for MAIL</td>
-<td>Mail</td>
-</tr>
-<tr>
-<td>RELAY_PASSWORD</td>
-<td>PleaseChangeMe</td>
-<td>REQUIRED, only for MAIL</td>
-<td>Mail</td>
-</tr>
-<tr>
-<td>DOCKER_NETWORK</td>
-<td>192.168.42.0/24</td>
-<td>OPTIONAL</td>
-<td>Mail</td>
-</tr>
-<tr>
-<td>DEBUG_PEER</td>
-<td>mail.example.com</td>
-<td>OPTIONAL</td>
-<td>Mail</td>
-</tr>
-<tr>
-<td>PHP_MEMORY</td>
-<td>512M</td>
-<td>OPTIONAL</td>
-<td>PHP</td>
-</tr>
-<tr>
-<td>HOSTNAME</td>
-<td>misp.example.com</td>
-<td>DEPRECATED</td>
-<td>MISP</td>
-</tr>
-<tr>
-<td>MISP_FQDN</td>
-<td>misp.example.com</td>
-<td>REQUIRED if MISP_URL is empty</td>
-<td>MISP</td>
-</tr>
-<tr>
-<td>MISP_URL</td>
-<td>https://misp.example.com</td>
-<td>REQUIRED if MISP_FQDN is empty.</td>
-<td>MISP</td>
-</tr>
-<tr>
-<td>MISP_HTTPS_PORT</td>
-<td>443</td>
-<td>REQUIRED</td>
-<td>MISP</td>
-</tr>
-<tr>
-<td>MISP_encoding</td>
-<td>utf8</td>
-<td>REQUIRED</td>
-<td>MISP</td>
-</tr>
-<tr>
-<td>MISP_SALT</td>
-<td>Fl9DW5Zc3WMV0fKZi5RXDEJTpfVqSmumvbISZKxkzLaeNqHnYD</td>
-<td>REQUIRED</td>
-<td>MISP</td>
-</tr>
-<tr>
-<td>ADD_ANALYZE_COLUMN</td>
-<td>no, yes</td>
-<td>OPTIONAL</td>
-<td>Entrypoint</td>
-</tr>
-<tr>
-<td>USE_PGP</td>
-<td>no, yes</td>
-<td>OPTIONAL</td>
-<td>Entrypoint</td>
-</tr>
-<tr>
-<td>USE_SMIME</td>
-<td>no, yes</td>
-<td>OPTIONAL</td>
-<td>Entrypoint</td>
-</tr>
-</tbody>
-</table></div>
+<h2>How to Use This Image<a class="headerlink" href="#how-to-use-this-image" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="using-with-docker-compose">
 <h3>Using With <code class="docutils literal notranslate"><span class="pre">docker-compose</span></code><a class="headerlink" href="#using-with-docker-compose" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>services:
-  <span class="c1">### MISP-Server ###</span>
-  misp-server:
-    image: dcso/misp-dockerized-server:<span class="si">${</span><span class="nv">MISP_CONTAINER_TAG</span><span class="si">}</span>
-    container_name: misp-server
-    restart: on-failure
-    <span class="c1"># ports:</span>
-    <span class="c1">#   - &quot;8080:80&quot; # DEBUG only</span>
-    <span class="c1">#   - &quot;8443:443&quot; # DEBUG only</span>
-    environment:
-      <span class="c1"># DB</span>
-      MYSQL_ROOT_PASSWORD: <span class="si">${</span><span class="nv">MYSQL_ROOT_PASSWORD</span><span class="si">}</span>
-      MYSQL_DATABASE: <span class="si">${</span><span class="nv">MYSQL_DATABASE</span><span class="si">}</span>
-      MYSQL_USER: <span class="si">${</span><span class="nv">MYSQL_USER</span><span class="si">}</span>
-      MYSQL_PASSWORD: <span class="si">${</span><span class="nv">MYSQL_PASSWORD</span><span class="si">}</span>
-      <span class="c1"># PROXY</span>
-      HTTP_PROXY: <span class="si">${</span><span class="nv">HTTP_PROXY</span><span class="si">}</span>
-      HTTPS_PROXY: <span class="si">${</span><span class="nv">HTTPS_PROXY</span><span class="si">}</span>
-      NO_PROXY: <span class="si">${</span><span class="nv">NO_PROXY</span><span class="si">}</span>
-      <span class="c1"># POSTFIX</span>
-      SENDER_ADDRESS: <span class="si">${</span><span class="nv">SENDER_ADDRESS</span><span class="si">}</span>
-      HOSTNAME: <span class="si">${</span><span class="nv">myHOSTNAME</span><span class="si">}</span>
-      DOMAIN: <span class="si">${</span><span class="nv">DOMAIN</span><span class="si">}</span>
-      HTTP_SERVERADMIN: <span class="si">${</span><span class="nv">HTTP_SERVERADMIN</span><span class="si">}</span>
-      RELAYHOST: <span class="si">${</span><span class="nv">RELAYHOST</span><span class="si">}</span>
-      RELAY_USER: <span class="si">${</span><span class="nv">RELAY_USER</span><span class="si">}</span>
-      RELAY_PASSWORD: <span class="si">${</span><span class="nv">RELAY_PASSWORD</span><span class="si">}</span>
-      DOCKER_NETWORK: <span class="si">${</span><span class="nv">DOCKER_NETWORK</span><span class="si">}</span>
-      DEBUG_PEER: <span class="si">${</span><span class="nv">DEBUG_PEER</span><span class="si">}</span>
-      <span class="c1"># PHP</span>
-      PHP_MEMORY: <span class="si">${</span><span class="nv">PHP_MEMORY</span><span class="si">}</span>
-    volumes:
-    <span class="c1">###### mips-server ######</span>
-    <span class="c1"># Apache2 Configuration</span>
-    - misp-vol-server-apache2-config-sites-enabled:/etc/apache2/sites-enabled
-    <span class="c1"># Volume with Certificates</span>
-    - misp-vol-ssl:/etc/apache2/ssl
-    <span class="c1"># Volume with PGP Key</span>
-    - misp-vol-pgp:/var/www/MISP/.gnupg
-    <span class="c1"># Volume with S/MIME Certificate and Key</span>
-    - misp-vol-smime:/var/www/MISP/.smime
-    <span class="c1"># Redis Volume</span>
-    - misp-vol-redis-data:/redis_data_dir
-    <span class="c1"># MISP Configurations:</span>
-    - misp-vol-server-MISP-app-Config:/var/www/MISP/app/Config
-    - misp-vol-server-MISP-cakeresque-config:/var/www/MISP/app/Plugin/CakeResque/Config
-    - misp-vol-server-MISP-tmp:/var/www/MISP/app/tmp
-    - misp-vol-server-MISP-attachments:/var/www/MISP/app/files
-    <span class="c1">###### misp-redis ######</span>
-    - misp-vol-redis-data:/data/
-    <span class="c1">###### misp-db ######</span>
-    - misp-vol-db-data:/var/lib/mysql/<span class="s2">&quot;</span>
-<span class="s2">    networks:</span>
-<span class="s2">      misp-backend:</span>
-<span class="s2">        aliases:</span>
-<span class="s2">        - misp-server</span>
+  <span class="c1">### MISP-Robot ###</span>
+  misp-redis:
+    image: dcso/misp-dockerized-redis:<span class="si">${</span><span class="nv">MISP_ROBOT_TAG</span><span class="si">}</span>
+    container_name: misp-redis
+    networks:
+      misp-backend:
+        aliases:
+        - misp-redis
 </pre></div>
 </div>
 </div>
 <div class="section" id="using-with-docker-run">
 <h3>Using With <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code><a class="headerlink" href="#using-with-docker-run" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run <span class="se">\</span>
-    --name misp-server <span class="se">\</span>
-    -e MYSQL_ROOT_PASSWORD: <span class="si">${</span><span class="nv">MYSQL_ROOT_PASSWORD</span><span class="si">}</span> <span class="se">\</span>
-    -e MYSQL_DATABASE: <span class="si">${</span><span class="nv">MYSQL_DATABASE</span><span class="si">}</span> <span class="se">\</span>
-    -e MYSQL_USER: <span class="si">${</span><span class="nv">MYSQL_USER</span><span class="si">}</span> <span class="se">\</span>
-    -e MYSQL_PASSWORD: <span class="si">${</span><span class="nv">MYSQL_PASSWORD</span><span class="si">}</span> <span class="se">\</span>
-    -v misp-vol-server-apache2-config-sites-enabled:/etc/apache2/sites-enabled <span class="se">\</span>
-    -v misp-vol-ssl:/etc/apache2/ssl <span class="se">\</span>
-    -v misp-vol-pgp:/var/www/MISP/.gnupg <span class="se">\</span>
-    -v misp-vol-smime:/var/www/MISP/.smime <span class="se">\</span>
-    -v misp-vol-redis-data:/redis_data_dir <span class="se">\</span>
-    -v misp-vol-server-MISP-app-Config:/var/www/MISP/app/Config <span class="se">\</span>
-    -v misp-vol-server-MISP-cakeresque-config:/var/www/MISP/app/Plugin/CakeResque/Config <span class="se">\</span>
-    -v misp-vol-server-MISP-tmp:/var/www/MISP/app/tmp <span class="se">\</span>
-    -v misp-vol-server-MISP-attachments:/var/www/MISP/app/files <span class="se">\</span>
-    -v misp-vol-redis-data:/data/ <span class="se">\</span>
-    -v misp-vol-db-data:/var/lib/mysql/ <span class="se">\</span>
-    image: dcso/misp-dockerized-server <span class="se">\</span>
+    --name misp-redis <span class="se">\</span>
+    image: dcso/misp-dockerized-redis <span class="se">\</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="documentation">
-<h3>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h3>
-<p>You can also find the <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-server/">Dockerfile</a> at Github.com.</p>
 </div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<p>You can also find the <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-redis/">Dockerfile</a> at Github.com.</p>
 </div>
 <div class="section" id="license">
 <h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
-<p>View <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-server/blob/master/LICENSE">license information</a> for the software contained in this image.</p>
+<p>View <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-redis/blob/master/LICENSE">license information</a> for the software contained in this image.</p>
 <p>As with all Docker images, these likely also contain other software that may be under other licenses (such as Bash, etc., from the base distribution, along with any direct or indirect dependencies of the primary software being contained).</p>
 <p>As for any pre-built image usage, it is the image user’s responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.</p>
 </div>
@@ -1205,15 +818,6 @@
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="MISP-dockerized-proxy.html" class="btn btn-neutral float-right" title="MISP-dockerized-proxy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="index.html" class="btn btn-neutral float-left" title="Container Information" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

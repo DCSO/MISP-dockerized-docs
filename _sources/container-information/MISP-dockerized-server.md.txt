@@ -2,66 +2,47 @@
 
 ## Available MISP Versions (Supported Tags and Respective `Dockerfile` Links)
 
-| Version               | Status   | Status    | Notes                             |
-| --------------------- | -------- | --------- | --------------------------------- |
-| [`2.4.99-ubuntu`][13] | Dec'2018 | supported | Default version for release 1.0.0, 1.0.1 |
+### Supported Builds
+
+| Version                                                                                                | Release Date | Status    | Notes                             |
+| ------------------------------------------------------------------------------------------------------ | ------------ | --------- | --------------------------------- |
+| [`2.4.99-debian`](https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.99-debian/Dockerfile) | Dec'2018     | supported | Default version for release 1.0.x |
+
+### Intermediate Builds
+
+| Version                                                                                                          | Release Date | Status      | Notes                                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------- | ------------ | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                  |
+| [`2.4.100-debian`](https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.100-debian/Dockerfile)         | Jan'2019     | unsupported |                                                                                                                                                    |
+| [`2.4.101-debian`](https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.101-debian/Dockerfile)         | Jan'2019     | unsupported |                                                                                                                                                    |
+| [`2.4.nightly-ubuntu`](https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.nightly-ubuntu/Dockerfile) | Oct'2018     | unsupported | The nightly version is a build based on the latest development version of MISP-dockerized. This build is experimental and therefore not supported. |
 
 
 ### Beta Builds
 The following versions of MISP were used during the beta of MISP-dockerized (v0.X.X). However, we highly recommend upgrading to the current version of MISP-dockerized.
 
-| Version                    | Status   | Status                        | Notes                                                                                                                                                     |
-| -------------------------- | -------- | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`2.4.nightly-ubuntu`][10] | Oct'2018 | unsupported                   | The nightly version is a build based on the latest development version of MISP-dockerized. This build is experimental and therefore not supported.        |
-| [`2.4.88-ubuntu`][1]       | Apr'2018 | supported                     |                                                                                                                                                           |
-| [`2.4.89-ubuntu`][2]       | Apr'2018 | supported                     |                                                                                                                                                           |
-| [`2.4.90-ubuntu`][3]       | Apr'2018 | supported                     |                                                                                                                                                           |
-| [`2.4.91-ubuntu`][4]       | Jun'2018 | supported                     |                                                                                                                                                           |
-| [`2.4.92-ubuntu`][5]       | Jun'2018 | supported                     |                                                                                                                                                           |
-| [`2.4.93-ubuntu`][6]       | Sep'2018 | supported                     |                                                                                                                                                           |
-| [`2.4.94-ubuntu`][7]       | Sep'2018 | supported                     |                                                                                                                                                           |
-| [`2.4.95-ubuntu`][8]       | Sep'2018 | available but not recommended | MISP Pull mechanism is currently not working. The ticket to that issue can be found here: https://github.com/MISP/MISP/issues/3613#issuecomment-419459107 |
-| [`2.4.96-ubuntu`][9]       | Oct'2018 | supported                     |                                                                                                                                                           |
-| [`2.4.97-ubuntu`][11]      | Oct'2018 | supported                     |                                                                                                                                                           |
-| [`2.4.98-ubuntu`][12]      | Oct'2018 | supported                     |                                                                                                                                                           |
-| [`2.4.99-ubuntu`][13]      | Dec'2018 | supported                     |                                                                                                                                                           |
-| [`2.4.100-ubuntu`][14]      | Jan'2019 | supported                     |                                                                                                                                                           |
-| [`2.4.101-ubuntu`][15]      | Jan'2019 | supported                     |                                                                                                                                                           |
-
-
-[1]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.88-ubuntu/Dockerfile
-[2]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.89-ubuntu/Dockerfile
-[3]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.90-ubuntu/Dockerfile
-[4]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.91-ubuntu/Dockerfile
-[5]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.92-ubuntu/Dockerfile
-[6]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.93-ubuntu/Dockerfile
-[7]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.94-ubuntu/Dockerfile
-[8]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.95-ubuntu/Dockerfile
-[9]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.96-ubuntu/Dockerfile
-[10]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.nightly-ubuntu/Dockerfile
-[11]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.97-debian/Dockerfile
-[12]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.98-debian/Dockerfile
-[13]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.99-debian/Dockerfile
-[14]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.100-debian/Dockerfile
-[15]: https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.101-debian/Dockerfile
-
+| Version                                                                                                | Release Date | Status      | Notes                                                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------ | ------------ | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`2.4.88-ubuntu`](https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.88-ubuntu/Dockerfile) | Apr'2018     | End-Of-Life |                                                                                                                                                           |
+| [`2.4.89-ubuntu`](https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.89-ubuntu/Dockerfile) | Apr'2018     | End-Of-Life |                                                                                                                                                           |
+| [`2.4.90-ubuntu`](https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.90-ubuntu/Dockerfile) | Apr'2018     | End-Of-Life |                                                                                                                                                           |
+| [`2.4.91-ubuntu`](https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.91-ubuntu/Dockerfile) | Jun'2018     | deprecated  |                                                                                                                                                           |
+| [`2.4.92-ubuntu`](https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.92-ubuntu/Dockerfile) | Jun'2018     | deprecated  |                                                                                                                                                           |
+| [`2.4.93-ubuntu`](https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.93-ubuntu/Dockerfile) | Sep'2018     | deprecated  |                                                                                                                                                           |
+| [`2.4.94-ubuntu`](https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.94-ubuntu/Dockerfile) | Sep'2018     | deprecated  |                                                                                                                                                           |
+| [`2.4.95-ubuntu`](https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.95-ubuntu/Dockerfile) | Sep'2018     | deprecated  | MISP Pull mechanism is currently not working. The ticket to that issue can be found here: https://github.com/MISP/MISP/issues/3613#issuecomment-419459107 |
+| [`2.4.96-ubuntu`](https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.96-ubuntu/Dockerfile) | Oct'2018     | deprecated  |                                                                                                                                                           |
+| [`2.4.97-debian`](https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.97-debian/Dockerfile) | Oct'2018     | deprecated  |                                                                                                                                                           |
+| [`2.4.98-debian`](https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.98-debian/Dockerfile) | Oct'2018     | deprecated  |                                                                                                                                                           |  |
 
 ## Image Information
 
-|                                   |                 |
-|-                                  |-                |
-| Travis Master                     | [![][101]][102] |
-| Docker Size & Layers              | [![][104]][107] |
-| Latest Docker Version             | [![][105]][107] |
-| Commit for Latest Docker Version  | [![][106]][107] |
-
-[101]: https://travis-ci.org/DCSO/MISP-dockerized-server.svg?branch=master
-[102]: https://travis-ci.org/DCSO/MISP-dockerized-server
-[103]: https://images.microbadger.com/badges/license/dcso/misp-dockerized-server.svg
-[104]: https://images.microbadger.com/badges/image/dcso/misp-dockerized-server.svg
-[105]: https://images.microbadger.com/badges/version/dcso/misp-dockerized-server.svg
-[106]: https://images.microbadger.com/badges/commit/dcso/misp-dockerized-server.svg
-[107]: https://microbadger.com/images/dcso/misp-dockerized-server
+|                                  |                                                                                                                                                  |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Travis Master                    | [![](https://travis-ci.org/DCSO/MISP-dockerized-server.svg?branch=master)](https://travis-ci.org/DCSO/MISP-dockerized-server)                    |
+| Docker Size & Layers             | [![](https://images.microbadger.com/badges/image/dcso/misp-dockerized-server.svg)](https://microbadger.com/images/dcso/misp-dockerized-server)   |
+| Latest Docker Version            | [![](https://images.microbadger.com/badges/version/dcso/misp-dockerized-server.svg)](https://microbadger.com/images/dcso/misp-dockerized-server) |
+| Commit for Latest Docker Version | [![](https://images.microbadger.com/badges/commit/dcso/misp-dockerized-server.svg)](https://microbadger.com/images/dcso/misp-dockerized-server)  |
 
 ## Integrated MISP Modules 
 
@@ -91,26 +72,36 @@ The following versions of MISP were used during the beta of MISP-dockerized (v0.
 
 ### Available Environment Variables
 
-| Environment Variables                       | Example                          | Type                    |
-| ------------------------------------------- | -------------------------------- | ----------------------- |
-| MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD} | PleaseChangeMe                   | REQUIRED                |
-| MYSQL_DATABASE: ${MYSQL_DATABASE}           | misp                             | OPTIONAL                |
-| MYSQL_USER: ${MYSQL_USER}                   | misp                             | OPTIONAL                |
-| MYSQL_PASSWORD: ${MYSQL_PASSWORD}           | PleaseChangeMe                   | REQUIRED                |
-| HTTP_PROXY: ${HTTP_PROXY}                   | http://proxy.example.com:3128    | OPTIONAL                |
-| HTTPS_PROXY: ${HTTPS_PROXY}                 | http://proxy.example.com:3128    | OPTIONAL                |
-| NO_PROXY: ${NO_PROXY}                       | internal.example.com example.com | OPTIONAL                |
-| SENDER_ADDRESS: ${SENDER_ADDRESS}           | no-reply@example.com             | REQUIRED, only for MAIL |
-| HOSTNAME: ${myHOSTNAME}                     | misp.example.com                 | REQUIRED                |
-| DOMAIN: ${DOMAIN}                           | example.com                      | REQUIRED, only for MAIL |
-| HTTP_SERVERADMIN: ${HTTP_SERVERADMIN}       | support@example.com              | REQUIRED                |
-| RELAYHOST: ${RELAYHOST}                     | mail.example.com                 | REQUIRED, only for MAIL |
-| RELAY_USER: ${RELAY_USER}                   | Mailuser42                       | REQUIRED, only for MAIL |
-| RELAY_PASSWORD: ${RELAY_PASSWORD}           | PleaseChangeMe                   | REQUIRED, only for MAIL |
-| DOCKER_NETWORK: ${DOCKER_NETWORK}           | 192.168.42.0/24                  | OPTIONAL                |
-| DEBUG_PEER: ${DEBUG_PEER}                   | mail.example.com                 | OPTIONAL                |
-| PHP_MEMORY: ${PHP_MEMORY}                   | 512M                             | OPTIONAL                |
-| REDIS_FQDN: ${REDIS_FQDN}                   | misp-redis                       | OPTIONAL                |
+| Environment Variables | Example                                            | Type                            | Component  |
+| --------------------- | -------------------------------------------------- | ------------------------------- | ---------- |
+| MYSQL_ROOT_PASSWORD   | PleaseChangeMe                                     | REQUIRED                        | DB         |
+| MYSQL_DATABASE        | misp                                               | OPTIONAL                        | DB         |
+| MYSQL_USER            | misp                                               | OPTIONAL                        | DB         |
+| MYSQL_PASSWORD        | PleaseChangeMe                                     | REQUIRED                        | DB         |
+| REDIS_FQDN            | misp-redis                                         | OPTIONAL                        | Redis      |
+| HTTP_PROXY            | http://proxy.example.com:3128                      | OPTIONAL                        | Base       |
+| HTTPS_PROXY           | http://proxy.example.com:3128                      | OPTIONAL                        | Base       |
+| NO_PROXY              | internal.example.com example.com                   | OPTIONAL                        | Base       |
+| SENDER_ADDRESS        | no-reply@example.com                               | REQUIRED, only for MAIL         | Mail       |
+| DOMAIN                | example.com                                        | REQUIRED, only for MAIL         | Mail       |
+| HTTP_SERVERADMIN      | support@example.com                                | REQUIRED                        | Web        |
+| RELAYHOST             | mail.example.com                                   | REQUIRED, only for MAIL         | Mail       |
+| RELAY_USER            | Mailuser42                                         | REQUIRED, only for MAIL         | Mail       |
+| RELAY_PASSWORD        | PleaseChangeMe                                     | REQUIRED, only for MAIL         | Mail       |
+| DOCKER_NETWORK        | 192.168.42.0/24                                    | OPTIONAL                        | Mail       |
+| DEBUG_PEER            | mail.example.com                                   | OPTIONAL                        | Mail       |
+| PHP_MEMORY            | 512M                                               | OPTIONAL                        | PHP        |
+| HOSTNAME              | misp.example.com                                   | DEPRECATED                      | MISP       |
+| MISP_FQDN             | misp.example.com                                   | REQUIRED if MISP_URL is empty   | MISP       |
+| MISP_URL              | https://misp.example.com                           | REQUIRED if MISP_FQDN is empty. | MISP       |
+| MISP_HTTPS_PORT       | 443                                                | REQUIRED                        | MISP       |
+| MISP_encoding         | utf8                                               | REQUIRED                        | MISP       |
+| MISP_SALT             | Fl9DW5Zc3WMV0fKZi5RXDEJTpfVqSmumvbISZKxkzLaeNqHnYD | REQUIRED                        | MISP       |
+| ADD_ANALYZE_COLUMN    | no, yes                                            | OPTIONAL                        | Entrypoint |
+| USE_PGP               | no, yes                                            | OPTIONAL                        | Entrypoint |
+| USE_SMIME             | no, yes                                            | OPTIONAL                        | Entrypoint |
+
+
 
 ### Using With `docker-compose`
 ``` bash

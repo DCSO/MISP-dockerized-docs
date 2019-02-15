@@ -21,19 +21,12 @@
 
 ### Project Information
 
-|                                  |                 |
-|-                                 |-                |
-| Travis Master                    | [![][101]][102] |
-| Docker Size & Layers             | [![][104]][107] |
-| Latest Docker Version            | [![][105]][107] |
-| Commit for Latest Docker Version | [![][106]][107] |
-
-[101]: https://travis-ci.org/DCSO/MISP-dockerized-misp-modules.svg?branch=master
-[102]: https://travis-ci.org/DCSO/MISP-dockerized-misp-modules
-[104]: https://images.microbadger.com/badges/image/dcso/misp-dockerized-misp-modules.svg
-[105]: https://images.microbadger.com/badges/version/dcso/misp-dockerized-misp-modules.svg
-[106]: https://images.microbadger.com/badges/commit/dcso/misp-dockerized-misp-modules.svg
-[107]: https://microbadger.com/images/dcso/misp-dockerized-misp-modules
+|                                  |                                                                                                                                                              |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Travis Master                    | [![](https://travis-ci.org/DCSO/MISP-dockerized-misp-modules.svg?branch=master)](https://travis-ci.org/DCSO/MISP-dockerized-misp-modules)                    |
+| Docker Size & Layers             | [![](https://images.microbadger.com/badges/image/dcso/misp-dockerized-misp-modules.svg)](https://microbadger.com/images/dcso/misp-dockerized-misp-modules)   |
+| Latest Docker Version            | [![](https://images.microbadger.com/badges/version/dcso/misp-dockerized-misp-modules.svg)](https://microbadger.com/images/dcso/misp-dockerized-misp-modules) |
+| Commit for Latest Docker Version | [![](https://images.microbadger.com/badges/commit/dcso/misp-dockerized-misp-modules.svg)](https://microbadger.com/images/dcso/misp-dockerized-misp-modules)  |
 
 
 ## How to Use This Image

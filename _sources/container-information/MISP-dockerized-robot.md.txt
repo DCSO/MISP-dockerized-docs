@@ -28,19 +28,14 @@
 
 ### Project Information
 
-| | |
-|-|-|
-| Travis Master | [![][101]][102] |
-| Docker Size & Layers | [![][104]][107]|
-| Latest Docker Version | [![][105]][107]|
-| Commit for Latest Docker Version | [![][106]][107]|
 
-[101]: https://travis-ci.org/DCSO/MISP-dockerized-robot.svg?branch=master
-[102]: https://travis-ci.org/DCSO/MISP-dockerized-robot
-[104]: https://images.microbadger.com/badges/image/dcso/misp-dockerized-robot.svg
-[105]: https://images.microbadger.com/badges/version/dcso/misp-dockerized-robot.svg
-[106]: https://images.microbadger.com/badges/commit/dcso/misp-dockerized-robot.svg
-[107]: https://microbadger.com/images/dcso/misp-dockerized-robot
+|                                  |                                                                                                                                                              |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Travis Master                    | [![](https://travis-ci.org/DCSO/MISP-dockerized-robot.svg?branch=master)](https://travis-ci.org/DCSO/MISP-dockerized-robot)                    |
+| Docker Size & Layers             | [![](https://images.microbadger.com/badges/image/dcso/misp-dockerized-robot.svg)](https://microbadger.com/images/dcso/misp-dockerized-robot)   |
+| Latest Docker Version            | [![](https://images.microbadger.com/badges/version/dcso/misp-dockerized-robot.svg)](https://microbadger.com/images/dcso/misp-dockerized-robot) |
+| Commit for Latest Docker Version | [![](https://images.microbadger.com/badges/commit/dcso/misp-dockerized-robot.svg)](https://microbadger.com/images/dcso/misp-dockerized-robot)  |
+
 
 
 ## How to Use This Image
