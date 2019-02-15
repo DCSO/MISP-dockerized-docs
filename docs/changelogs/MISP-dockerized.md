@@ -1,6 +1,20 @@
 # MISP-dockerized
 
 
+
+
+---
+## Release Candidate 1.0.3
+[View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v1.0.3)
+This MISP-dockerized release is a minor release.
+### Update Information
+This release improved the text output from the scripts and also improved the quoting of variables.
+### General Changes
+No general changes where made.
+### Detailed Information
+- This release improved the text output from the scripts and also improved the quoting of variables.
+
+
 ---
 ## Release Candidate 1.0.2
 [View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v1.0.2)
