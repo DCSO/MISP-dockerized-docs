@@ -11,3 +11,4 @@ On this page, you can find most of the information you normally get from hub.doc
    MISP-dockerized-misp-modules
    MISP-dockerized-robot
    MISP-dockerized-postfix
+   MISP-dockerized-redis

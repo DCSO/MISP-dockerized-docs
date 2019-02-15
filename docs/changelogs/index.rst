@@ -12,6 +12,7 @@ Changelogs of MISP-dockerized repositories.
    MISP-dockerized-misp-modules
    MISP-dockerized-robot
    MISP-dockerized-postfix
+   MISP-dockerized-redis
 
 
 .. warning::
