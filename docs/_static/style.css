@@ -1,13 +1,18 @@
 /* Max Page width */
 .wy-nav-content {
     max-width: 1200px !important;
-
+    background: white;
 }
 
 /* Sidebar header (and topbar for mobile) */
 .wy-side-nav-search, .wy-nav-top {
-    background: #808080;
+    background: white;
+    border-right: 1px #4e4a4a solid;
   }
+
+.wy-nav-content {
+    background: white;
+}
 
   /* Sidebar */
 /* .wy-nav-side {
