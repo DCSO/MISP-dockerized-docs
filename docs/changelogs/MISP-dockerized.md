@@ -3,6 +3,19 @@
 
 
 
+
+---
+## Release Candidate 1.0.4
+[View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v1.0.4)
+This MISP-dockerized release is a minor release.
+### Update Information
+This release includes new CI files and we fixed a bug which prevents the CI to push the MISP-dockerized environment to the Docker registries.
+### General Changes
+No general changes where made.
+### Detailed Information
+- We fixed the .ci/30_push_2_registry.sh script
+
+
 ---
 ## Release Candidate 1.0.3
 [View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v1.0.3)
