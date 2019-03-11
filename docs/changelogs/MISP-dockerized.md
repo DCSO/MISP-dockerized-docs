@@ -3,7 +3,6 @@
 
 
 
-
 ---
 ## Release Candidate 1.0.4
 [View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v1.0.4)
@@ -14,7 +13,6 @@ This release includes new CI files and we fixed a bug which prevents the CI to p
 No general changes where made.
 ### Detailed Information
 - We fixed the .ci/30_push_2_registry.sh script
-
 
 ---
 ## Release Candidate 1.0.3
