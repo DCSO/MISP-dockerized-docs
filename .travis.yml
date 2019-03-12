@@ -6,14 +6,9 @@ env:
   global:
   - PATH="$PATH:/$(whoami)/.local/bin"
 
-# before_install:
-#   - sudo apt-get install make git pip
-
-
 script:
   - make -C .travis execute-CI
   - make html
-
 
 deploy:
   provider: pages
