@@ -2,6 +2,18 @@
 Since release candidate 0.3.0, we changed the development process from an release candidate change to a feature change development process.
 
 
+---
+## Feat/MDD-173: Added MISP Version 2.4.103
+### Update Information
+Features of the release:
+- Added MISP server container for MISP release 2.4.103.
+  For more information, please have a look at the official changelog at https://github.com/MISP/MISP/releases/tag/v2.4.103.
+### General Changes
+Besides the new MISP version, we improved the CI scripts for Gitlab and Travis CI.
+### Fixes and Improvements
+- Added MISP server container with MISP Version 2.4.103
+### Detailed Changes
+- Added new MISP server 2.4.103 on base of 2.4.97.
 
 ---
 ## Feat/MDD172: Added MISP Version 2.4.102
@@ -9,15 +21,12 @@ Since release candidate 0.3.0, we changed the development process from an releas
 Features of the release:
 - Added MISP server container for MISP release 2.4.102.
   For more information, please have a look at the official changelog at https://github.com/MISP/MISP/releases/tag/v2.4.102.
-- Added improved CI scripts
 ### General Changes
-Besides the new MISP version, we improved the CI scripts for Gitlab and Travis CI.
+Besides the new MISP version, no general changes were made.
 ### Fixes and Improvements
 - Added MISP server container with MISP Version 2.4.102
-- Added improved CI scripts
 ### Detailed Changes
 - Added new MISP server 2.4.102 on base of 2.4.97.
-- Gitlab CI can now build the server image for internal Docker registry and hub.docker.com registry.
 
 ---
 ## Feat/MDD155: Added MISP Version 2.4.101
