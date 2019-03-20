@@ -3,6 +3,69 @@ Since release candidate 0.3.0, we changed the development process from an releas
 
 
 ---
+## Feat/MDD-190: Fixed 2.4.93 MISP Server Image
+### Update Information
+Features of the release:
+- Fully worked 2.4.93 MISP server version, but not supported.
+### General Changes
+Besides the modified MISP version, no general changes were made.
+### Fixes and Improvements
+- Added entrypoint_workers.sh script
+- Changed apache2 misp.ssl configuration
+- Changed Dockerfile
+- Changed entrypoint_mariadb.sh script
+- Changed entrypoint_apache.sh script
+- Added Gitlab CI test job for 2.4.93
+### Detailed Changes
+- Added entrypoint_workers.sh script
+  Added a own startscript for resque worker of MISP.
+- Changed apache2 misp.ssl configuration
+  Disabled X-Content-Type-Options nosniff and X-Frame-Options DENY.
+- Changed Dockerfile
+  Added all missed dependencies.
+- Changed entrypoint_mariadb.sh script
+  Improved MariaDB start script and removed the task of importing MISP scheme.
+- Changed entrypoint_apache.sh script
+- Added Gitlab CI test job for 2.4.93
+  Backported CI test job from 2.4.103.
+
+---
+## Feat/MDD-189: Improved 2.4.103 MISP Server Image
+### Update Information
+Features of the release:
+- This MISP server 2.4.103 release has an improved mechanism to sync the different start scripts. First start Redis and DB and after this start apache2. Then all other scripts.
+### General Changes
+Besides the modified MISP version (2.4.103), no general changes were made.
+### Fixes and Improvements
+- Changed license file
+- Added "entrypoint.sh" script for supervisord
+- Removed entrypoint_monitoring.sh
+- Removed entrypoint_syslog-ng.sh
+- Added "entrypoint_worker.sh"
+- Changed misp_cron.sh and misp_update.sh
+- Changed Dockerfile for 2.4.103 to fit to the official MISP documentation
+- Added enviroment variables
+- Changed all entrypoint scripts to support green colored start output tag
+### Detailed Changes
+- Changed License file
+  Added current year to License file
+- Added "entrypoint.sh" script for supervisord
+- Removed entrypoint_monitoring.sh
+  It is not more needed.
+- Removed entrypoint_syslog-ng.sh
+  It is not more needed.
+- Added "entrypoint_worker.sh"
+  MISP workers get an own entrypoint_worker.sh start script
+- Changed misp_cron.sh and misp_update.sh
+  Improved misp_cron.sh script and misp_update.sh script at the way how the get their AUTH token from DB
+- Changed Dockerfile for 2.4.103 to fit to the official MISP documentation
+- Added environent variables:
+  - PHP_MEMORY_LIMIT="512M"
+  - PHP_MAX_EXECUTION_TIME="600"
+  - PHP_UPLOAD_MAX_FILESIZE="50M"
+  - PHP_POST_MAX_SIZE="50M"
+
+---
 ## Feat/MDD-173: Added MISP Version 2.4.103
 ### Update Information
 Features of the release:
