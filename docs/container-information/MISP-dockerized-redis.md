@@ -2,9 +2,9 @@
 
 ## Supported Tags and Respective `Dockerfile` Links
 
-- [`1`, `1.0-alpine`, `latest`][5]
+- [`5-alpine3.9-dev`][5]
 
-[1]: https://github.com/DCSO/MISP-dockerized-redis/blob/master/1.0-alpine/Dockerfile
+[1]: https://hub.docker.com/_/redis
 
 ## Quick reference
 
@@ -37,7 +37,7 @@
 services:
   ### MISP-Robot ###
   misp-redis:
-    image: dcso/misp-dockerized-redis:${MISP_ROBOT_TAG}
+    image: dcso/misp-dockerized-redis:${MISP_REDIS_TAG}
     container_name: misp-redis
     networks:
       misp-backend:

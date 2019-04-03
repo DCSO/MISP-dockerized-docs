@@ -3,6 +3,98 @@
 
 
 
+
+---
+## Release Candidate 1.1.0
+[View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v1.1.0)
+
+`This release is a major release. A backup and a test before you upgrade is recommended.`
+### About
+MISP dockerized is a project designed to provide an easy-to-use and easy-to-install 'out of the box' MISP instance that includes everything you need to run MISP with minimal host-side requirements.
+
+MISP dockerized uses MISP (Open Source Threat Intelligence Platform - https://github.com/MISP/MISP), which is maintained and developed by the MISP project team (https://www.misp-project.org/).
+
+MISP-dockerized provides the following features:mar
+* 3-steps (in 5 minute or less) ready MISP instance
+* Built in MISP modules
+* Official Docker Redis database in an own Docker container [NEW]
+* Built in mail transport via postfix
+* Prehardened TLS configuration
+* Default http to https redirect
+* Easy-to-use script based backup and restore function
+* Prebuilt management commands to ease maintenance efforts
+* Periodically built Docker containers
+* Automated test framework to test new MISP releases
+* PHP environment custom settings [NEW]
+* Built in cron job for headless MISP server [NEW]
+-----------------------------
+### Update Informations
+This release includes the new MISP server container version 2.4.103 and a few other changes you see below.
+### General Changes
+- Changed MISP Server Version from 2.4.99 to 2.4.103
+- Added new CI pipeline files
+- Fixed typos in different shellscripts
+- Added missing release v1.0.1
+- Added 'make delete' in top level makefile
+- Added 'make support' in top level makefile
+- Added '2019' to license file
+### Detailed Changes, Fixes & Improvements
+#### v1.1.0 [Main Repository](https://github.com/DCSO/MISP-dockerized)
+- Added 'make log' and 'make log-f' option in v1.1.0
+- Added 'make support' in makefile
+- Added environment variables 
+  - MISP_URL
+  - MISP_FQDN
+  - REDIS_FQDN: "misp-redis"
+  - CRON_INTERVAL: "3600"
+  - CRON_USER_ID: "1"
+  - PHP_MEMORY_LIMIT: "512M"
+  - PHP_MAX_EXECUTION_TIME: "300"
+  - PHP_POST_MAX_SIZE: "50M"
+  - PHP_UPLOAD_MAX_FILESIZE: "50M"
+#### Container [misp-dockerized-server](https://github.com/DCSO/MISP-dockerized-server)
+- [Bug/MDD-198: Fixing Gitlab CI to Build All Images](https://github.com/DCSO/MISP-dockerized-server/commit/fdd38e488a2632ad0db0fdd99fa4201b5faf007c)
+- [Bug/MDD-197: Fixing Docker Container 2.4.93](https://github.com/DCSO/MISP-dockerized-server/commit/9424db007f4532a0eee5f6dcc5395d9242f5e95a)
+- [Feat/MDD-194: Fixed Heavy IO Commands in 2.4.99-2.4.103](https://github.com/DCSO/MISP-dockerized-server/commit/fdaf9c3aa8ff62a77bb487c91e4a036d92b42010)
+- [Bug/MDD-193: Changed 2.4.103](https://github.com/DCSO/MISP-dockerized-server/commit/5751b0a620745e2de3ff7c882f48eb42365f13f4)
+- [Feat/MDD-190: Fixing 2.4.93 MISP Server Image](https://github.com/DCSO/MISP-dockerized-server/commit/ffaac4520c0b60842a0ebd3ba2673c030e892184)
+- [Feat/MDD-189: Improved 2.4.103 MISP Server Image](https://github.com/DCSO/MISP-dockerized-server/commit/dd5bf6f8609ad227ed283ca530b1eb6df92f44ef)
+- [Feat/MDD-173: Added MISP Version 2.4.103](https://github.com/DCSO/MISP-dockerized-server/commit/dc344c3e5764f5b730715c04ea027f6c7a957d32)
+- [Feat/MDD-172: Added MISP Version 2.4.102](https://github.com/DCSO/MISP-dockerized-server/commit/29e1ef6748ed0b0300bff80b221e2e3e808d5f8d)
+- [Feat/MDD155: Added MISP Version 2.4.101](https://github.com/DCSO/MISP-dockerized-server/commit/74f8aed23cb7981fcde7e7a1258738ec8daa3563)
+- [Feat.MDD150: Added MISP Version 2.4.100](https://github.com/DCSO/MISP-dockerized-server/commit/e6c59f0554e0b49f329199c0db638b792e9f19d1)
+- [Bug.MDD149: Error with baseurl and test.sh shellscript](https://github.com/DCSO/MISP-dockerized-server/commit/69acf5ef1ce1e315a7e914c9b169b3fe25cd9692)
+- [ Bug.MDD148: Fixing Bugs in entrypoint scripts for MISP-Server 2.4.97-99](https://github.com/DCSO/MISP-dockerized-server/commit/6a9225558587c34f8d38809959888122dd1cf11d)
+- [ Bug.MDD146: Fixing Bugs in entrypoint_apache.sh for MISP-Server 2.4.97-2.4.99](https://github.com/DCSO/MISP-dockerized-server/commit/fc7038f415c48ea467398710c9fcb3656069c5d8)
+- [Bug.MDD143: Fix for function "create_certificate" deadlock Bug](https://github.com/DCSO/MISP-dockerized-server/commit/7f567c424d9965069ebf0bd47fabad6eead327ab)
+#### Container [misp-dockerized-robot](https://github.com/DCSO/MISP-dockerized-robot)
+-  [Bug.MDD174: Travis CI and Gitlab CI does not Build and Push the Images Correctly](https://github.com/DCSO/MISP-dockerized-robot/commit/f45b2416c59e254226c5608d6319a70c1230055c)
+-  [Bug.MDD174: Travis CI and Gitlab CI does not Build and Push the Images Correctly](https://github.com/DCSO/MISP-dockerized-robot/commit/1ffd29276bb1bdb2cf356e739d6843fb1364d8a8)
+- [Bug.MDD149: Error in test.sh shell script](https://github.com/DCSO/MISP-dockerized-robot/commit/7bdf2be8b59f4431bc3a8006e0421d8869d4d6d7)
+- [Feat.MDD138: Added new MISP Robot Container Version](https://github.com/DCSO/MISP-dockerized-robot/commit/b278e5217abd0c4cc6f7f5e5b386739dc320bb58)
+- [Feat.MDD138 - Added new MISP Robot Container Version](https://github.com/DCSO/MISP-dockerized-robot/commit/2899b53a965d00e2c444b108da172fb2197129cb)
+- [Feat.MDD123: Change Container Version Scheme from Three to Two Digits](https://github.com/DCSO/MISP-dockerized-robot/commit/11a6afea7f79bb63cd6be0a66f002ba2e88f904f)
+- [Bug.MDD120 - MISP Robot Version 1.0.4-debian Ansible is only available in Travis CI and not in Gitlab CI](https://github.com/DCSO/MISP-dockerized-robot/commit/df335f63e141d5b9fd1cdae7962dea20b7cc70de)
+#### Container [misp-dockerized-proxy](https://github.com/DCSO/MISP-dockerized-proxy)
+- [Bug.MDD143: Fix for Function "create_certificate" Deadlock Bug](https://github.com/DCSO/MISP-dockerized-proxy/commit/dc8dc54838487b6ae4114edd9f41ab3de10b0af7)
+#### Container [misp-dockerized-misp-modules](https://github.com/DCSO/MISP-dockerized-misp-modules)
+- [Feat/MDD-191: Added MISP Module Server Image 2.0](https://github.com/DCSO/MISP-dockerized-misp-modules/commit/3465a27db498602e7035489c7e413ff9e79d4a6f)
+- [Bug/MDD179: MISP Modules is not Starting Correctly](https://github.com/DCSO/MISP-dockerized-misp-modules/commit/136958b0ebfd91f8ca41f7baca230e8359bf0a66)
+- [Bug.MDD134: Added Container version 1.2 for Gitlab CI](https://github.com/DCSO/MISP-dockerized-misp-modules/commit/ca460a01698123d42870ae260be02327b8940668)
+#### Container [misp-dockerized-redis](https://github.com/DCSO/MISP-dockerized-redis)
+- [Feat/MDD-170: Added Redis Image 5-alpine3.9](https://github.com/DCSO/MISP-dockerized-redis/commit/fd66d41a12c060bb9c30e35724de674efce048f6)
+
+---
+## Release Candidate 1.0.4
+[View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v1.0.4)
+This MISP-dockerized release is a minor release.
+### Update Information
+This release includes new CI files and we fixed a bug which prevents the CI to push the MISP-dockerized environment to the Docker registries.
+### General Changes
+No general changes where made.
+### Detailed Information
+- We fixed the .ci/30_push_2_registry.sh script
+
 ---
 ## Release Candidate 1.0.4
 [View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v1.0.4)
