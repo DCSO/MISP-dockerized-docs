@@ -2,7 +2,17 @@
 Since release candidate 0.3.0, we changed the development process from an release candidate change to a feature change development process.
 
 
-
+---
+## Feat/MDD-190: Fixing 2.4.93 MISP Server Image
+### Update Information
+Features of the release:
+- A new MISP modules container on base of Alpine Linux with version number 2.0
+### General Changes
+Besides the modified MISP module server version, we changed the CI files for our Gitlab CI.
+### Fixes and Improvements
+- MISP modules image 2.0 is based on Alpine Linux therfore it is smaller than the Debian slim image.
+- We improved the CI files for a better usage in Gitlab CI.
+### Detailed Changes
 
 
 

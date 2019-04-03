@@ -4,17 +4,23 @@
 
 ### Supported Builds
 
-| Version                                                                                                | Release Date | Status    | Notes                             |
-| ------------------------------------------------------------------------------------------------------ | ------------ | --------- | --------------------------------- |
-| [`2.4.99-debian`](https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.99-debian/Dockerfile) | Dec'2018     | supported | Default version for release 1.0.x |
-
+| Version                                                                                                  | Release Date | Status    | Notes                             |
+| -------------------------------------------------------------------------------------------------------- | ------------ | --------- | --------------------------------- |
+| [`2.4.99-debian`](https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.99-debian/Dockerfile)   | Dec'2018     | supported | Default version for release 1.0.x |
+| [`2.4.103-debian`](https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.103-debian/Dockerfile) | Mar'2019     | supported | Default version for release 1.1.x |
+|                                                                                                          |
 ### Intermediate Builds
 
 | Version                                                                                                          | Release Date | Status      | Notes                                                                                                                                              |
 | ---------------------------------------------------------------------------------------------------------------- | ------------ | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 |                                                                                                                  |
 | [`2.4.100-debian`](https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.100-debian/Dockerfile)         | Jan'2019     | unsupported |                                                                                                                                                    |
-| [`2.4.101-debian`](https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.101-debian/Dockerfile)         | Jan'2019     | unsupported |                                                                                                                                                    |
+| [`2.4.101-debian`](https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.101-debian/Dockerfile)         | Jan'2019     | unsupported |
+|                                                                                                                  |
+| [`2.4.102-debian`](https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.102-debian/Dockerfile)         | Mar'2019     | unsupported |
+|                                                                                                                  |
+| [`2.4.103-debian`](https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.103-debian/Dockerfile)         | Mar'2019     | unsupported |
+|                                                                                                                  |
 | [`2.4.nightly-ubuntu`](https://github.com/DCSO/MISP-dockerized-server/blob/master/2.4.nightly-ubuntu/Dockerfile) | Oct'2018     | unsupported | The nightly version is a build based on the latest development version of MISP-dockerized. This build is experimental and therefore not supported. |
 
 
