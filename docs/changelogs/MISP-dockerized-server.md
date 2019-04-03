@@ -2,6 +2,85 @@
 Since release candidate 0.3.0, we changed the development process from an release candidate change to a feature change development process.
 
 
+
+
+---
+## Bug/MDD-198: Fixing Gitlab CI to Build All Images
+### Update Information
+This release fixed small bugs in Gitlab CI files.
+### General Changes
+The general Gitlab CI files was changed. We activated all images to build in our local Gitlab CI.
+### Fixes and Improvements
+- Changed Main Gitlab CI file
+- Changed 2.4.93 Gitlab CI file
+- Changed 2.4.93 Dockerfile to remove all not existing files
+### Detailed Changes
+- Changed Main Gitlab CI file
+   Activate all disabled images to build.
+- Changed 2.4.93 Gitlab CI file
+  Fix typos in the 2.4.93 Gitlab CI file the base is not debian it is ubuntu.
+- Changed 2.4.93 Dockerfile to remove all not existing files
+   We copy the content from 2.4.103 Docker container, but as we create 2.4.93 we had no extra postfix installed.
+
+
+
+---
+## Bug/MDD-197: Fixing Docker MISP Server Container 2.4.93
+### Update Information
+This release fixed small bugs in MISP server container 2.4.93.
+### General Changes
+No general changes were made.
+### Fixes and Improvements
+- Changed Dockerfile
+- Changed entrypoint scripts
+- Integrate supervisord configuration file into entrypoint
+- Sort configuration files into folder
+- Added misp_cron and misp_update script
+- Integrate php.ini file into entrypoint_apache2.sh
+### Detailed Changes
+- Changed Dockerfile
+  We backported environment and argument variables and the structure for entrypoint scripts.
+- Changed entrypoint scripts
+- Integrate supervisord configuration file into entrypoint
+  entrypoint.sh script write at every start the configuration file.
+- Sort configuration files into folder
+  To cleanup the files folder we moved various configuration files into own folder.
+- Added misp_cron and misp_update script
+  Scripts to update MISP for taxonomies, Galaxies, Warninglists and for an cron job to push/pull events.
+- Integrate php.ini file into entrypoint_apache2.sh
+
+---
+## Feat/MDD-194: Fixed Heavy IO Commands in 2.4.99-2.4.103
+### Update Information
+This release fixed small bugs.
+### General Changes
+No general changes were made.
+### Fixes and Improvements
+- Deleted heavy IO commands as "chmod" and "chown" from Dockerfile
+- Changed heavy IO commands as "chmod" and "chown" in entrypoint_apache.sh to an solution via "find"
+- Fixed healthcheck.sh script for 2.4.100-2.4.103
+- Changed CI before_install script to fit to the new dependencies of docker-compose in Alpine Linux
+### Detailed Changes
+- Deleted heavy IO commands as "chmod" and "chown" from Dockerfile
+  chown and chmod commands cause a high IO load on our CI server to improve this we deleted this commands from our Dockerfiles.
+- Changed heavy IO commands as "chmod" and "chown" in entrypoint_apache.sh to an solution via "find"
+  chown and chmod commands cause a high IO load on our CI server to improve this we changed this commands to one via find which is faster and require less IO.
+- Fixed healthcheck.sh script for 2.4.100-2.4.103
+  The healthcheck.sh script search for REDIS_HOST but our variable is called REDIS_FQDN.
+- Changed CI before_install script to fit to the new dependencies of docker-compose in Alpine Linux
+
+---
+## Bug/MDD-193: Changed 2.4.103
+### Update Information
+Features of the release:
+- Fixed 2.4.103 server image
+### General Changes
+Besides the modified MISP version (2.4.103), no general changes were made.
+### Fixes and Improvements
+- Fixed an bug in 2.4.103 Dockerfile
+### Detailed Changes
+- Fixed an bug in 2.4.103 Dockerfile
+
 ---
 ## Feat/MDD-190: Fixed 2.4.93 MISP Server Image
 ### Update Information
