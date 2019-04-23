@@ -5,6 +5,27 @@ Since release candidate 0.3.0, we changed the development process from an releas
 
 
 ---
+## Bug/MDD-199: Repair Global 'tagging.sh' Script
+### Update Information
+This release fixed a bug in `tagging.sh` script.
+### General Changes
+The general `tagging.sh` script was changed.
+There are no user actions required.
+### Fixes and Improvements
+- Restricted Docker image souce repository tags to source repository not2push
+- Added test Gitlab CI job for 2.4.nightly-ubuntu
+- Added tag commands to Gitlab CI test job
+### Detailed Changes
+- Restricted Docker image souce repository tags to source repository not2push
+   The `tagging.sh` save all tags which are pass to the current container name. But this is problematic for the case that we tag first for the one repository and then for the second. Therefore there are new tags which not exists for 'not2push' repository but exists for an custom repository. This runs into an error. Which was fixed now.
+- Added test Gitlab CI job for 2.4.nightly-ubuntu
+   The 2.4.nightly-ubuntu had no second Gitlab CI job for test, only the build CI job. Therefore we added this test.
+- Added tag commands to Gitlab CI test job
+   The tag command was not tested at test CI job. Now we fixed this.
+
+
+
+---
 ## Bug/MDD-198: Fixing Gitlab CI to Build All Images
 ### Update Information
 This release fixed small bugs in Gitlab CI files.
