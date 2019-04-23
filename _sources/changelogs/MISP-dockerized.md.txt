@@ -1,7 +1,29 @@
 # MISP-dockerized
 
+---
+## Release Candidate 1.1.1
+[View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v1.1.1)
 
-
+`This MISP-dockerized release is a minor release.`
+### Update Information
+This release fixed small bugs and close the issue #62 and perhaps also issue #61 .
+### General Changes
+There are general changes, but without any impact for an user.
+- Updated 01_before_install.sh CI script to the latest state to install docker-compose correctly in Gitlab CI
+- Updated 02_script.sh CI script to fix typos
+- Added separated 20_tag_2_registry.sh CI script excluded from 30_push_2_registry.sh
+- Added options in general Makefile for: `change-ssl`, `change-smime` and `change-pgp`
+- Added version 1.1.1
+### Detailed Information
+- We separate the tag function from push function and added it to our test CI job.
+   Now we are able to test if tagging is working as expected.
+- Added options in general Makefile for: `change-ssl`, `change-smime` and `change-pgp`
+    This commands redirects to 1.1.1->Makefile commands.
+- Added version 1.1.1
+  - Update help text from Makefile
+    Updated the help text to all required options.
+  - Added  change-ssl/smime/pgp make commands
+    This commands copy the keys and certificates into the misp-server and misp-proxy container.
 
 
 ---
