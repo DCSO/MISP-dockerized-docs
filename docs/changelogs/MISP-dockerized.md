@@ -1,5 +1,20 @@
 # MISP-dockerized
 
+
+
+---
+## Release Candidate 1.1.2
+[View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v1.1.2)
+
+This MISP-dockerized release is a minor release.
+### Update Information
+This release fixed small bugs and close the issue #67 and perhaps also issue #61.
+### General Changes
+There are general changes, but without any impact for an user.
+
+### Detailed Information
+
+
 ---
 ## Release Candidate 1.1.1
 [View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v1.1.1)
