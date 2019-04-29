@@ -1,6 +1,33 @@
 # MISP-dockerized-proxy
 Since release candidate 0.3.0, we changed the development process from an release candidate change to a feature change development process.
 
+
+
+
+
+---
+## Bug/MDD-203: Update CI Files
+### Update Information
+This release updated the CI and License files.
+### General Changes
+The general CI files were changed.
+### Fixes and Improvements
+- Removed top level makefile whis is not more used
+- Updated CI files to support new environment variables
+- Updated Readme
+- Updated Pipeline files for Travis CI and Gitlab CI
+### Detailed Changes
+- Removed top level makefile whis is not more used
+  The functionality of the top level makefile was moved to .ci folder. Now the makefile is unused and can be deleted.
+- Updated CI files to support new environment variables
+   The URL to notify hub.docker.com has been changed therefore the notify script were updated. Additional to this we improved the other CI files to make a great tagging, uploading and building of the container.
+- Updated Readme
+  We fixed a link typo.
+- Updated Pipeline files for Travis CI and Gitlab CI
+   We updated the Travis and Gitlab CI pipeline files to latest version.
+
+
+
 ---
 ## Bug.MDD143: Fix for Function "create_certificate" Deadlock Bug
 ### Update Information 
