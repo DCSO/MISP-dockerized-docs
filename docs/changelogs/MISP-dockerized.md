@@ -11,8 +11,11 @@ This MISP-dockerized release is a minor release.
 This release fixed small bugs and close the issue #67 and perhaps also issue #61.
 ### General Changes
 There are general changes, but without any impact for an user.
-
 ### Detailed Information
+- Updated .ci/20_tag_2_registry.sh and .ci/30_push_2_registry.sh
+  This update fixed that misp-dockerized-redis container are retagged and pushed into registries.
+- Updated .ci/02_script.sh
+  Suppress the Docker pull messages.
 
 
 ---
