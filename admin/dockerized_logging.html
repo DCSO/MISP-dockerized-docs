@@ -937,7 +937,7 @@
 <div class="section" id="show-logs-with-syslog-forwarding">
 <h2>Show logs with syslog forwarding<a class="headerlink" href="#show-logs-with-syslog-forwarding" title="Permalink to this headline">¶</a></h2>
 <p>If you want to forward all MISP-dockerized logs to local or remote syslog, delete the following lines from ./config/config.yml file:
-<code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">USE_SYSLOG=&quot;no&quot;</span> <span class="pre">SYSLOG_REMOTE_HOST=&quot;127.0.0.1&quot;</span></code></p>
+<code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">USE_SYSLOG=&quot;no&quot;</span> <span class="pre">SYSLOG_REMOTE_HOST=&quot;127.0.0.1&quot;</span> </code></p>
 <p>The example below activates syslog forwarding to local syslog daemon:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    <span class="c1">### LOG DRIVER ###</span>
     <span class="c1"># for more Information: https://docs.docker.com/compose/compose-file/#logging + https://docs.docker.com/config/containers/logging/syslog/</span>
@@ -985,7 +985,7 @@
     <p>
         &copy; Copyright 2018, DCSO GmbH
       <span class="lastupdated">
-        Last updated on May 01, 2019.
+        Last updated on Jun 14, 2019.
       </span>
 
     </p>
