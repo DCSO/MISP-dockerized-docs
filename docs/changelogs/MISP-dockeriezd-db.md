@@ -1,6 +1,5 @@
 # MISP-dockerized-db
 
-
 ---
 ## Bug/MDD-219: Fix Gitlab CI
 ### Update Information

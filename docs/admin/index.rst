@@ -5,13 +5,11 @@ Administrator Guides
 Best practices for effectively managing an MISP-dockerized environment.
 
 .. toctree::
-	:maxdepth: 3
+	:maxdepth: 2
 
 	dockerized_upgrading
 	dockerized_backup-restore
-	.. dockerized_make_cmd
 	dockerized_logging
-	.. performance
 	docker/docker_cmd
 	docker/docker_proxy
 	docker/docker_network
