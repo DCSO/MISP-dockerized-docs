@@ -5,3 +5,4 @@ FAQ
    :maxdepth: 2
 
    docker
+   cert_error
