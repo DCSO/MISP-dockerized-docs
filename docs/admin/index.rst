@@ -17,3 +17,4 @@ Best practices for effectively managing an MISP-dockerized environment.
 	docker/docker_network
 	docker/docker_daemon
 	redis_maintenance
+	ssl_passphrase
