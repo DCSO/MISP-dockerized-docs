@@ -46,6 +46,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Design Docs" href="../design/index.html" />
+    <link rel="prev" title="Redis Maintenance" href="redis_maintenance.html" />
     <link href="../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -98,7 +100,7 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../intro/features.html">Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../intro/requirements/index.html">Requirements</a><ul>
@@ -230,7 +232,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Administrator Guides</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Administrator Guides</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="dockerized_upgrading.html">Upgrading MISP-dockerized</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="dockerized_upgrading.html#advice">Advice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dockerized_upgrading.html#basic-instructions">Basic Instructions</a></li>
@@ -281,6 +283,16 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="redis_maintenance.html">Redis Maintenance</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Use Certificate with passphrase</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to">How to</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#via-environment-variable">via Environment Variable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#via-file">via File</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#further-documentation">Further Documentation</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../design/index.html">Design Docs</a><ul>
@@ -851,6 +863,8 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
+          <li><a href="index.html">Administrator Guides</a> &raquo;</li>
+        
       <li>Use Certificate with passphrase</li>
     
     
@@ -873,23 +887,23 @@
   <div class="section" id="use-certificate-with-passphrase">
 <h1>Use Certificate with passphrase<a class="headerlink" href="#use-certificate-with-passphrase" title="Permalink to this headline">¶</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">This</span> <span class="pre">is</span> <span class="pre">unsupported!</span></code></p>
-<p>This guide is for administrators which want to use password protected certificates. This guide is in special for the <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-proxy/issues/17">Github.com issue 17</a>.</p>
+<p>This guide is for administrators which want to use password protected certificates. This guide is in special for the <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-proxy/issues/17">GitHub issue 17</a>.</p>
 <div class="section" id="how-to">
 <h2>How to<a class="headerlink" href="#how-to" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="via-environment-variable">
 <h3>via Environment Variable<a class="headerlink" href="#via-environment-variable" title="Permalink to this headline">¶</a></h3>
-<p>Go to config/config.env and set <code class="docutils literal notranslate"><span class="pre">SSL_PASSPHRASE_ENABLE=&quot;yes&quot;</span></code>.
+<p>Go to <code class="docutils literal notranslate"><span class="pre">config/config.env</span></code> and set <code class="docutils literal notranslate"><span class="pre">SSL_PASSPHRASE_ENABLE=&quot;yes&quot;</span></code>.
 Now make: <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span></code> or <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">build-config</span> <span class="pre">&amp;&amp;</span> <span class="pre">make</span> <span class="pre">deploy</span></code>
 You are ready.
 For troubleshooting please look at <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">-f</span> <span class="pre">logs</span> <span class="pre">misp-proxy</span></code> or <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">-f</span> <span class="pre">logs</span> <span class="pre">misp-server</span></code></p>
 </div>
 <div class="section" id="via-file">
 <h3>via File<a class="headerlink" href="#via-file" title="Permalink to this headline">¶</a></h3>
-<p>To activate passphrase certificate via file you need to one file one for nginx and Apache2 will generate his file on base of the another one.</p>
+<p>To activate passphrase certificate via file you need to one file one for NGINX and Apache2 will generate his file on base of the another one.</p>
 <ol class="simple">
 <li>Create a new file in <code class="docutils literal notranslate"><span class="pre">config/ssl/ssl.passphrase</span></code>.
 Content of the file is only your password.</li>
-<li>Go to config/config.env and set <code class="docutils literal notranslate"><span class="pre">SSL_PASSPHRASE_ENABLE=&quot;yes&quot;</span></code>.</li>
+<li>Go to <code class="docutils literal notranslate"><span class="pre">config/config.env</span></code> and set <code class="docutils literal notranslate"><span class="pre">SSL_PASSPHRASE_ENABLE=&quot;yes&quot;</span></code>.</li>
 <li>Update configuration: <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">build-config</span></code></li>
 <li>Deploy new configuration: <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">deploy</span></code></li>
 </ol>
@@ -904,9 +918,9 @@ Content of the file is only your password.</li>
 <div class="section" id="further-documentation">
 <h2>Further Documentation<a class="headerlink" href="#further-documentation" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_password_file</li>
-<li>https://httpd.apache.org/docs/current/mod/mod_ssl.html#sslpassphrasedialog</li>
-<li>https://cwiki.apache.org/confluence/display/HTTPD/RemoveSSLCertPassPhrase</li>
+<li><a class="reference external" href="http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_password_file">http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_password_file</a></li>
+<li><a class="reference external" href="https://httpd.apache.org/docs/current/mod/mod_ssl.html#sslpassphrasedialog">https://httpd.apache.org/docs/current/mod/mod_ssl.html#sslpassphrasedialog</a></li>
+<li><a class="reference external" href="https://cwiki.apache.org/confluence/display/HTTPD/RemoveSSLCertPassPhrase">https://cwiki.apache.org/confluence/display/HTTPD/RemoveSSLCertPassPhrase</a></li>
 </ul>
 </div>
 </div>
@@ -916,6 +930,15 @@ Content of the file is only your password.</li>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../design/index.html" class="btn btn-neutral float-right" title="Design Docs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="redis_maintenance.html" class="btn btn-neutral float-left" title="Redis Maintenance" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
