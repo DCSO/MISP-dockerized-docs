@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Use Certificate with passphrase &mdash; MISP-dockerized 1.0.3 documentation</title>
+  <title>Use SSL Certificate with Passphrase &mdash; MISP-dockerized 1.0.3 documentation</title>
   
 
   
@@ -283,10 +283,10 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="redis_maintenance.html">Redis Maintenance</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Use Certificate with passphrase</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#how-to">How to</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#via-environment-variable">via Environment Variable</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#via-file">via File</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Use SSL Certificate with Passphrase</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to">How to …</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#via-environment-variable">… via Environment Variable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#via-file">… via File</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
@@ -865,13 +865,13 @@
         
           <li><a href="index.html">Administrator Guides</a> &raquo;</li>
         
-      <li>Use Certificate with passphrase</li>
+      <li>Use SSL Certificate with Passphrase</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/admin/ssl_passphrase.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/admin/ssl_passphrase.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -884,43 +884,46 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="use-certificate-with-passphrase">
-<h1>Use Certificate with passphrase<a class="headerlink" href="#use-certificate-with-passphrase" title="Permalink to this headline">¶</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">This</span> <span class="pre">is</span> <span class="pre">unsupported!</span></code></p>
+  <div class="section" id="use-ssl-certificate-with-passphrase">
+<h1>Use SSL Certificate with Passphrase<a class="headerlink" href="#use-ssl-certificate-with-passphrase" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This guide is only valid for MISP-dockerized 1.2.0+.</p>
+</div>
 <p>This guide is for administrators which want to use password protected certificates. This guide is in special for the <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-proxy/issues/17">GitHub issue 17</a>.</p>
 <div class="section" id="how-to">
-<h2>How to<a class="headerlink" href="#how-to" title="Permalink to this headline">¶</a></h2>
+<h2>How to …<a class="headerlink" href="#how-to" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="via-environment-variable">
-<h3>via Environment Variable<a class="headerlink" href="#via-environment-variable" title="Permalink to this headline">¶</a></h3>
-<p>Go to <code class="docutils literal notranslate"><span class="pre">config/config.env</span></code> and set <code class="docutils literal notranslate"><span class="pre">SSL_PASSPHRASE_ENABLE=&quot;yes&quot;</span></code>.
-Now make: <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span></code> or <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">build-config</span> <span class="pre">&amp;&amp;</span> <span class="pre">make</span> <span class="pre">deploy</span></code>
+<h3>… via Environment Variable<a class="headerlink" href="#via-environment-variable" title="Permalink to this headline">¶</a></h3>
+<p>Go to <code class="code docutils literal notranslate"><span class="pre">config/config.env</span></code> and set <code class="code docutils literal notranslate"><span class="pre">SSL_PASSPHRASE_ENABLE=&quot;yes&quot;</span></code>.
+Now make: <code class="code docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span></code> or <code class="code docutils literal notranslate"><span class="pre">make</span> <span class="pre">build-config</span> <span class="pre">&amp;&amp;</span> <span class="pre">make</span> <span class="pre">deploy</span></code>
 You are ready.
-For troubleshooting please look at <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">-f</span> <span class="pre">logs</span> <span class="pre">misp-proxy</span></code> or <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">-f</span> <span class="pre">logs</span> <span class="pre">misp-server</span></code></p>
+For troubleshooting please look at <cite>docker -f logs misp-proxy</cite> or <cite>docker -f logs misp-server</cite></p>
 </div>
 <div class="section" id="via-file">
-<h3>via File<a class="headerlink" href="#via-file" title="Permalink to this headline">¶</a></h3>
+<h3>… via File<a class="headerlink" href="#via-file" title="Permalink to this headline">¶</a></h3>
 <p>To activate passphrase certificate via file you need to one file one for NGINX and Apache2 will generate his file on base of the another one.</p>
-<ol class="simple">
-<li>Create a new file in <code class="docutils literal notranslate"><span class="pre">config/ssl/ssl.passphrase</span></code>.
+<ol class="arabic simple">
+<li>Create a new file in <code class="code docutils literal notranslate"><span class="pre">config/ssl/ssl.passphrase</span></code>.
 Content of the file is only your password.</li>
-<li>Go to <code class="docutils literal notranslate"><span class="pre">config/config.env</span></code> and set <code class="docutils literal notranslate"><span class="pre">SSL_PASSPHRASE_ENABLE=&quot;yes&quot;</span></code>.</li>
-<li>Update configuration: <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">build-config</span></code></li>
-<li>Deploy new configuration: <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">deploy</span></code></li>
+<li>Go to <code class="code docutils literal notranslate"><span class="pre">config/config.env</span></code> and set <code class="code docutils literal notranslate"><span class="pre">SSL_PASSPHRASE_ENABLE=&quot;yes&quot;</span></code>.</li>
+<li>Update configuration: <code class="code docutils literal notranslate"><span class="pre">make</span> <span class="pre">build-config</span></code></li>
+<li>Deploy new configuration: <code class="code docutils literal notranslate"><span class="pre">make</span> <span class="pre">deploy</span></code></li>
 </ol>
 </div>
 </div>
 <div class="section" id="troubleshooting">
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>To restart the container: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">restart</span> <span class="pre">misp-server</span> <span class="pre">misp-proxy</span></code></li>
+<li>To restart the container: <code class="code docutils literal notranslate"><span class="pre">docker</span> <span class="pre">restart</span> <span class="pre">misp-server</span> <span class="pre">misp-proxy</span></code></li>
 </ul>
 </div>
 <div class="section" id="further-documentation">
 <h2>Further Documentation<a class="headerlink" href="#further-documentation" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference external" href="http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_password_file">http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_password_file</a></li>
-<li><a class="reference external" href="https://httpd.apache.org/docs/current/mod/mod_ssl.html#sslpassphrasedialog">https://httpd.apache.org/docs/current/mod/mod_ssl.html#sslpassphrasedialog</a></li>
-<li><a class="reference external" href="https://cwiki.apache.org/confluence/display/HTTPD/RemoveSSLCertPassPhrase">https://cwiki.apache.org/confluence/display/HTTPD/RemoveSSLCertPassPhrase</a></li>
+<li><a class="reference external" href="http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_password_file">NGINX SSL password file</a></li>
+<li><a class="reference external" href="https://httpd.apache.org/docs/current/mod/mod_ssl.html#sslpassphrasedialog">Apache2 SSL passphrasedialog</a></li>
+<li><a class="reference external" href="https://cwiki.apache.org/confluence/display/HTTPD/RemoveSSLCertPassPhrase">Apache2 SSL Remove SSL cert passphrase</a></li>
 </ul>
 </div>
 </div>
