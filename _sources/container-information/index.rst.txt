@@ -4,7 +4,7 @@ Container Information
 On this page, you can find most of the information you normally get from hub.docker.com or Git readme files.
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    MISP-dockerized-server
    MISP-dockerized-proxy
@@ -12,3 +12,4 @@ On this page, you can find most of the information you normally get from hub.doc
    MISP-dockerized-robot
    MISP-dockerized-postfix
    MISP-dockerized-redis
+   MISP-dockerized-monitoring
