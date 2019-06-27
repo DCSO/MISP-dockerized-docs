@@ -6,3 +6,4 @@ FAQ
 
    docker
    cert_error
+   version
