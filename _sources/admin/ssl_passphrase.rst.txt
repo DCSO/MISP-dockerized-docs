@@ -6,7 +6,7 @@ Use SSL Certificate with Passphrase
     This guide is only valid for MISP-dockerized 1.2.0+.
 
 
-.. info::
+.. note::
 
     This is not our recommended way and therefore unsupported.
 
