@@ -24,13 +24,13 @@ from recommonmark.transform import AutoStructify
 # -- Project information -----------------------------------------------------
 
 project = 'MISP-dockerized'
-copyright = '2018, DCSO GmbH'
+copyright = '2018,2019, DCSO GmbH'
 author = 'DCSO GmbH'
 
 # The short X.Y version
-version = '1.0.3'
+version = '1.1.1'
 # The full version, including alpha/beta/rc tags
-release = '1.0.3'
+release = '1.1.1'
 
 github_doc_root = 'https://github.com/DCSO/MISP-dockerized-docs/tree/master/docs/'
 
@@ -44,14 +44,14 @@ github_doc_root = 'https://github.com/DCSO/MISP-dockerized-docs/tree/master/docs
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.doctest',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.todo',
-    'sphinx.ext.coverage',
+    #'sphinx.ext.autodoc',
+    #'sphinx.ext.doctest',
+    #'sphinx.ext.intersphinx',
+    #'sphinx.ext.todo',
+    #'sphinx.ext.coverage',
     #'sphinx.ext.mathjax',
-    'sphinx.ext.ifconfig',
-    'sphinx.ext.viewcode',
+    #'sphinx.ext.ifconfig',
+    #'sphinx.ext.viewcode',
     'docxsphinx',
     'sphinx.ext.githubpages',
     'sphinx_markdown_tables',
@@ -110,7 +110,7 @@ html_theme_options = {
     #'canonical_url': '',
     #'analytics_id': '',
     'logo_only': False,
-    'display_version': True,
+    'display_version': False,
     'prev_next_buttons_location': 'bottom',
     'style_external_links': True,
     #'vcs_pageview_mode': 'edit',
@@ -163,7 +163,7 @@ html_last_updated_fmt = '%b %d, %Y'
 #html_additional_pages = {}
 
 # If false, no module index is generated.
-html_domain_indices = False
+html_domain_indices = True
 
 # If false, no index is generated.
 html_use_index = True
