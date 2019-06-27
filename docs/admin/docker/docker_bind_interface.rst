@@ -1,4 +1,4 @@
-Activate Interface binding for MISP Network Bridge Device
+Activate Interface Binding for MISP Network Bridge Device
 ##########################################################
 If you have more than one interface your bridge interface can be mapped to the false device interface.
 To prevent this you can add an option at the network part. 
