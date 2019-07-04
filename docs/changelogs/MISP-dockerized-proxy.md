@@ -3,6 +3,39 @@ Since release candidate 0.3.0, we changed the development process from an releas
 
 
 
+---
+## Bug/MDD-223: Entrypoint of Proxy Container 1.6 has no Execute Permission
+### Update Information
+This release fixes a small bug in the proxy container 1.6-alpine and improved the sub Gitlab-CI files.
+### General Changes
+Improvements with the sub Gitlab-CI files are done.
+### Fixes and Improvements
+- Fixed execute permission from entrypoint script for container 1.6-alpine
+### Detailed Changes
+- Fixed execute permission from entrypoint script for container 1.6-alpine
+  The entrypoint.sh script for the Alpine Linux proxy container version 1.6 had no execute permission, therefore it was not possible to start. We added the permissions and now the proxy container starts correctly.
+
+
+
+---
+## Feat/MDD-220: Improve Proxy Docker Container
+### Update Information
+This release added a new misp-dockerized-proxy Docker container.
+### General Changes
+The general CI files were changed.
+- Changed Gitlab CI Build tools from default `docker build`  to `kaniko`
+- Added a Gitlab CI test job for all container 
+- Added a Release Date variable for all container 
+- Removed unused CI scripts
+### Fixes and Improvements
+- Added new misp-dockerized-proxy:1.6-alpine Docker container
+### Detailed Changes
+- Added new misp-dockerized-proxy:1.6-alpine Docker container
+  This container supports: 
+  - Our MISP-dockerized-monitoring as reverse proxy. 
+  - The new MISP-dockerized variable scheme.
+  - SSL web certificate passphrase option.
+
 
 
 ---
