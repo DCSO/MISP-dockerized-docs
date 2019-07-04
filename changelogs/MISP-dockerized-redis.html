@@ -804,11 +804,18 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">MISP-dockerized-redis</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#feat-mdd-170-added-redis-image-5-alpine3-9">Feat/MDD-170: Added Redis Image 5-alpine3.9</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#feat-mdd-221-improve-redis-and-monitoring-container">Feat/MDD 221: Improve Redis and Monitoring Container</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#update-information">Update information</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#general-changes">General changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#general-changes">General Changes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#fixes-and-improvements">Fixes and Improvements</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#detailed-changes">Detailed changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detailed-changes">Detailed Changes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#feat-mdd-170-added-redis-image-5-alpine3-9">Feat/MDD-170: Added Redis Image 5-alpine3.9</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Update information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">General changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Fixes and Improvements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Detailed changes</a></li>
 </ul>
 </li>
 </ul>
@@ -906,24 +913,55 @@
   <div class="section" id="misp-dockerized-redis">
 <h1>MISP-dockerized-redis<a class="headerlink" href="#misp-dockerized-redis" title="Permalink to this headline">¶</a></h1>
 <hr class="docutils" />
-<div class="section" id="feat-mdd-170-added-redis-image-5-alpine3-9">
-<h2>Feat/MDD-170: Added Redis Image 5-alpine3.9<a class="headerlink" href="#feat-mdd-170-added-redis-image-5-alpine3-9" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="feat-mdd-221-improve-redis-and-monitoring-container">
+<h2>Feat/MDD 221: Improve Redis and Monitoring Container<a class="headerlink" href="#feat-mdd-221-improve-redis-and-monitoring-container" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="update-information">
 <h3>Update information<a class="headerlink" href="#update-information" title="Permalink to this headline">¶</a></h3>
-<p>We added a new MISP redis image version 5-alpine3.9.</p>
+<p>In this release we changed the docker build tools.</p>
 </div>
 <div class="section" id="general-changes">
-<h3>General changes<a class="headerlink" href="#general-changes" title="Permalink to this headline">¶</a></h3>
-<p>In general we added the new redis Git repository to move the redis installation from <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-server">MISP server</a> to new MISP redis container.</p>
+<h3>General Changes<a class="headerlink" href="#general-changes" title="Permalink to this headline">¶</a></h3>
+<p>In general the CI files were changed. This has no user impact.</p>
+<ul class="simple">
+<li>Changed Gitlab CI Build tools from default <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">build</span></code>  to <code class="docutils literal notranslate"><span class="pre">kaniko</span></code></li>
+<li>Added a Gitlab CI test job for all container</li>
+<li>Added a Release Date variable for all container</li>
+<li>Improved all shellscripts to avoid warnings and errors from shellcheck</li>
+<li>Removed unused CI scripts</li>
+</ul>
 </div>
 <div class="section" id="fixes-and-improvements">
 <h3>Fixes and Improvements<a class="headerlink" href="#fixes-and-improvements" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>We added a new redis container repository</li>
+<li>No changes at container level.</li>
 </ul>
 </div>
 <div class="section" id="detailed-changes">
-<h3>Detailed changes<a class="headerlink" href="#detailed-changes" title="Permalink to this headline">¶</a></h3>
+<h3>Detailed Changes<a class="headerlink" href="#detailed-changes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>No changes at container level.</li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="feat-mdd-170-added-redis-image-5-alpine3-9">
+<h2>Feat/MDD-170: Added Redis Image 5-alpine3.9<a class="headerlink" href="#feat-mdd-170-added-redis-image-5-alpine3-9" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Update information<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>We added a new MISP redis image version 5-alpine3.9.</p>
+</div>
+<div class="section" id="id2">
+<h3>General changes<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>In general we added the new redis Git repository to move the redis installation from <a class="reference external" href="https://github.com/DCSO/MISP-dockerized-server">MISP server</a> to new MISP redis container.</p>
+</div>
+<div class="section" id="id3">
+<h3>Fixes and Improvements<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>We added a new redis container repository</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>Detailed changes<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>We added a new redis container on base of official redis:5-alpine3.9 container. It is an Alpine Linux version of the container. Therefore it is very small.</li>
 </ul>
