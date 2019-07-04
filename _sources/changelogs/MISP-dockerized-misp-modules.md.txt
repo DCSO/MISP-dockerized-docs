@@ -2,6 +2,27 @@
 Since release candidate 0.3.0, we changed the development process from an release candidate change to a feature change development process.
 
 
+
+
+---
+## Bug/MDD-204: MISP Modules are not starting
+### Update information 
+In the last test we detect that our MISP modules server does not start. The root cause was a new not installed dependency which is not available at Alpine Linux. So we required a new base image. Normally we switch back to the official `debian:stretch-slim` base image, but in these base is only Python 3.5. And it exists PyPI dependencies which are not available for python 3.5. Therefore we switched to the base image [`python:3.7-slim-stretch`](https://hub.docker.com/_/python) which is an official Python container on base of debian stretch with Python 3.7. Therefore we have the best choice to control the right python version with the right dependencies.
+### General Changes
+In general the CI files were changed. This has no user impact.
+- Changed Gitlab CI Build tools from default `docker build`  to `kaniko`
+- Added a Gitlab CI test job for all container 
+- Added a Release Date variable for all container 
+- Improved all shellscripts to avoid warnings and errors from shellcheck
+- Removed unused CI scripts
+### Fixes and Improvements
+- Added a new MISP-modules version `3.0-python`
+### Detailed Changes
+- Added a new MISP modules version 3.0-python
+  New dependencies are added from MISP team which are not available at Alpine Linux. See more above.
+
+
+
 ---
 ## Feat/MDD-190: Fixing 2.4.93 MISP Server Image
 ### Update Information
