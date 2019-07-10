@@ -7,3 +7,4 @@ FAQ
    docker
    cert_error
    version
+   useful_bash_commands
