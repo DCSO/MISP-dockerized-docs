@@ -46,3 +46,8 @@ One liner to remove all of Docker containers:
 docker rm $(docker ps -a -q)
 ```
 
+### Get a Terminal Overview of Docker Containers
+
+See the following two github projects if you need a Gui Terminal application:
+- https://github.com/skanehira/docui
+- https://github.com/jesseduffield/lazydocker
