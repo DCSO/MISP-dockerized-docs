@@ -2,6 +2,18 @@
 Since release candidate 0.3.0, we changed the development process from an release candidate change to a feature change development process.
 
 
+---
+## Bug/MDD-224: Rename Container 1.6-alpine to 2.0-alpine for Breaking Changes
+### Update Information
+This release renamed the `misp-dockerized-proxy:1.6-alpine` container to `misp-dockerized-proxy:2.0-alpine`. The reason is incompatiblity with the current MISP-dockerized 1.1.1 release.
+### General Changes
+Improvements with the sub Gitlab CI files are done.
+### Fixes and Improvements
+- Rename container 1.6-alpine to 2.0-alpine
+### Detailed Changes
+- Rename container 1.6-alpine to 2.0-alpine
+  The version 1.6 or better 2.0 added an netdata monitoring endpoint with basic authentication. This requires that the basic auth environment variables are set through MISP-dockerized 1.2.0+. In Release 1.1.1 and before this variables are not set. Therefore the proxy is not backwards compatible.
+
 
 ---
 ## Bug/MDD-223: Entrypoint of Proxy Container 1.6 has no Execute Permission
