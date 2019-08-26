@@ -1,6 +1,6 @@
 # Errors like Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column
 
-##Problem
+## Problem
 
 If you get errors like:
 
