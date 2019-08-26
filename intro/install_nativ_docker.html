@@ -843,6 +843,12 @@
 <li class="toctree-l4"><a class="reference internal" href="../appendix/faq/useful_bash_commands.html#find-type-f-path-sh-exec-chmod-x"><code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">.</span> <span class="pre">-type</span> <span class="pre">f</span> <span class="pre">-path</span> <span class="pre">&quot;*.sh&quot;</span> <span class="pre">-exec</span> <span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">{}</span> <span class="pre">+</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../appendix/faq/misp_error_column-not-found.html">Errors like Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../appendix/faq/misp_error_column-not-found.html#what-happened-exactly">What happened exactly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../appendix/faq/misp_error_column-not-found.html#solution">Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../appendix/faq/misp_error_column-not-found.html#known-sources">Known Sources</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../appendix/releases.html">Release Policy</a><ul>
@@ -956,7 +962,7 @@ If you need help look <a class="reference external" href="https://www.circl.lu/d
 </ul>
 <p>Please make sure that the <strong>certificate chain</strong> and <strong>key</strong> are in PEM format - recognizable in the first line:</p>
 <blockquote>
-<div>“—–BEGIN CERTIFICATE—–“or”—–BEGIN RSA PRIVATE KEY—–“</div></blockquote>
+<div>“—–BEGIN CERTIFICATE—–“<br />or<br />”—–BEGIN RSA PRIVATE KEY—–“</div></blockquote>
 <ul class="simple">
 <li>(<strong>OPTIONAL</strong>) During installation, Diffie-Hellman params will be freshly generated, but if you still want to create them by yourself, copy your existing one to:</li>
 <li><code class="docutils literal notranslate"><span class="pre">&lt;PATH</span> <span class="pre">to</span> <span class="pre">MISP-dockerized&gt;/config/ssl/dhparams.pem</span></code></li>
@@ -1021,7 +1027,7 @@ If you need help look <a class="reference external" href="https://www.circl.lu/d
     <p>
         &copy; Copyright 2018,2019, DCSO GmbH
       <span class="lastupdated">
-        Last updated on Jul 23, 2019.
+        Last updated on Aug 26, 2019.
       </span>
 
     </p>
