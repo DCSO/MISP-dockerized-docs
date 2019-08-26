@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>We would like to thank… &mdash; MISP-dockerized 1.1.1 documentation</title>
+  <title>Cannot download Docker images behind a proxy &mdash; MISP-dockerized 1.1.1 documentation</title>
   
 
   
@@ -46,7 +46,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="History" href="history.html" />
+    <link rel="next" title="Error with SSL certificate" href="cert_error.html" />
+    <link rel="prev" title="FAQ" href="index.html" />
     <link href="../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -295,26 +296,26 @@
 <li class="toctree-l2"><a class="reference internal" href="../design/logging.html">Logging</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">FAQ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../faq/docker.html">Cannot download Docker images behind a proxy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../faq/docker.html#sources">Sources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../faq/cert_error.html">Error with SSL certificate</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../faq/cert_error.html#make-deploy-makes-an-error-with-ssl-certificate">make deploy makes an error with ssl certificate</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../faq/cert_error.html#problem">Problem</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../faq/cert_error.html#solution">Solution</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FAQ</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Cannot download Docker images behind a proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sources">Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cert_error.html">Error with SSL certificate</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cert_error.html#make-deploy-makes-an-error-with-ssl-certificate">make deploy makes an error with ssl certificate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cert_error.html#problem">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cert_error.html#solution">Solution</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../faq/version.html">How to find your current MISP-dockerized version?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../faq/useful_bash_commands.html">Useful Bash Commands</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../faq/useful_bash_commands.html#find-type-f-path-sh-exec-chmod-x"><code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">.</span> <span class="pre">-type</span> <span class="pre">f</span> <span class="pre">-path</span> <span class="pre">&quot;*.sh&quot;</span> <span class="pre">-exec</span> <span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">{}</span> <span class="pre">+</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="version.html">How to find your current MISP-dockerized version?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="useful_bash_commands.html">Useful Bash Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="useful_bash_commands.html#find-type-f-path-sh-exec-chmod-x"><code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">.</span> <span class="pre">-type</span> <span class="pre">f</span> <span class="pre">-path</span> <span class="pre">&quot;*.sh&quot;</span> <span class="pre">-exec</span> <span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">{}</span> <span class="pre">+</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../faq/misp_error_column-not-found.html">Errors like Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../faq/misp_error_column-not-found.html#what-happened-exactly">What happened exactly</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../faq/misp_error_column-not-found.html#solution">Solution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../faq/misp_error_column-not-found.html#known-sources">Known Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misp_error_column-not-found.html">Errors like Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="misp_error_column-not-found.html#what-happened-exactly">What happened exactly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="misp_error_column-not-found.html#solution">Solution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="misp_error_column-not-found.html#known-sources">Known Sources</a></li>
 </ul>
 </li>
 </ul>
@@ -853,16 +854,16 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Appendix</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="releases.html">Release Policy</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="releases.html#patch-bugfix-releases-1-9-x">Patch/Bugfix Releases (1.9.x)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="releases.html#minor-feature-releases-1-9-x">Minor/Feature Releases (1.9.x)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="releases.html#major-but-not-breaking-releases-1-x-0">Major (But Not Breaking) Releases (1.x.0)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="releases.html#major-breaking-releases-x-0-0">Major/Breaking Releases (x.0.0)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/index.html">Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/releases.html">Release Policy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../appendix/releases.html#patch-bugfix-releases-1-9-x">Patch/Bugfix Releases (1.9.x)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../appendix/releases.html#minor-feature-releases-1-9-x">Minor/Feature Releases (1.9.x)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../appendix/releases.html#major-but-not-breaking-releases-1-x-0">Major (But Not Breaking) Releases (1.x.0)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../appendix/releases.html#major-breaking-releases-x-0-0">Major/Breaking Releases (x.0.0)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="history.html">History</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">We would like to thank…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/history.html">History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/thanks.html">We would like to thank…</a></li>
 </ul>
 </li>
 </ul>
@@ -910,15 +911,15 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">Appendix</a> &raquo;</li>
+          <li><a href="index.html">FAQ</a> &raquo;</li>
         
-      <li>We would like to thank…</li>
+      <li>Cannot download Docker images behind a proxy</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/appendix/thanks.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/faq/docker.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -931,26 +932,44 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="we-would-like-to-thank">
-<h1>We would like to thank…<a class="headerlink" href="#we-would-like-to-thank" title="Permalink to this headline">¶</a></h1>
-<p>We would like to thank our supporters and contributors:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://dcso.de">DCSO GmbH</a></li>
-<li>https://github.com/rhaist</li>
-<li>https://github.com/Mezzonian</li>
-<li>https://github.com/8ear</li>
-</ul>
-<p>We would like to thank the maker of:</p>
-<ul class="simple">
-<li>Mailcow (https://github.com/mailcow/)</li>
-<li>https://sphinxcontrib-github.readthedocs.io/en/latest/index.html</li>
-<li>https://pypi.org/project/ghp-import/</li>
-<li>https://hub.docker.com/_/mariadb/</li>
-<li>https://hub.docker.com/_/nginx/</li>
-<li>https://hub.docker.com/_/httpd/</li>
-<li>Mailu (https://github.com/mailu)</li>
-</ul>
-<p>With their projects they have done an amazing job with Docker which we could orient ourselves on and which inspired us to develop MISP-dockerized.</p>
+  <div class="section" id="cannot-download-docker-images-behind-a-proxy">
+<h1>Cannot download Docker images behind a proxy<a class="headerlink" href="#cannot-download-docker-images-behind-a-proxy" title="Permalink to this headline">¶</a></h1>
+<p>First, create a systemd drop-in directory for the Docker service:</p>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>  mkdir /etc/systemd/system/docker.service.d
+</pre></div>
+</td></tr></table></div>
+<p>Now create a file called <code class="docutils literal notranslate"><span class="pre">/etc/systemd/system/docker.service.d/http-proxy.conf</span></code> that adds the HTTP_PROXY environment variable:</p>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>  <span class="o">[</span>Service<span class="o">]</span>
+  <span class="nv">Environment</span><span class="o">=</span><span class="s2">&quot;HTTP_PROXY=http://proxy.example.com:80/&quot;</span>
+  <span class="nv">Environment</span><span class="o">=</span><span class="s2">&quot;HTTPS_PROXY=http://proxy.example.com:80/&quot;</span>
+</pre></div>
+</td></tr></table></div>
+<p>If you have internal Docker registries that you need to contact without proxying you can specify them via the NO_PROXY environment variable:</p>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>  ...
+  <span class="nv">Environment</span><span class="o">=</span><span class="s2">&quot;NO_PROXY=localhost,127.0.0.0/8,docker-registry.somecorporation.com&quot;</span>
+  ...
+</pre></div>
+</td></tr></table></div>
+<p>Flush changes:</p>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>  sudo systemctl daemon-reload
+</pre></div>
+</td></tr></table></div>
+<p>Verify that the configuration has been loaded:</p>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>  sudo systemctl show --property Environment docker
+</pre></div>
+</td></tr></table></div>
+<p>Restart Docker:</p>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>  sudo systemctl restart docker
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="sources">
+<h1>Sources<a class="headerlink" href="#sources" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://stackoverflow.com/questions/23111631/cannot-download-docker-images-behind-a-proxy">https://stackoverflow.com/questions/23111631/cannot-download-docker-images-behind-a-proxy</a></p>
 </div>
 
 
@@ -961,8 +980,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="cert_error.html" class="btn btn-neutral float-right" title="Error with SSL certificate" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="history.html" class="btn btn-neutral float-left" title="History" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="FAQ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
