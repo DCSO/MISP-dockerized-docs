@@ -313,6 +313,7 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Errors like Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#problem">Problem</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#what-happened-exactly">What happened exactly</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#solution">Solution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#known-sources">Known Sources</a></li>
@@ -934,11 +935,13 @@
             
   <div class="section" id="errors-like-error-pdoexception-sqlstate-42s22-column-not-found-1054-unknown-column">
 <h1>Errors like Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column<a class="headerlink" href="#errors-like-error-pdoexception-sqlstate-42s22-column-not-found-1054-unknown-column" title="Permalink to this headline">¶</a></h1>
-<p>##Problem</p>
+<div class="section" id="problem">
+<h2>Problem<a class="headerlink" href="#problem" title="Permalink to this headline">¶</a></h2>
 <p>If you get errors like:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">Error:</span> <span class="pre">[PDOException]</span> <span class="pre">SQLSTATE[42S22]:</span> <span class="pre">Column</span> <span class="pre">not</span> <span class="pre">found:</span> <span class="pre">1054</span> <span class="pre">Unknown</span> <span class="pre">column</span> <span class="pre">'xxx'</span> <span class="pre">in</span> <span class="pre">'where</span> <span class="pre">clause'</span></code> (Where xxx will be replaced through an column name)</li>
 </ul>
+</div>
 <div class="section" id="what-happened-exactly">
 <h2>What happened exactly<a class="headerlink" href="#what-happened-exactly" title="Permalink to this headline">¶</a></h2>
 <p>One of the problem can be that MISP changed their database scheme, which will be changed after the first login to the page.</p>
