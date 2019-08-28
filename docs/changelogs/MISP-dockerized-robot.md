@@ -6,6 +6,41 @@ Since release candidate 0.3.0, we changed the development process from an releas
 
 
 ---
+## Bug/MDD-225: Backup does not Work in MISP Robot container 2.4
+### Update Information
+This release added a new misp-dockerized-robot Docker container.
+### General Changes
+- For performance reasons Gitlab CI is now disabled for the build. Only Travis CI build the container. 
+### Fixes and Improvements
+- Added new misp-dockerized-robot:2.5-debian Docker container
+### Detailed Changes
+- Added new misp-dockerized-robot:2.5-debian Docker container
+  We fixed the backup error in the following issue DCSO/MISP-dockerized#77
+
+
+
+---
+## Feat/MDD-188: Added New MISP robot version 2.4-debian
+### Update Information
+This release added a new misp-dockerized-robot Docker container.
+### General Changes
+The general CI files were changed.
+- Changed Gitlab CI Build tools from default `docker build`  to `kaniko`
+- Added a Gitlab CI test job for all container 
+- Added a Release Date variable for all container 
+- Removed unused CI scripts
+- Updated year in the license file
+- Fix license link in readme
+### Fixes and Improvements
+- Added new misp-dockerized-robot:2.4-debian Docker container
+### Detailed Changes
+- Added new misp-dockerized-robot:2.4-debian Docker container
+  We added with the new version a new mysql performance test script.
+
+
+
+
+---
 ## Bug.MDD174: Travis CI and Gitlab CI does not Build and Push the Images Correctly
 ### Update information 
 We added a new misp-robot version 2.3-debian and cleaned the CI helper scripts.
