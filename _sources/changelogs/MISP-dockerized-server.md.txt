@@ -5,6 +5,71 @@ Since release candidate 0.3.0, we changed the development process from an releas
 
 
 ---
+
+## Bug/MDD-227: MISP Server 2.4.99: AH00534: apache2: Configuration error: More than one MPM loaded.
+### Update Information
+This release fixes an bug in the 2.4.99 MISP server version and add the server 2.4.112 and 2.4.113.
+### General Changes
+We change the general CI tools from `docker build` to `kaniko` and we disabled Gitlab CI and use only Travis CI now.
+There are no user actions required.
+### Fixes and Improvements
+- Fixed the bug described in the subject in 2.4.99-2.4.103
+- Fixed an bug in server 2.4.104-2.4.113 with misp_cron.sh shellscript
+- Added an ENV variable for 2.4.104-2.4.xx
+- Added MISP server container 2.4.112-2.4.113 on base of new 2.4.nightly-debian
+### Detailed Changes
+- Fixed the bug described in the subject in 2.4.99-2.4.103
+  We explicit deactivate mpm_event process handler.
+- Fixed an bug in server 2.4.104-2.4.113 with misp_cron.sh shellscript
+- Added an ENV variable for 2.4.104-2.4.xx
+   We added `SERVER_IDS` as ENV variable. So the user can control which server entries should be included in the cron process.
+- Added MISP server container 2.4.112 and 2.4.113 on base of new 2.4.nightly-debian
+   The same features as 2.4.nightly-debian.
+
+
+
+
+
+---
+## Feat/MDD-151: Added new Base 2.4.nightly-debian + 2.4.104-2.4.111 Container
+### Update Information
+This release added a new 2.4 nightly MISP server container at the base of debian, changed the build tools and ...
+### General Changes
+We change the general CI tools from `docker build` to `kaniko`.
+There are no user actions required.
+### Fixes and Improvements
+- New Debian based container for nightly 2.4 builds.
+  - Added MSMTP as new mailer daemon instead of postfix
+  - Removed unneccesary tools and packages (Redis Server, MariaDB Server, Syslog-ng)
+  - Improved Rsyslog
+  - Added PHP7.2
+  - Added PyMISP script
+  - Added binaries
+  - Improved Entrypoint scripts
+  - Moved content of static files to entrypoint scripts
+- Added MISP server container 2.4.104-2.4.111 on base of new 2.4.nightly-debian
+### Detailed Changes
+- New Debian based container for nightly 2.4 builds.
+  - Added MSMTP as new mailer daemon instead of postfix
+    MSMTP is more lightweight mailer daemon with less features, but also less complexity.
+  - Removed unneccesary tools and packages (Redis Server, MariaDB Server, Monitoring, Syslog-ng)
+    Netdata, Redis and MariaDB have their own Docker container. Therefore we removed all packages from these containers. Syslog-ng was replaced through Rsyslog, because Rsyslog can handle wildcard files.
+  - Improved Rsyslog
+  - Added PHP7.2
+    Debian stretch default PHP version is 7.0, but this is not more recommended.
+  - Added PyMISP script
+    Added PyMISP script and requirements to add own python scripts.
+  - Added binaries
+    If files should be modified I recreate the file and this is done from a own shellschript binary.
+  - Improved Entrypoint scripts
+    Colorized output if you has no syslog logging activated.
+  - Moved content of static files to entrypoint scripts
+- Added MISP server container 2.4.104-2.4.111 on base of new 2.4.nightly-debian
+   The same features as 2.4.nightly-debian.
+
+
+
+---
 ## Bug/MDD-199: Repair Global 'tagging.sh' Script
 ### Update Information
 This release fixed a bug in `tagging.sh` script.

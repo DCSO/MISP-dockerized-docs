@@ -2,6 +2,28 @@
 Since release candidate 0.3.0, we changed the development process from an release candidate change to a feature change development process.
 
 
+
+
+
+---
+## Bug/MDD 226: MISP Proxy Version 1 (1.5-alpine) can not start with MISP-dockerized 1.0.3
+### Update Information
+This release added a new MISP proxy container: `misp-dockerized-proxy:1.6-alpine`. Which fixes an bug from 1.5-alpine.
+### General Changes
+- For performance reasons Gitlab CI is now disabled for the build. Only Travis CI build the container. 
+### Fixes and Improvements
+- Added a new 1.6-alpine container for MISP-dockerized 1.0.3 and below
+### Detailed Changes
+- Added a new 1.6-alpine container for MISP-dockerized 1.0.3 and below
+  The 1.5-alpine container logs:
+   ```bash
+   2019/07/30 08:21:05 [emerg] 21#21: invalid number of arguments in "server_name" directive in /etc/nginx/conf.d/vars_common:1
+   nginx: [emerg] invalid number of arguments in "server_name" directive in /etc/nginx/conf.d/vars_common:1
+   nginx: configuration file /etc/nginx/nginx.conf test failed
+   ``` 
+   This comes from an unfilled environment variable. We fixed this and from now on if the environment variable `MISP_FQDN` is empty the entrypoint script fill it with the `HOSTNAME` variable. Which is filled automatically from docker itself.
+
+
 ---
 ## Bug/MDD-224: Rename Container 1.6-alpine to 2.0-alpine for Breaking Changes
 ### Update Information

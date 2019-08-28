@@ -3,6 +3,103 @@
 
 
 ---
+[View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v1.2.0)
+
+`This release is a major release. A backup and a test before you upgrade is recommended.`
+### About
+MISP dockerized is a project designed to provide an easy-to-use and easy-to-install 'out of the box' MISP instance that includes everything you need to run MISP with minimal host-side requirements.
+
+MISP dockerized uses MISP (Open Source Threat Intelligence Platform - https://github.com/MISP/MISP), which is maintained and developed by the MISP project team (https://www.misp-project.org/).
+
+MISP-dockerized provides the following features:mar
+* 3-steps (in 5 minute or less) ready MISP instance
+* Built in MISP modules
+* Built in Monitoring via Netdata Docker container [NEW]
+* Built in Monitoring Webinterface with Basic Authentication [NEW]
+* Built in Mail Transport via MSMTP [NEW]
+* Built in Cron Job for Headless MISP server
+* Prehardened TLS configuration
+* Default HTTP to HTTPS redirect
+* Easy-to-use script based backup and restore function
+* Prebuilt management commands to ease maintenance efforts
+* Periodically built Docker containers
+* Automated test framework to test new MISP releases
+* PHP environment custom settings
+* External Redis database support, via official Redis database container [NEW]
+* External MariaDB database support, via official MariaDB database container [NEW]
+
+-----------------------------
+### Update Informations
+This release includes the new MISP server container version 2.4.113 and a few other changes you see below.
+### General Changes
+In general we improved our Docker build tools and CI scripts for container and this repository.
+Additionally we replaced our `dockerhub.dcso.de` [Docker](https://hub.docker.com/_/registry) Registry with [Harbor](https://github.com/goharbor/harbor) under the same URL.
+The Docker registry change impact all users which have the images from 'dockerhub.dcso.de'. Please change the variable `DOCKER_REGISTRY` from **dockerhub.dcso.de** to **dockerhub.dcso.de/dcso** in *config/config.env*
+
+
+### Detailed Changes, Fixes & Improvements
+
+#### v1.2.0 [Main Repository](https://github.com/DCSO/MISP-dockerized)
+- Changed MISP server version from 2.4.103 to 2.4.113 #79 #75 
+- Changed MISP proxy container version from 1 to 2
+- Changed MISP modules container version from 2 to 3 #80 
+- Changed `make change-smime` and `make change-pgp` command
+- Changed syslog example for improved logging via local or remote syslog server
+- Changed environment name scheme to make it more clear and easier to understand the variable names
+- Changed requirements shellscript to colorize the output
+- Added an hosts entry to travis CI for `misp.example.com` for tests
+- Added timezone to environment variable section of containers to change time zone from containter
+- Added New `MISP-dockerized-monitoring` container
+- Added New `MISP-dockerized-db` container #74 
+- Added Gitlab CI Jobs for Unsupported MISP Server Versions
+
+#### v1.0.4 [Main Repository](https://github.com/DCSO/MISP-dockerized)
+- Fixed CI test bug
+- Fixed an bug in the build-config script for other Docker registries
+- Changed MISP modules Docker container version from `misp-dockerized-misp-modules:1`
+to `misp-dockerized-misp-modules:latest`
+- Changed PHP_MEMORY default value from 512MB to 2048MB
+- Changed default Docker registry source for the container from dockerhub.dcso.de to dcso (hub.docker.com)
+
+#### Container [misp-dockerized-server](https://github.com/DCSO/MISP-dockerized-server)
+- [Bug/MDD-227: MISP Server 2.4.99: AH00534: apache2: Configuration error: More than one MPM loaded](https://github.com/DCSO/MISP-dockerized-server/commit/e251dd641d5f6c3ab396f029567d278438d80e38)
+- [Feat/MDD-151: Added new Base Container 2.4.nightly-debian and more Improvements](https://github.com/DCSO/MISP-dockerized-server/commit/4035009ab14bcb8e91922456f53983f6eb4029fb)
+- [Bug/MDD 199: Repair Global 'tagging.sh' Script](https://github.com/DCSO/MISP-dockerized-server/commit/0d8106b69707033b14c92ae7c151826c27bf040b)
+#### Container [misp-dockerized-robot](https://github.com/DCSO/MISP-dockerized-robot)
+- [Bug/MDD-225: Backup does not Work in MISP Robot container 2.4](https://github.com/DCSO/MISP-dockerized-robot/commit/aa192d47e15bd9f6d3dd88c9b5a5c7bd27415a1b)
+- [Feat/MDD-188: Added New MISP robot version 2.4-debian](https://github.com/DCSO/MISP-dockerized-robot/commit/294bb80592a79657ff65129e791342a8d8b940c3)
+#### Container [misp-dockerized-proxy](https://github.com/DCSO/MISP-dockerized-proxy)
+- [Bug/MDD 226: MISP Proxy Version 1 (1.5-alpine) can not start with MISP-dockerized 1.0.3](https://github.com/DCSO/MISP-dockerized-proxy/commit/74b2a7b44fd3824a02bfa3afe6c3c15b070ad956)
+- [Bug/MDD-224: Rename Container 1.6-alpine to 2.0-alpine for Breaking Changes](https://github.com/DCSO/MISP-dockerized-proxy/commit/0bb3452e70b7ba389bdb693ea901220025261af3)
+- [Bug/MDD-223: Entrypoint of Proxy Container 1.6 has no Execute Permission](https://github.com/DCSO/MISP-dockerized-proxy/commit/5d6b2397e79801b82cc6e1eb4dae5fe93c3a5ac7)
+- [Feat/MDD-220: Improve Proxy Docker Container](https://github.com/DCSO/MISP-dockerized-proxy/commit/8093b59122962fcc75dbc3152366d20351d29a1f)
+- [Bug/MDD-203: Update CI Files](https://github.com/DCSO/MISP-dockerized-proxy/commit/990c5381f8e8053fa3fc994dce02f0734c47ed9e)
+#### Container [misp-dockerized-misp-modules](https://github.com/DCSO/MISP-dockerized-misp-modules)
+- [Bug/MDD-204: MISP Modules are not starting](https://github.com/DCSO/MISP-dockerized-misp-modules/commit/7294ee1f289ba4f43eb65c41b6b4467f835dcb07)
+#### Container [misp-dockerized-redis](https://github.com/DCSO/MISP-dockerized-redis)7
+- [Feat/MDD 221: Improve Redis and Monitoring Container](https://github.com/DCSO/MISP-dockerized-redis/commit/4c2a143063823ec792c482ef73daa5990132332e)
+- [Feat/MDD-170: Added Redis Image 5-alpine3.9](https://github.com/DCSO/MISP-dockerized-redis/commit/fd66d41a12c060bb9c30e35724de674efce048f6)
+#### Container [misp-dockerized-db](https://github.com/DCSO/MISP-dockerized-db)
+- [Bug/MDD-219: Fix Gitlab CI](https://github.com/DCSO/MISP-dockerized-db/commit/d2d893f2d64f4d62aa7339ea6bed73ee20b004d8)
+- [Feat/MDD-169: Added Official MariaDB container verison 10.4.5-bionic](https://github.com/DCSO/MISP-dockerized-db/commit/41d4beed50cda15181c2dd737dc7643087daa4b9)
+- [Initial commit](https://github.com/DCSO/MISP-dockerized-db/commit/ed9c4b0909d96e5dd601fe1d700ae6aa76ac7bbe)
+   - Added new repository MISP-dockerized-db
+   - Added new container misp-dockerized-db:10.4.5-bionic
+#### Container [misp-dockerized-monitoring](https://github.com/DCSO/MISP-dockerized-monitoring)
+- [ Feat/MDD 221: Improve Redis and Monitoring Container + Add Netdata v1.16](https://github.com/DCSO/MISP-dockerized-monitoring/commit/07924d1796ff626057fe293137eb5cb2dd08d752)
+- [Initial Commit](https://github.com/DCSO/MISP-dockerized-monitoring/commit/c4045d8a3634c2e0745ee32a9fa98a6afc0a8428)
+   - Finished: Feat/MDD-154: Adding Monitoring Capabilites with an Netdata Container
+   - Added new repository MISP-dockerized-monitoring
+   This repository contains monitoring container to monitor the MISP-dockerized environment.
+   - Added new container misp-dockerized-monitoring:v1.15.0
+   The first container is based at [Netdata](https://netdata.cloud/).
+
+
+
+
+
+
+---
 ## Release Candidate 1.1.2
 [View release on Github.com](https://github.com/DCSO/MISP-dockerized/releases/tag/v1.1.2)
 
